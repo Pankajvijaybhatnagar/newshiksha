@@ -50,7 +50,7 @@ export const HeaderOne = () => {
                       <ul className="td_nav_list">
                         <li className="menu-item-has-children">
                           <Link to="/">Home</Link>
-                          <ul>
+                          {/* <ul>
                             <li>
                               <Link to="/">University</Link>
                             </li>
@@ -75,7 +75,7 @@ export const HeaderOne = () => {
                             <li>
                               <Link to="/home-v8">Kitchen Coach</Link>
                             </li>
-                          </ul>
+                          </ul> */}
                         </li>
                         <li className="menu-item-has-children">
                           <Link to="/products">Courses</Link>
