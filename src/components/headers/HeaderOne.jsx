@@ -6,7 +6,7 @@ import { HeaderSidebar } from "./HeaderSidebar";
 import { useMobilemenu } from "../../lib/hooks/useMobilemenu";
 import { useStickyHeader } from "../../lib/hooks/useStickyHeader";
 
-import Logo from "../../assets/img/logo.svg";
+import Logo from "../../assets/img/logo.png";
 
 export const HeaderOne = () => {
   useMobilemenu();
@@ -24,7 +24,7 @@ export const HeaderOne = () => {
               {/* left */}
               <div className="td_main_header_left">
                 <Link className="td_site_branding" to="/">
-                  <img src={Logo} alt="Logo" />
+                  <img width={170} src={Logo} alt="Logo" />
                 </Link>
                 <div className="td_header_social_btns">
                   <a href="#" className="td_center">
@@ -106,7 +106,7 @@ export const HeaderOne = () => {
                       </ul>
 
                       <Link className="td_site_branding" to="/">
-                        <img src={Logo} alt="Logo" />
+                        <img width={170} src={Logo} alt="Logo" />
                       </Link>
 
                       {/* last three */}

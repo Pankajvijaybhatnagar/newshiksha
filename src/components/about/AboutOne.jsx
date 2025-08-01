@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import aboutImg1 from "../../assets/img/home_1/about_img_1.jpg";
-import aboutImg2 from "../../assets/img/home_1/about_img_2.jpg";
+import aboutImg1 from "../../assets/img/home_1/about_section3.jpg";
+import aboutImg2 from "../../assets/img/home_1/about_section.jpg";
 import circleText from "../../assets/img/home_1/about_circle_text.svg";
 import { VideoPlayer } from "../videos/VideoPlayer";
 

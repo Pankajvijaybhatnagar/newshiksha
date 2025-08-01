@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import heroBg from "../../assets/img/home_1/hero_bg_1.jpg";
+import heroBg from "../../assets/img/home_1/hero_bg.jpg";
 
 export const HeroOne = () => {
   return (
@@ -22,7 +22,7 @@ export const HeroOne = () => {
             <h1 className="td_hero_title td_fs_64 td_white_color td_mb_12">
               <span>Shiksha Mahakumbh</span> – A National Movement for Global Learning
             </h1>
-            <p className="td_hero_subtitle td_fs_18 td_white_color td_opacity_7 td_mb_30">
+            <p style={{color:'white'}} className="td_hero_subtitle td_fs_18 td_white_color td_opacity_7 td_mb_30">
               Join a multi-edition national initiative uniting educators, innovators, and policymakers to shape a future-ready, inclusive education system rooted in Indian values.
             </p>
             <Link

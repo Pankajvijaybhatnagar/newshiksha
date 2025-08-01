@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import logoBlack from "../../assets/img/logo_black.svg";
+import logoBlack from "../../assets/img/logo_black.png";
 
 export const HeaderSidebar = ({ showSidebar, toggleSidebar }) => {
   return (
@@ -18,8 +18,7 @@ export const HeaderSidebar = ({ showSidebar, toggleSidebar }) => {
 
         <div className="td_side_header_box">
           <h2 className="td_side_header_heading">
-            Do you have a project in your <br />
-            mind? Keep connect us.
+            Welcome to Shiksha Mahakumbh
           </h2>
         </div>
         <div className="td_side_header_box">
