@@ -39,7 +39,7 @@ import { PressRelease } from "./pages/press/PressRelease";
 import { PressDetails } from "./pages/press/PressDetails";
 import {MediaPage} from "./pages/mediaSection/MediaPage";
 import {Submit} from "./pages/paper/Submit";
-import {Sponsors} from "./pages/sponsor/sponsors"; 
+import {Sponsors} from "./pages/sponsor/Sponsors"; 
 import {DigitalPage} from "./pages/mediaSection/DigitalPage";
 import { Wishes } from "./pages/wishes/Wishes";
 import { NewProgram } from "./pages/program/NewProgram";
