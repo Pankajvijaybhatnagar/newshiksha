@@ -44,14 +44,14 @@ export const Layout = ({
 
       {/* header */}
       {header === 1 && <HeaderOne />}
-      {header === 2 && <HeaderTwo />}
-      {header === 3 && <HeaderThree />}
-      {header === 4 && <HeaderFour />}
-      {header === 5 && <HeaderFive />}
-      {header === 6 && <HeaderSix />}
-      {header === 7 && <HeaderSeven />}
-      {header === 8 && <HeaderEight />}
-      {header === 9 && <HeaderNine />}
+      {header === 2 && <HeaderOne />}
+      {header === 3 && <HeaderOne />}
+      {header === 4 && <HeaderOne />}
+      {header === 5 && <HeaderOne />}
+      {header === 6 && <HeaderOne />}
+      {header === 7 && <HeaderOne />}
+      {header === 8 && <HeaderOne />}
+      {header === 9 && <HeaderOne />}
 
       {/* breadcrumb */}
       {breadcrumbTitle && (
@@ -62,13 +62,13 @@ export const Layout = ({
 
       {/* footer */}
       {footer === 1 && <FooterOne />}
-      {footer === 2 && <FooterTwo />}
-      {footer === 3 && <FooterThree />}
-      {footer === 4 && <FooterFour />}
-      {footer === 5 && <FooterFive />}
-      {footer === 6 && <FooterSix />}
-      {footer === 7 && <FooterSeven />}
-      {footer === 8 && <FooterEight />}
+      {footer === 2 && <FooterOne />}
+      {footer === 3 && <FooterOne />}
+      {footer === 4 && <FooterOne />}
+      {footer === 5 && <FooterOne />}
+      {footer === 6 && <FooterOne/>}
+      {footer === 7 && <FooterOne />}
+      {footer === 8 && <FooterOne/>}
     </>
   );
 };

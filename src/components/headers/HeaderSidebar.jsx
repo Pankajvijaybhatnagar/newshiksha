@@ -27,7 +27,7 @@ export const HeaderSidebar = ({ showSidebar, toggleSidebar }) => {
             <li>
               <i className="fa-solid fa-phone"></i>
               <span>
-                <a href="tel:+444547800112">+44 454 7800 112</a>
+                <a href="tel:+444547800112">+91 9417050631</a>
               </span>
             </li>
             <li>
@@ -39,14 +39,13 @@ export const HeaderSidebar = ({ showSidebar, toggleSidebar }) => {
             <li>
               <i className="fa-solid fa-location-dot"></i>
               <span>
-                50 Wall Street Suite, 44150 <br />
-                Ohio, United States
+                Plot No. 1, Sector 71, Sahibzada Ajit Singh Nagar, Punjab 160071
               </span>
             </li>
           </ul>
         </div>
         <div className="td_side_header_box">
-          <h3 className="td_side_header_title td_heading_color">Subscribe</h3>
+          <h3 className="td_side_header_title td_heading_color">Feedback</h3>
           <div className="td_newsletter td_style_1">
             <form className="td_newsletter_form">
               <input
@@ -59,7 +58,7 @@ export const HeaderSidebar = ({ showSidebar, toggleSidebar }) => {
                 className="td_btn td_style_1 td_radius_30 td_medium"
               >
                 <span className="td_btn_in td_white_color td_accent_bg">
-                  <span>Subscribe Now</span>
+                  <span>Send</span>
                 </span>
               </button>
             </form>
@@ -68,18 +67,18 @@ export const HeaderSidebar = ({ showSidebar, toggleSidebar }) => {
         <div className="td_side_header_box">
           <h3 className="td_side_header_title td_heading_color">Follow Us</h3>
           <div className="td_social_btns td_style_1 td_heading_color">
-            <a href="#" className="td_center">
-              <i className="fa-brands fa-linkedin-in"></i>
-            </a>
-            <a href="#" className="td_center">
-              <i className="fa-brands fa-twitter"></i>
-            </a>
-            <a href="#" className="td_center">
-              <i className="fa-brands fa-youtube"></i>
-            </a>
-            <a href="#" className="td_center">
-              <i className="fa-brands fa-facebook-f"></i>
-            </a>
+             <a href="https://www.facebook.com/shikshamahakumbh?mibextid=ZbWKwL" className="td_center">
+                    <i className="fa-brands fa-facebook-f"></i>
+                  </a>
+                  <a href="https://www.youtube.com/@ShikshaMahakumbh" className="td_center">
+                    <i className="fa-brands fa-youtube"></i>
+                  </a>
+                  <a href="https://www.instagram.com/shikshamahakumbh/profilecard/?igsh=NnljejByOXo4OTZr" className="td_center">
+                    <i className="fa-brands fa-instagram"></i>
+                  </a>
+                  <a href="https://x.com/shikshamahakumb?t=9ZRwSFPF-PWT8m641Aoqfg&s=08" className="td_center">
+                    <i className="fa-brands fa-x-twitter"></i>
+                  </a>
           </div>
         </div>
       </div>

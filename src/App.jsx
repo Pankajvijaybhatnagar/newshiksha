@@ -17,10 +17,14 @@ import { CoursesDetails } from "./pages/course/CoursesDetails";
 import { About } from "./pages/about/About";
 import { Error } from "./pages/error/Error";
 import { Event } from "./pages/event/Event";
+import { PastEvent } from "./pages/event/PastEvent";
+import { UpcomingEvent } from "./pages/event/UpcomingEvent";
+import { Pic } from "./pages/photo/Pic";
+import { Vid } from "./pages/video/Vid";
 import { EventDetails } from "./pages/event/EventDetails";
 import { TeamMembers } from "./pages/team/TeamMembers";
 import { TeamMemberDetails } from "./pages/team/TeamMemberDetails";
-import { StudentRegistrations } from "./pages/auth/StudentRegistrations";
+import { StudentRegistration } from "./pages/auth/StudentRegistration";
 import { InstructorRegistrations } from "./pages/auth/InstructorRegistrations";
 import { Signup } from "./pages/auth/Signup";
 import { Signin } from "./pages/auth/Signin";
@@ -31,6 +35,22 @@ import { Blog } from "./pages/blogs/Blog";
 import { BlogWithSidebar } from "./pages/blogs/BlogWithSidebar";
 import { BlogDetails } from "./pages/blogs/BlogDetails";
 import { Contact } from "./pages/contact/Contact";
+import { PressRelease } from "./pages/press/PressRelease";
+import { PressDetails } from "./pages/press/PressDetails";
+import {MediaPage} from "./pages/mediaSection/MediaPage";
+import {Submit} from "./pages/paper/Submit";
+import {Sponsors} from "./pages/sponsor/sponsors"; 
+import {DigitalPage} from "./pages/mediaSection/DigitalPage";
+import { Wishes } from "./pages/wishes/Wishes";
+import { NewProgram } from "./pages/program/NewProgram";
+import {ShikhsaKumbh} from "./pages/about/Shikshakumbh";
+import { ShikhsaMahaKumbh } from "./pages/about/ShikshaMAhaKumbh";
+import { ShikhsaVibhag } from "./pages/about/ShikshaVibhag";
+import { VitVibhag } from "./pages/about/VitVibhag";
+import { Prachar } from "./pages/about/Prachar";
+import { SamparkVibhag } from "./pages/about/Sampark";
+import { Prabandhan } from "./pages/about/Prabhandh";
+
 
 function App() {
   useWow();
@@ -57,13 +77,36 @@ function App() {
       />
       <Route path="/course-details" element={<CoursesDetails />} />
       <Route path="/about" element={<About />} />
+      <Route path="/about/ShikshaKumbh" element={<ShikhsaKumbh />} />
+      <Route path="/about/ShikshaMahaKumbh" element={<ShikhsaMahaKumbh />} />
+      <Route path="/about/ShikshaVibhag" element={<ShikhsaVibhag />} />
+      <Route path="/about/VitVibhag" element={<VitVibhag />} />
+      <Route path="/about/pracharVibhag" element={<Prachar />} />
+      <Route path="/about/SamparkVibhag" element={<SamparkVibhag />} />
+      <Route path="/about/prabandhanVibhag" element={<Prabandhan />} />
       <Route path="/event" element={<Event />} />
+      <Route path="/past-event" element={<PastEvent />} />
+      <Route path="/event/:id" element={<EventDetails />} />
+      <Route path="/upcoming-event" element={<UpcomingEvent />} />
+      <Route path="/photos" element={<Pic />} />
+      <Route path="/videos" element={<Vid />} />
+      <Route path="/press-release" element={<PressRelease />} />
+      <Route path="/press-release/:id" element={<PressDetails />} />
+      <Route path="/media" element={<MediaPage />} />
+      <Route path="/media/digital-media" element={<DigitalPage />} />
+      <Route path="/paper-submission" element={<Submit />} />
+      <Route path="/sponsor" element={<Sponsors />} />
+      <Route path="/wishes-received" element={<Wishes />} />
+      <Route path="/shikshaMahakumbh2025" element={<NewProgram />} />
+
+
+
       <Route path="/event-details" element={<EventDetails />} />
       <Route path="/team-members" element={<TeamMembers />} />
       <Route path="/team-member-details" element={<TeamMemberDetails />} />
       <Route
-        path="/students-registrations"
-        element={<StudentRegistrations />}
+        path="/students-registration"
+        element={<StudentRegistration />}
       />
       <Route
         path="/instructor-registrations"

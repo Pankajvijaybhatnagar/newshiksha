@@ -27,18 +27,16 @@ export const HeaderOne = () => {
                   <img width={170} src={Logo} alt="Logo" />
                 </Link>
                 <div className="td_header_social_btns">
-                  <a href="#" className="td_center">
+                  <a href="https://www.facebook.com/shikshamahakumbh?mibextid=ZbWKwL" className="td_center">
                     <i className="fa-brands fa-facebook-f"></i>
                   </a>
-                  <a href="#" className="td_center">
-                    <i className="fa-brands fa-x-twitter"></i>
+                  <a href="https://www.youtube.com/@ShikshaMahakumbh" className="td_center">
+                    <i className="fa-brands fa-youtube"></i>
                   </a>
-                  <a href="#" className="td_center">
+                  <a href="https://www.instagram.com/shikshamahakumbh/profilecard/?igsh=NnljejByOXo4OTZr" className="td_center">
                     <i className="fa-brands fa-instagram"></i>
                   </a>
-                  <a href="#" className="td_center">
-                    <i className="fa-brands fa-pinterest-p"></i>
-                  </a>
+                 
                 </div>
               </div>
 
@@ -48,61 +46,35 @@ export const HeaderOne = () => {
                     <div className="td_nav_list_wrap_in">
                       {/* first three */}
                       <ul className="td_nav_list">
-                        <li className="menu-item-has-children">
+                        <li >
                           <Link to="/">Home</Link>
-                          {/* <ul>
-                            <li>
-                              <Link to="/">University</Link>
-                            </li>
-                            <li>
-                              <Link to="/home-v2">Online Educations</Link>
-                            </li>
-                            <li>
-                              <Link to="/home-v3">Education</Link>
-                            </li>
-                            <li>
-                              <Link to="/home-v4">Kindergarten</Link>
-                            </li>
-                            <li>
-                              <Link to="/home-v5">Modern Language</Link>
-                            </li>
-                            <li>
-                              <Link to="/home-v6">Al-Quran Learning</Link>
-                            </li>
-                            <li>
-                              <Link to="/home-v7">Motivation Speaker</Link>
-                            </li>
-                            <li>
-                              <Link to="/home-v8">Kitchen Coach</Link>
-                            </li>
-                          </ul> */}
+
                         </li>
-                        <li className="menu-item-has-children">
-                          <Link to="/products">Courses</Link>
-                          <ul>
-                            <li>
-                              <Link to="/courses-grid-view">
-                                Courses Grid View
-                              </Link>
-                            </li>
-                            <li>
-                              <Link to="/courses-list-view">
-                                Courses List View
-                              </Link>
-                            </li>
-                            <li>
-                              <Link to="/courses-grid-with-sidebar">
-                                Courses Grid With Sidebar
-                              </Link>
-                            </li>
-                            <li>
-                              <Link to="/course-details">Course Details</Link>
-                            </li>
+                        <li className="menu-item-has-children td_mega_menu">
+                          <Link to="/products">About</Link>
+                          <ul className="absolute left-0 z-50 hidden group-hover:block bg-white shadow-lg p-4 td_mega_wrapper">
+                            <li><Link to="/about">Introduction</Link></li>
+                            <li><Link to="/about/ShikshaKumbh">Shiksha Kumbh</Link></li>
+                            <li><Link to="/about/ShikshaMahaKumbh">Shiksha MahaKumbh</Link></li>
+                            <li><a href="/abhiyanphotoframe.pdf" target="_blank">Abhiyan in Photo Frames</a></li>
+                            <li><a href="/smk 3.pdf" target="_blank">Shiksha Mahakumbh 3.0 in Photo Frame</a></li>
+                            <li><Link to="/about/ShikshaVibhag">शैक्षिक विभाग - Shaikshik Vibha</Link></li>
+                            <li><Link to="/about/VitVibhag">वित्त विभाग - Vitt Vibhag</Link></li>
+                            <li><Link to="/about/pracharVibhag">प्रचार विभाग - Prachar Vibhag</Link></li>
+                            <li><Link to="/about/samparkVibhag">संपर्क विभाग - Sampark Vibhag</Link></li>
+                            <li><Link to="/about/prabandhanVibhag">प्रबंधन विभाग - Prabandhan Vibhag</Link></li>
                           </ul>
                         </li>
                         <li>
-                          <Link to="/about">About</Link>
+                          <Link to="/students-registration">Registration</Link>
                         </li>
+                        <li className="menu-item-has-children td_mega_menu">
+                          <Link to="/students-registration">Program</Link>
+                          <ul className="absolute left-0 z-50 hidden group-hover:block bg-white shadow-lg p-4 ">
+                            <li><Link to="/shikshaMahakumbh2025">SHIKSHA MAHAKUMBH 2025</Link></li>
+                          </ul>
+                        </li>
+
                       </ul>
 
                       <Link className="td_site_branding" to="/">
@@ -115,83 +87,51 @@ export const HeaderOne = () => {
                           <Link to="#">Pages</Link>
                           <ul className="td_mega_wrapper">
                             <li className="menu-item-has-children">
-                              <h4>Inner Pages</h4>
+                              <h4>Gallery</h4>
+                              <li className="menu-item-has-children">
+
+                                <ul>
+                                  <li><Link to="/photos">Photos</Link></li>
+                                  <li><Link to="/videos">Videos</Link></li>
+                                  <li><Link to="/media">Media</Link></li>
+                                  <li><Link to="/press-release">Press Release</Link></li>
+                                </ul>
+                              </li>
+                            </li>
+                            <li className="menu-item-has-children">
+                              <h4>Brochure</h4>
                               <ul>
-                                <li>
-                                  <Link to="/event">Upcoming Event</Link>
-                                </li>
-                                <li>
-                                  <Link to="/event-details">Event Details</Link>
-                                </li>
-                                <li>
-                                  <Link to="/team-members">Team Members</Link>
-                                </li>
-                                <li>
-                                  <Link to="/team-member-details">
-                                    Team Details
-                                  </Link>
-                                </li>
+                                <li><a href="/SM24 Brochure.pdf" target="_blank" rel="noopener noreferrer">Conference</a></li>
+                                <li><Link to="/sponsor">Sponsor</Link></li>
                               </ul>
                             </li>
                             <li className="menu-item-has-children">
-                              <h4>Inner Pages</h4>
+                              <h4>Other Pages</h4>
                               <ul>
                                 <li>
-                                  <Link to="/students-registrations">
-                                    Students Registrations
-                                  </Link>
+                                  <a href="https://pub.dhe.org.in/" target="_blank" rel="noopener noreferrer">
+                                    Publications
+                                  </a>
                                 </li>
-                                <li>
-                                  <Link to="/instructor-registrations">
-                                    Instructor Registrations
-                                  </Link>
-                                </li>
-                                <li>
-                                  <Link to="/signup">Signup</Link>
-                                </li>
-                                <li>
-                                  <Link to="/signin">Signin</Link>
-                                </li>
-                              </ul>
-                            </li>
-                            <li className="menu-item-has-children">
-                              <h4>Shop Pages</h4>
-                              <ul>
-                                <li>
-                                  <Link to="/faqs">Faqs</Link>
-                                </li>
-                                <li>
-                                  <Link to="/cart">Cart</Link>
-                                </li>
-                                <li>
-                                  <Link to="/checkout">Checkout</Link>
-                                </li>
-                                <li>
-                                  <Link to="/error">Error</Link>
-                                </li>
+                                <li><Link to="/committee">Committee</Link></li>
+                               
+                                <li><Link to="/paper-submission">Paper Submission</Link></li>
+                                <li><Link to="/wishes-received">Wishes Received</Link></li>
                               </ul>
                             </li>
                           </ul>
                         </li>
                         <li className="menu-item-has-children">
-                          <Link to="#">Blogs</Link>
-                          <ul>
-                            <li>
-                              <Link to="/blog">Blogs</Link>
-                            </li>
-                            <li>
-                              <Link to="/blog-with-sidebar">
-                                Blog With Sidebar
-                              </Link>
-                            </li>
-                            <li>
-                              <Link to="/blog-details">Blog Details</Link>
-                            </li>
+                          <Link to="#">Events</Link>
+                          <ul className="absolute left-0 z-50 hidden group-hover:block bg-white shadow-lg p-4">
+                            <li><Link to="/past-event">Past Event</Link></li>
+                            <li><Link to="/upcoming-event">Upcoming Event</Link></li>
                           </ul>
                         </li>
                         <li>
                           <Link to="/contact">Contact</Link>
                         </li>
+                        <li><Link to="/merchandise">Merchandise</Link></li>
                       </ul>
                     </div>
                   </div>
@@ -201,9 +141,9 @@ export const HeaderOne = () => {
               {/* right */}
               <div className="td_main_header_right">
                 {/* lang dropdown */}
-                <div className="position-relative td_language_wrap">
+                {/* <div className="position-relative td_language_wrap">
                   <HeaderLanguage />
-                </div>
+                </div> */}
 
                 <div className="position-relative">
                   <HeaderSearch />
