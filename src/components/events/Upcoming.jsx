@@ -4,6 +4,7 @@ import { Link } from 'react-router-dom';
 
 import img1 from '../../assets/img/heroslider/k1.jpeg';
 import img2 from '../../assets/img/heroslider/featurepic.jpg';
+import img3 from '../../assets/img/heroslider/niper.jpg';
 
 export const Upcoming = () => {
   const events = [
@@ -41,6 +42,92 @@ export const Upcoming = () => {
 
   return (
     <div className="td_container_fluid td_py_60 td_bg_gray_4 text-center">
+      {/* Top Info Section with Image and Text */}
+      <div style={{
+        maxWidth: '950px',
+        margin: '0 auto 48px auto',
+        background: 'linear-gradient(120deg, #fff 80%, #ffe3ec 100%)',
+        borderRadius: '28px',
+        boxShadow: '0 12px 40px rgba(137,12,37,0.13)',
+        padding: '40px 36px 32px 36px',
+        textAlign: 'center',
+        border: '1.5px solid #e94e77',
+        position: 'relative',
+      }}>
+        {/* Top Image */}
+        <div style={{
+          width: '340px',
+          height: '240px',
+          background: 'linear-gradient(135deg, #ffe3ec 60%, #fff 100%)',
+          borderRadius: '20px',
+          margin: '0 auto 32px auto',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          boxShadow: '0 6px 32px rgba(137,12,37,0.10)',
+          border: '1.5px solid #e94e77',
+        }}>
+          <img src={img3} alt="Conference" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '20px', boxShadow: '0 2px 12px rgba(137,12,37,0.10)' }} />
+        </div>
+        {/* Text Content */}
+        <h3 style={{
+          color: '#890c25',
+          fontWeight: 'bold',
+          fontSize: '1.7rem',
+          marginBottom: '22px',
+          letterSpacing: '0.7px',
+          lineHeight: '1.3',
+        }}>
+          Multi-Track Conference and Demonstration of Startups /Innovative projects display at Shiksha Mahakumbh 2025<br />[31 Oct - 2 Nov 2025]<br />Venue Partner: <a href="https://niper.gov.in/" target="_blank" rel="noopener noreferrer" style={{ color: '#e94e77', textDecoration: 'underline' }}>NIPER, Mohali</a>
+        </h3>
+        <h4 style={{
+          color: '#e94e77',
+          fontWeight: 'bold',
+          fontSize: '1.18rem',
+          marginBottom: '14px',
+          letterSpacing: '0.7px',
+        }}>Author Guidelines for Paper Submission</h4>
+        <p style={{
+          marginBottom: '16px',
+          color: '#444',
+          fontSize: '1.12rem',
+          lineHeight: '1.8',
+        }}>
+          Authors are invited to submit original, unpublished research papers and recent advancements related to the conference tracks. Submitted papers, limited to 5-6 pages, should be novel contributions with conference track. Each submission must include the paper title, abstract, keywords, author names, affiliations and email address. All manuscripts must strictly adhere to the formatting template provided by the conference, which can be downloaded from IEEE Conference Templates.
+        </p>
+        <ul style={{
+          marginBottom: '16px',
+          paddingLeft: '22px',
+          textAlign: 'left',
+          display: 'inline-block',
+          color: '#555',
+          fontSize: '1.08rem',
+          lineHeight: '1.7',
+        }}>
+          <li>A plagiarism check report may be submitted with similarity index below 15%.</li>
+          <li>The papers must be submitted in PDF format following the specified conference template and should not exceed 5-6 pages. The final camera-ready paper must be submitted before the deadline.</li>
+          <li>All required documents and correspondence should be submitted in a single email within the specified deadlines.</li>
+        </ul>
+        <div style={{
+          marginTop: '22px',
+          color: '#890c25',
+          fontWeight: 'bold',
+          fontSize: '1.13rem',
+          letterSpacing: '0.5px',
+        }}>
+         <a href='#'>Multi Track Conference<br />Call For Papers</a> 
+        </div>
+        <div style={{
+          marginTop: '12px',
+          color: '#e94e77',
+          fontWeight: 'bold',
+          fontSize: '1.13rem',
+          letterSpacing: '0.5px',
+        }}>
+          Demonstration of Projects
+        </div>
+      </div>
+
       {/* Section Header */}
       <div className="td_text_center td_mb_40 mt-5">
         <h2 className="td_fs_40 td_font_bold td_heading_color td_mb_15">Upcoming Events</h2>

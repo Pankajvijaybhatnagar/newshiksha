@@ -95,14 +95,14 @@ export const Media = () => {
         printLink="https://drive.google.com/drive/folders/1SgwPcXC3xRR7V3hAtKJSzeggBB9Xpwnk"
         pastTitle="Shiksha Kumbh"
         pastYear="2023"
-        pastDigitalLink=""
+        pastDigitalLink="/media/digital-media2023"
         pastPrintLink="https://drive.google.com/drive/folders/1SgwPcXC3xRR7V3hAtKJSzeggBB9Xpwnk"
       />
 
       <MediaCard
         title="Shiksha Mahakumbh"
         year="2024"
-        digitalLink="https://drive.google.com/drive/folders/1XnauGu1-dQ2KCpTzvIMHhUwlBF-6GDEN"
+        digitalLink="/media/shikshaMahakumbh2024"
         printLink="https://www.rase.co.in/BatonCeremony"
         pastTitle="Shiksha Mahakumbh"
         pastYear="2023"

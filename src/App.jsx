@@ -50,6 +50,8 @@ import { VitVibhag } from "./pages/about/VitVibhag";
 import { Prachar } from "./pages/about/Prachar";
 import { SamparkVibhag } from "./pages/about/Sampark";
 import { Prabandhan } from "./pages/about/Prabhandh";
+import { Digital2023Page } from "./pages/mediaSection/Digital2023Page";
+import { MahaDigital } from "./pages/mediaSection/MahaDigital";
 
 
 function App() {
@@ -94,6 +96,8 @@ function App() {
       <Route path="/press-release/:id" element={<PressDetails />} />
       <Route path="/media" element={<MediaPage />} />
       <Route path="/media/digital-media" element={<DigitalPage />} />
+      <Route path="/media/digital-media2023" element={<Digital2023Page />} />
+      <Route path="/media/shikshaMahakumbh2024" element={<MahaDigital />} />
       <Route path="/paper-submission" element={<Submit />} />
       <Route path="/sponsor" element={<Sponsors />} />
       <Route path="/wishes-received" element={<Wishes />} />

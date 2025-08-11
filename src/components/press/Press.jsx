@@ -7,6 +7,7 @@ import img3 from '../../assets/img/press/p3.webp';
 import img4 from '../../assets/img/press/p4.webp';
 import img5 from '../../assets/img/press/p5.webp';
 import img6 from '../../assets/img/press/p6.webp';
+import img7 from '../../assets/img/heroslider/niper.jpg'; // Example image, replace with actual path if needed
 const cardsData = [
    {
     title: 'Shiksha Mahakumbh 2024 begins at...',
@@ -52,6 +53,73 @@ const cardsData = [
 export const Press = () => {
   return (
     <>
+      {/* Compact Flex Press Note Section */}
+      <div style={{
+        maxWidth: '950px',
+        margin: '0 auto 48px auto',
+        background: 'linear-gradient(120deg, #fff 80%, #ffe3ec 100%)',
+        borderRadius: '22px',
+        boxShadow: '0 8px 32px rgba(137,12,37,0.13)',
+        padding: '32px 28px',
+        display: 'flex',
+        alignItems: 'center',
+        gap: '32px',
+      }}>
+        {/* Image Left */}
+        <div style={{
+          minWidth: '180px',
+          width: '180px',
+          height: '180px',
+          background: 'linear-gradient(135deg, #ffe3ec 60%, #fff 100%)',
+          borderRadius: '16px',
+          display: 'flex',
+          alignItems: 'center',
+          justifyContent: 'center',
+          boxShadow: '0 4px 24px rgba(137,12,37,0.10)',
+          border: '1.5px solid #e94e77',
+        }}>
+          <img src={img7} alt="Press Note" style={{ width: '100%', height: '100%', objectFit: 'cover', borderRadius: '16px' }} />
+        </div>
+        {/* Content Right */}
+        <div style={{ flex: 1, textAlign: 'left' }}>
+          <h3 style={{
+            color: '#890c25',
+            fontWeight: 'bold',
+            fontSize: '1.25rem',
+            marginBottom: '12px',
+            letterSpacing: '0.5px',
+          }}>
+            Shiksha Mahakumbh 2025 Press Note
+          </h3>
+          <p style={{
+            color: '#444',
+            fontSize: '1.05rem',
+            marginBottom: '8px',
+          }}>
+            Multi-Track Conference & Startup Showcase<br />
+            31 Oct - 2 Nov 2025, NIPER Mohali
+          </p>
+          <p style={{
+            color: '#e94e77',
+            fontWeight: 'bold',
+            fontSize: '1.05rem',
+            marginBottom: '6px',
+          }}>
+            Call for Papers & Project Demos
+          </p>
+          <ul style={{
+            paddingLeft: '18px',
+            color: '#555',
+            fontSize: '0.98rem',
+            marginBottom: '0',
+          }}>
+            <li>Submit original research (5-6 pages, PDF)</li>
+            <li>Follow IEEE template</li>
+            <li>Plagiarism below 15%</li>
+          </ul>
+        </div>
+      </div>
+
       <div className="container" >
         <h1 className='text-center mt-3'>Press Notes</h1>
       </div>
