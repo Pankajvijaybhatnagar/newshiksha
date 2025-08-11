@@ -1,6 +1,6 @@
 import React from "react";
 import { Layout } from "../../layouts/Layout";
-import { Sponsor } from "../../components/sponsor/sponsor";
+import { Sponsor } from "../../components/sponsor/Sponsor";
 
 export const Sponsors = () => {
   return (
