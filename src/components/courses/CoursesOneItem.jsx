@@ -69,7 +69,7 @@ export const CoursesOneItem = ({
 
           <div className="td_card_btn">
             <Link
-              to="/cart"
+              to="/"
               className="td_btn td_style_1 td_radius_10 td_medium"
             >
               <span className="td_btn_in td_white_color td_accent_bg">

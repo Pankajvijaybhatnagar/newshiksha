@@ -13,15 +13,15 @@ export const VideoPlayer = ({ trigger, src }) => {
         contentStyle={{ width: "80%", maxWidth: 1920 }}
         lockScroll
       >
-        <Iframe
-          url={src ?? "https://www.youtube.com/embed/rRid6GCJtgc"}
+        {/* <Iframe
+          url={src ?? "/"}
           width="100%"
           height="400px"
           id=""
           className=""
           display="block"
           position="relative"
-        />
+        /> */}
       </Popup>
     </>
   );
