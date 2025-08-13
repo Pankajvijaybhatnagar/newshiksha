@@ -104,7 +104,7 @@ const Popup = ({ isOpen, onClose, title, children }) => {
           <div className="popup-header">
            <div className="welcome-icon">
   <img 
-    src="src/assets/img/logo_black.png" 
+    src="/img/logo_black.png" 
     alt="Welcome Icon" 
     width="48" 
     height="48" 
