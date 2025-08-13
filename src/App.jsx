@@ -240,21 +240,24 @@ function App() {
     </div>
     
     <div className="popup-actions">
-      <button 
-        onClick={closePopup}
-        className="btn-primary"
-      >
-        <span>अभी जुड़ें</span>
-        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-          <path 
-            d="M5 12h14m-7-7l7 7-7 7" 
-            stroke="currentColor" 
-            strokeWidth="2" 
-            strokeLinecap="round" 
-            strokeLinejoin="round"
-          />
-        </svg>
-      </button>
+    <a 
+  href="https://shikshamahakumb.co.in/registration" 
+  className="btn-primary" 
+  onClick={closePopup}
+  style={{ display: 'inline-flex', alignItems: 'center', textDecoration: 'none' }}
+>
+  <span>अभी जुड़ें</span>
+  <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+    <path 
+      d="M5 12h14m-7-7l7 7-7 7" 
+      stroke="currentColor" 
+      strokeWidth="2" 
+      strokeLinecap="round" 
+      strokeLinejoin="round"
+    />
+  </svg>
+</a>
+
       <button 
         onClick={closePopup}
         className="btn-secondary"
