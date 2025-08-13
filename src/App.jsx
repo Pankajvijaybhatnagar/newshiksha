@@ -102,20 +102,16 @@ const Popup = ({ isOpen, onClose, title, children }) => {
         {/* Content */}
         <div className="popup-inner">
           <div className="popup-header">
-            <div className="welcome-icon">
-              <svg width="48" height="48" viewBox="0 0 24 24" fill="none">
-                <path 
-                  d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z" 
-                  fill="url(#starGradient)"
-                />
-                <defs>
-                  <linearGradient id="starGradient" x1="0%" y1="0%" x2="100%" y2="100%">
-                    <stop offset="0%" style={{stopColor: '#FFD700'}} />
-                    <stop offset="100%" style={{stopColor: '#FFA500'}} />
-                  </linearGradient>
-                </defs>
-              </svg>
-            </div>
+           <div className="welcome-icon">
+  <img 
+    src="src/assets/img/logo_black.png" 
+    alt="Welcome Icon" 
+    width="48" 
+    height="48" 
+    style={{ borderRadius: '4px' }} 
+  />
+</div>
+
             <h2 className="popup-title">{title}</h2>
           </div>
           
@@ -215,59 +211,60 @@ function App() {
       </Routes>
 
       {/* Enhanced Beautiful Popup */}
-      <Popup 
-        isOpen={showPopup} 
-        onClose={closePopup}
-        title="Welcome to Our Platform!"
+    <Popup 
+  isOpen={showPopup} 
+  onClose={closePopup}
+  title="शिक्षा महाकुंभ अभियान"
+>
+  <div className="welcome-content">
+    <p className="welcome-text main">
+      🎉 <strong>शिक्षा महाकुंभ अभियान</strong>
+    </p>
+    <p className="welcome-text secondary">
+      5th Edition is going to be held at NIPER, Mohali from 31st October to 2nd November 2025.
+    </p>
+    
+    <div className="features-list">
+      <div className="feature-item">
+        <span className="feature-icon">📚</span>
+        <span>ज्ञानवर्धक सत्र</span>
+      </div>
+      <div className="feature-item">
+        <span className="feature-icon">🎯</span>
+        <span>विशेष आयोजन</span>
+      </div>
+      <div className="feature-item">
+        <span className="feature-icon">🏆</span>
+        <span>विशेषज्ञ संसाधन</span>
+      </div>
+    </div>
+    
+    <div className="popup-actions">
+      <button 
+        onClick={closePopup}
+        className="btn-primary"
       >
-        <div className="welcome-content">
-          <p className="welcome-text main">
-            🎉 <strong>Welcome to our educational platform!</strong>
-          </p>
-          <p className="welcome-text secondary">
-            Discover amazing courses, exciting events, and valuable educational resources designed just for you.
-          </p>
-          
-          <div className="features-list">
-            <div className="feature-item">
-              <span className="feature-icon">📚</span>
-              <span>Interactive Courses</span>
-            </div>
-            <div className="feature-item">
-              <span className="feature-icon">🎯</span>
-              <span>Live Events</span>
-            </div>
-            <div className="feature-item">
-              <span className="feature-icon">🏆</span>
-              <span>Expert Resources</span>
-            </div>
-          </div>
-          
-          <div className="popup-actions">
-            <button 
-              onClick={closePopup}
-              className="btn-primary"
-            >
-              <span>Get Started</span>
-              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-                <path 
-                  d="M5 12h14m-7-7l7 7-7 7" 
-                  stroke="currentColor" 
-                  strokeWidth="2" 
-                  strokeLinecap="round" 
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </button>
-            <button 
-              onClick={closePopup}
-              className="btn-secondary"
-            >
-              Maybe Later
-            </button>
-          </div>
-        </div>
-      </Popup>
+        <span>अभी जुड़ें</span>
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+          <path 
+            d="M5 12h14m-7-7l7 7-7 7" 
+            stroke="currentColor" 
+            strokeWidth="2" 
+            strokeLinecap="round" 
+            strokeLinejoin="round"
+          />
+        </svg>
+      </button>
+      <button 
+        onClick={closePopup}
+        className="btn-secondary"
+      >
+        बाद में
+      </button>
+    </div>
+  </div>
+</Popup>
+
 
       <style jsx>{`
         .popup-overlay {
