@@ -4,9 +4,9 @@ import React from "react";
 import { useTabs } from "../../lib/hooks/useTabs";
 import { CoursesOneItem } from "./CoursesOneItem";
 
-import courseThumb1 from "../../assets/img/home_1/course_thumb_1.jpg";
-import courseThumb2 from "../../assets/img/home_1/course_thumb_2.jpg";
-import courseThumb3 from "../../assets/img/home_1/course_thumb_3.jpg";
+import courseThumb1 from "../../assets/img/home_1/pic.jpg";
+import courseThumb2 from "../../assets/img/home_1/abc1.jpg";
+import courseThumb3 from "../../assets/img/home_1/abc2.jpg";
 import courseThumb4 from "../../assets/img/home_1/course_thumb_4.jpg";
 import courseThumb5 from "../../assets/img/home_1/course_thumb_5.jpg";
 import courseThumb6 from "../../assets/img/home_1/course_thumb_6.jpg";
@@ -40,7 +40,7 @@ export const CoursesOne = () => {
             <li className="active">
               <a href="#tab_1">School Education</a>
             </li>
-            <li>
+            {/* <li>
               <a href="#tab_2">Higher Education</a>
             </li>
             <li>
@@ -48,7 +48,7 @@ export const CoursesOne = () => {
             </li>
             <li>
               <a href="#tab_4">Workshops & Bootcamps</a>
-            </li>
+            </li> */}
           </ul>
           <div className="td_height_50 td_height_lg_50" />
 

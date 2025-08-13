@@ -27,7 +27,7 @@ export const HomeOne = () => {
       {/* <FeatureOne /> */}
 
       {/* campus */}
-      <CampusOne />
+      {/* <CampusOne /> */}
 
       {/* departments */}
       <DepartmentOne />

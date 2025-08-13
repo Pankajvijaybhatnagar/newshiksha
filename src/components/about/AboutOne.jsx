@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 import aboutImg1 from "../../assets/img/home_1/about_section3.jpg";
 import aboutImg2 from "../../assets/img/home_1/about_section.jpg";
-import circleText from "../../assets/img/home_1/about_circle_text.svg";
+import circleText from "../../assets/img/home_1/niper1.png";
 import { VideoPlayer } from "../videos/VideoPlayer";
 
 export const AboutOne = () => {

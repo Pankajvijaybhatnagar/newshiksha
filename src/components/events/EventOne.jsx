@@ -294,7 +294,7 @@ export const EventOne = () => {
                 </div>
               </div>
             </div>
-
+{/* 
             <div className="td_card td_style_1 td_type_1">
               <Link to="/event-details" className="td_card_thumb d-block">
                 <img src={eventThumb4} alt="Digital transformation in classrooms summit" />
@@ -334,10 +334,10 @@ export const EventOne = () => {
                   </span>
                 </div>
               </div>
-            </div>
+            </div> */}
 
             {/* second set (structure kept the same; content diversified) */}
-            <div className="td_card td_style_1 td_type_1">
+            {/* <div className="td_card td_style_1 td_type_1">
               <Link to="/event-details" className="td_card_thumb d-block">
                 <img src={eventThumb2} alt="NEP 2020 implementation clinics" />
                 <i className="fa-solid fa-arrow-up-right-from-square"></i>
@@ -374,9 +374,9 @@ export const EventOne = () => {
                   </span>
                 </div>
               </div>
-            </div>
+            </div> */}
 
-            <div className="td_card td_style_1 td_type_1">
+            {/* <div className="td_card td_style_1 td_type_1">
               <Link to="/event-details" className="td_card_thumb d-block">
                 <img src={eventThumb3} alt="Youth entrepreneurship pitch day" />
                 <i className="fa-solid fa-arrow-up-right-from-square"></i>
@@ -413,9 +413,9 @@ export const EventOne = () => {
                   </span>
                 </div>
               </div>
-            </div>
+            </div> */}
 
-            <div className="td_card td_style_1 td_type_1">
+            {/* <div className="td_card td_style_1 td_type_1">
               <Link to="/event-details" className="td_card_thumb d-block">
                 <img src={eventThumb4} alt="Arts, culture & innovation showcase" />
                 <i className="fa-solid fa-arrow-up-right-from-square"></i>
@@ -454,7 +454,7 @@ export const EventOne = () => {
                   </span>
                 </div>
               </div>
-            </div>
+            </div> */}
           </div>
         </div>
       </div>      
