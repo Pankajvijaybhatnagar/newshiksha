@@ -52,6 +52,10 @@ import { SamparkVibhag } from "./pages/about/Sampark";
 import { Prabandhan } from "./pages/about/Prabhandh";
 import { Digital2023Page } from "./pages/mediaSection/Digital2023Page";
 import { MahaDigital } from "./pages/mediaSection/MahaDigital";
+import { Maha2023Digital} from "./pages/mediaSection/Maha2023Digital";
+import { Merchandise } from "./pages/merchandise/Merchandise";
+import { Conference } from "./pages/confer/Conference";
+import { Committee } from "./pages/commit/Committee";
 
 
 function App() {
@@ -86,6 +90,8 @@ function App() {
       <Route path="/about/pracharVibhag" element={<Prachar />} />
       <Route path="/about/SamparkVibhag" element={<SamparkVibhag />} />
       <Route path="/about/prabandhanVibhag" element={<Prabandhan />} />
+      <Route path="/conference" element={<Conference />} />
+
       <Route path="/event" element={<Event />} />
       <Route path="/past-event" element={<PastEvent />} />
       <Route path="/event/:id" element={<EventDetails />} />
@@ -98,10 +104,13 @@ function App() {
       <Route path="/media/digital-media" element={<DigitalPage />} />
       <Route path="/media/digital-media2023" element={<Digital2023Page />} />
       <Route path="/media/shikshaMahakumbh2024" element={<MahaDigital />} />
+      <Route path="/media/shikshaMahakumbh2023" element={<Maha2023Digital />} />
+      <Route path="/merchandise" element={<Merchandise />} />
       <Route path="/paper-submission" element={<Submit />} />
       <Route path="/sponsor" element={<Sponsors />} />
       <Route path="/wishes-received" element={<Wishes />} />
       <Route path="/shikshaMahakumbh2025" element={<NewProgram />} />
+      <Route path="/committee" element={<Committee />} />
 
 
 

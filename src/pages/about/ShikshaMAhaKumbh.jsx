@@ -6,7 +6,7 @@ export const ShikhsaMahaKumbh = () => {
   return (
     <Layout
       breadcrumbTitle={"Shiksha Mahakumbh 2025"}
-      breadcrumbSubtitle={"contribute to our cause"}
+      
     >
       <ShikshaMaha />
     </Layout>

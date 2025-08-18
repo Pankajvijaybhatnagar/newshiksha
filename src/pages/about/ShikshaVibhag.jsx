@@ -5,8 +5,8 @@ import { Vibhag1 } from "../../components/about/Vibhag1";
 export const ShikhsaVibhag = () => {
   return (
     <Layout
-      breadcrumbTitle={"Shiksha Mahakumbh 2025"}
-      breadcrumbSubtitle={"contribute to our cause"}
+      breadcrumbTitle={"Shaikshik Vibha"}
+      
     >
       <Vibhag1 />
     </Layout>

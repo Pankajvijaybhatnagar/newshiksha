@@ -1,14 +1,14 @@
 import React from "react";
 import { Layout } from "../../layouts/Layout";
-import { Vibhag4 } from "../../components/about/Vibhag4";
+import { Commit } from "../../components/comit/Commit";
 
-export const SamparkVibhag = () => {
+export const Committee = () => {
   return (
     <Layout
-      breadcrumbTitle={"Sampark Vibhag"}
+      breadcrumbTitle={"Committee"}
       breadcrumbSubtitle={"contribute to our cause"}
     >
-      <Vibhag4 />
+      <Commit />
     </Layout>
   );
 };
