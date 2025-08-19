@@ -1,7 +1,7 @@
 import React from "react";
 import { Layout } from "../../layouts/Layout";
 
-import contactImg from "../../assets/img/shiksha logo.jpg";
+import contactImg from "/img/logo_black.png";
 
 export const Contact = () => {
   return (
@@ -13,7 +13,7 @@ export const Contact = () => {
             <div className="col-xxl-10 offset-xxl-1">
               <div className="row align-items-center td_gap_y_40">
                 <div className="col-lg-7">
-                  <img src={contactImg} alt="Contact" className="w-100 bg-black" style={{height:"450px" , width:"400px"}}/>
+                  <img src={contactImg} alt="Contact" className="w-100 " />
                 </div>
                 <div className="col-xl-4 offset-xl-1 col-lg-5">
                   <div className="td_contact_info">
@@ -36,7 +36,7 @@ export const Contact = () => {
                         <a>172 408 7787 </a>&nbsp;
                       </p>
                       <p className="td_fs_18 td_heading_color td_medium mb-0 td_opacity_7">
-                        <a href="mailto:info@gmail.com">info@shikshamahakumbh.com</a>
+                        <a href="mailto:info@shikshamahakumbh.com">info@shikshamahakumbh.com</a>
                       </p>
                     </div>
                   </div>

@@ -21,7 +21,7 @@ export const HomeOne = () => {
       <AboutOne />
 
       {/* popular */}
-      <CoursesOne />
+      {/* <CoursesOne /> */}
 
       {/* feature */}
       {/* <FeatureOne /> */}
