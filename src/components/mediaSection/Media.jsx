@@ -106,7 +106,7 @@ export const Media = () => {
         printLink="https://www.rase.co.in/BatonCeremony"
         pastTitle="Shiksha Mahakumbh"
         pastYear="2023"
-        pastDigitalLink=""
+        pastDigitalLink="/media/shikshaMahakumbh2023"
         pastPrintLink="https://drive.google.com/drive/folders/1SgwPcXC3xRR7V3hAtKJSzeggBB9Xpwnk"
       />
     </div>

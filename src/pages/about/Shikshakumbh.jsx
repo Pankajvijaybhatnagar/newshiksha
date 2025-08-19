@@ -5,8 +5,8 @@ import { Shiksha } from "../../components/about/Shiksha";
 export const ShikhsaKumbh = () => {
   return (
     <Layout
-      breadcrumbTitle={"Shiksha Mahakumbh 2025"}
-      breadcrumbSubtitle={"contribute to our cause"}
+      breadcrumbTitle={"Shiksha Kumbh 2025"}
+      
     >
       <Shiksha />
     </Layout>

@@ -6,10 +6,9 @@ import { Wish } from "../../components/wishes/Wish";
 export const Wishes = () => {
   return (
     <Layout
-      title="Wishes"
-    //   image={wishesImg}
-    >
-      <Wish />
-    </Layout>
+          breadcrumbTitle={"Wishes Received"}
+        >
+          <Wish />
+        </Layout>
   );
 };

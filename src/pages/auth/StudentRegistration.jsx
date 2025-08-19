@@ -21,8 +21,7 @@ export const StudentRegistration = () => {
 
   return (
     <Layout
-      breadcrumbTitle={"Students Registrations"}
-      breadcrumbSubtitle={"Students Registrations"}
+      breadcrumbTitle={"Students Registration"}
     >
       <style>{mediaQuery}</style>
       <section>

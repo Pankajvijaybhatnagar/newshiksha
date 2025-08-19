@@ -5,8 +5,7 @@ import { Sponsor } from "../../components/sponsor/Sponsor";
 export const Sponsors = () => {
   return (
     <Layout
-      breadcrumbTitle={"sponsor"}
-      breadcrumbSubtitle={"contribute to our cause"}
+      breadcrumbTitle={"Sponsor"}
     >
       <Sponsor />
     </Layout>

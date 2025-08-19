@@ -6,10 +6,9 @@ import { Submission } from "../../components/paper submission/Submission";
 export const Submit = () => {
   return (
     <Layout
-      title={"Paper Submission"}
-    //   image={Img}
-    >
-      <Submission />
-    </Layout>
+          breadcrumbTitle={"Paper Submission"}
+        >
+          <Submission />
+        </Layout>
   );
 };

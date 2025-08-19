@@ -101,7 +101,7 @@ export const HeaderOne = () => {
                             <li className="menu-item-has-children">
                               <h4>Brochure</h4>
                               <ul>
-                                <li><a href="/SM24 Brochure.pdf" target="_blank" rel="noopener noreferrer">Conference</a></li>
+                                <li><a href="/conference" target="_blank" rel="noopener noreferrer">Conference</a></li>
                                 <li><Link to="/sponsor">Sponsor</Link></li>
                               </ul>
                             </li>
