@@ -66,7 +66,7 @@ export const HeaderOne = () => {
                           </ul>
                         </li>
                         <li>
-                          <Link to="/students-registration">Registration</Link>
+                          <Link to="https://shikshamahakumb.co.in/registration">Registration</Link>
                         </li>
                         <li className="menu-item-has-children td_mega_menu">
                           <Link to="/students-registration">Program</Link>
