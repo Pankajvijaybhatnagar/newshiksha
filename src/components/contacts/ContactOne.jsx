@@ -36,7 +36,7 @@ export const ContactOne = () => {
                         <a>172 408 7787 </a>&nbsp;
                       </p>
                       <p className="td_fs_18 td_heading_color td_medium mb-0 td_opacity_7">
-                        <a href="mailto:info@gmail.com">info@shikshamahakumbh.com</a>
+                        <a href="mailto:info@shikshamahakumbh.com">info@shikshamahakumbh.com</a>
                       </p>
                     </div>
                   </div>

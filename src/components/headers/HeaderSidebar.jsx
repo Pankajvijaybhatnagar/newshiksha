@@ -27,13 +27,15 @@ export const HeaderSidebar = ({ showSidebar, toggleSidebar }) => {
             <li>
               <i className="fa-solid fa-phone"></i>
               <span>
-                <a href="tel:+444547800112">+91 9417050631</a>
+                <a href="tel:+91 7903431900">+91 7903431900   </a> <br />
+                <a href="tel:+91 9463231250">  +91 9463231250  </a><br />
+                <a href="tel:172 408 7787"> 172 408 7787  </a>
               </span>
             </li>
             <li>
               <i className="fa-solid fa-envelope"></i>
               <span>
-                <a href="mailto:example@gmail.com">example@gmail.com</a>
+                <a href="info@shikshamahakumbh.com">info@shikshamahakumbh.com</a>
               </span>
             </li>
             <li>

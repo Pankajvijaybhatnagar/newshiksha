@@ -48,7 +48,7 @@ export const VideoOne = () => {
               Email Us:
             </p>
             <h3 className="td_fs_36 mb-0 td_white_color">
-              <a href="mailto:hello@campus.edu">shikshamahakumbh23@gmail.com</a>
+              <a href="mailto:info@shikshamahakumbh.com">info@shikshamahakumbh.com</a>
             </h3>
           </div>
           <div className="td_contact_box_or td_fs_24 td_medium td_white_bg td_white_bg td_center rounded-circle td_accent_color">
@@ -59,7 +59,7 @@ export const VideoOne = () => {
               Call Us:
             </p>
             <h3 className="td_fs_36 mb-0 td_white_color">
-              <a href="tel:+919876543210">+91 9463231250</a>
+              <a href="tel:+919876543210">7903431900, 9463231250</a>
             </h3>
           </div>
         </div>

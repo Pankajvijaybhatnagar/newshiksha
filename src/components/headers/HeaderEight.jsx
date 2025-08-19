@@ -159,7 +159,7 @@ export const HeaderEight = () => {
                             <h4>Inner Pages</h4>
                             <ul>
                               <li>
-                                <Link to="/students-registrations">
+                                <Link to="https://shikshamahakumb.co.in/registration">
                                   Students Registrations
                                 </Link>
                               </li>

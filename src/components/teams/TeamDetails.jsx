@@ -66,7 +66,7 @@ export const TeamDetails = () => {
                         />
                       </svg>
                     </i>
-                    <a href="mailto:info@gmail.com">info@gmail.com</a>
+                    <a href="mailto:info@shikshamahakumbh.com">info@shikshamahakumbh.com</a>
                   </li>
                   <li>
                     <i className="td_team_member_contact_icon td_center td_accent_color">
