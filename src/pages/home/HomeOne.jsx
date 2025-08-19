@@ -10,18 +10,20 @@ import { EventOne } from "../../components/events/EventOne";
 import { TestimonialOne } from "../../components/testimonials/TestimonialOne";
 import { BlogOne } from "../../components/blogs/BlogOne";
 import { CoursesOne } from "../../components/courses/CoursesOne";
+import { VideoTwo } from "../../components/videos/VideoTwo";
 
 export const HomeOne = () => {
   return (
     <Layout header={1} footer={1}>
       {/* hero */}
       <HeroOne />
-
+      
+   <VideoTwo/>
       {/* about */}
       <AboutOne />
 
       {/* popular */}
-      <CoursesOne />
+      {/* <CoursesOne /> */}
 
       {/* feature */}
       {/* <FeatureOne /> */}
