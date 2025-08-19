@@ -11,6 +11,7 @@ import { TestimonialOne } from "../../components/testimonials/TestimonialOne";
 import { BlogOne } from "../../components/blogs/BlogOne";
 import { CoursesOne } from "../../components/courses/CoursesOne";
 import { VideoTwo } from "../../components/videos/VideoTwo";
+import { AboutSix } from "../../components/about/AboutSix";
 
 export const HomeOne = () => {
   return (
@@ -34,11 +35,13 @@ export const HomeOne = () => {
       {/* departments */}
       <DepartmentOne />
 
+      <AboutSix />
       {/* video */}
       <VideoOne />
 
       {/* event schedule */}
       <EventOne />
+       
 
       {/* testimonial */}
       {/* <TestimonialOne /> */}
