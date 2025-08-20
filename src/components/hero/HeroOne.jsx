@@ -172,7 +172,7 @@ export const HeroOne = () => {
             data-wow-delay="0.35s"
           >
             <span className="td_btn_in td_white_color td_accent_bg">
-              <span>Apply for Upcoming Edition</span>
+              <span>Register to Participate in Shiksha Mahakumbh 2025</span>
               <svg
                 width="19"
                 height="20"
