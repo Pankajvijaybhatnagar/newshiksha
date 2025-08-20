@@ -133,7 +133,7 @@ export const DepartmentOne = () => {
               </svg>
             </div>
             <h3 className="td_iconbox_title mb-0 td_medium td_fs_36">
-              Computer Science
+             Law
             </h3>
           </div>
           <div

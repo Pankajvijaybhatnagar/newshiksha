@@ -87,7 +87,7 @@ export const AboutOne = () => {
                 </ul>
               </div>
               <Link
-                to="/courses-grid-view"
+                to="/"
                 className="td_btn td_style_1 td_radius_10 td_medium"
               >
                 <span className="td_btn_in td_white_color td_accent_bg">
