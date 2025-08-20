@@ -223,6 +223,7 @@ function App() {
       <Route path="/past-event" element={<PastEvent />} />
       <Route path="/event/:id" element={<EventDetails />} />
       <Route path="/upcoming-event" element={<UpcomingEvent />} />
+      <Route path="/upcoming-event/shiksha-mahakumbh-2025" element={<UpcomingEvent />} />
       <Route path="/photos" element={<Pic />} />
       <Route path="/videos" element={<Vid />} />
       <Route path="/press-release" element={<PressRelease />} />

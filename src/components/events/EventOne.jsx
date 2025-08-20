@@ -18,40 +18,40 @@ export const EventOne = () => {
       location: "	NIPER Mohali, Punjab",
       image: eventThumb1,
       isFeatured: true,
-      link: "/"
+      link: "/upcoming-event/shiksha-mahakumbh-2025"
     },
     {
       id: 2,
-      title: "Shiksha Mahakumbh 2025",
+      title: "International Conference on the Indian Education System for Global Development",
       description: "Deep dive into policy frameworks and educational reforms with industry experts and government officials.",
-      date: "Will be updated soon",
+      date: "December 16 -17, 2024",
       time: "12:30 pm – 2:00 pm",
-      location: "	Jawaharlal Nehru University, New Delhi",
+      location: "	 Kurukshetra University",
       image: eventThumb2,
       isFeatured: false,
-      link: "/"
+      link: "/event/1"
     },
     {
       id: 3,
-      title: "Shiksha Kumbh 2025",
+      title: "Role of Academic-driven Startups in Developing Economy of J&K",
       description: "Showcase of vocational training programs and apprenticeship opportunities for students and professionals.",
-      date: "Will be updated soon",
+      date: "June 29-30, 2024",
       time: "10:00 am",
-      location: "	Indian Institute of Technology Jammu",
+      location: "	National Institute of Technology Srinagar",
       image: eventThumb3,
       isFeatured: false,
-      link: "/"
+      link: "/event/2"
     },
     {
       id: 4,
-      title: "Digital Transformation in Classrooms Summit",
+      title: "Role of Academic-driven Startups in Economy",
       description: "Exploring innovative technologies and digital tools revolutionizing modern education.",
-      date: "Feb 13, 2025",
+      date: "December 20, 2023",
       time: "03:00 pm",
-      location: "Innovation Hall, Bhopal",
+      location: "National Institute of Technology Kurukshetra",
       image: eventThumb4,
       isFeatured: false,
-      link: "/"
+      link: "/event/3"
     },
     // {
     //   id: 5,
@@ -203,7 +203,9 @@ export const EventOne = () => {
   // Regular Event Component
   const RegularEventCard = ({ event }) => (
     <div className="td_card td_style_1 td_type_1">
-      <Link to={event.link} className="td_card_thumb d-block">
+      <Link to={event.link} style={{
+        height:160
+      }} className="td_card_thumb d-block">
         <img src={event.image} alt={event.title} />
         <i className="fa-solid fa-arrow-up-right-from-square"></i>
       </Link>

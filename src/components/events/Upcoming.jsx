@@ -8,25 +8,25 @@ import img3 from '../../assets/img/heroslider/niper.jpg';
 
 export const Upcoming = () => {
   const events = [
-    {
-      id: 5,
-      title: "Shiksha Mahakumbh 2025",
-      description: "An international conference exploring India’s educational values, innovations, and reforms to shape a globally empowered education ecosystem. An international conference s",
-      date: "Will be updated soon",
-      venue: "		Jawaharlal Nehru University",
+    // {
+    //   id: 5,
+    //   title: "Shiksha Mahakumbh 2025",
+    //   description: "An international conference exploring India’s educational values, innovations, and reforms to shape a globally empowered education ecosystem. An international conference s",
+    //   date: "Will be updated soon",
+    //   venue: "		Jawaharlal Nehru University",
       
-      image: img2,
+    //   image: img2,
       
-    },
-    {
-      id: 6,
-      title: "Shiksha Kumbh 2025",
-      description: "Academic-driven startups in J&K empower youth, foster innovation, and boost the regional economy through research-based entrepreneurship and skill-driven development.",
-      date: "		Will be updated soon",
-      venue: "		Indian Institute of Technology Jammu",
+    // },
+    // {
+    //   id: 6,
+    //   title: "Shiksha Kumbh 2025",
+    //   description: "Academic-driven startups in J&K empower youth, foster innovation, and boost the regional economy through research-based entrepreneurship and skill-driven development.",
+    //   date: "		Will be updated soon",
+    //   venue: "		Indian Institute of Technology Jammu",
       
-      image: img1,
-    },
+    //   image: img1,
+    // },
    
   ];
 
@@ -129,12 +129,12 @@ export const Upcoming = () => {
       </div>
 
       {/* Section Header */}
-      <div className="td_text_center td_mb_40 mt-5">
+      {/* <div className="td_text_center td_mb_40 mt-5">
         <h2 className="td_fs_40 td_font_bold td_heading_color td_mb_15">Upcoming Events</h2>
         <p className="td_fs_18 td_body_color ">
           Discover amazing events, conferences, and workshops happening near you
         </p>
-      </div>    
+      </div>     */}
 
       {/* Cards Grid */}
       <div style={{ display: 'flex', flexWrap: 'wrap', justifyContent: 'center', gap: '50px' }}>
