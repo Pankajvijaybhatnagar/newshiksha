@@ -19,7 +19,7 @@ export const FooterOne = () => {
               <ul className="td_footer_address_widget td_medium td_mp_0">
                 <li>
                   <i className="fa-solid fa-phone-volume"></i>
-                  <a href="cal:+91 7903431900">+91 7903431900</a>
+                  <a href="cal:‪+91 7903431900‬">‪+91 7903431900‬</a>
                 </li>
                 <li>
                   <i className="fa-solid fa-location-dot"></i>Plot No. 1, Sector 71, Sahibzada Ajit Singh Nagar, Punjab 160071
@@ -37,13 +37,13 @@ export const FooterOne = () => {
                   <Link to="/">Home</Link>
                 </li>
                 <li>
-                  <Link to="/">Journals</Link>
+                  <Link to="https://shikshamahakumb.co.in/registration">Registration</Link>
                 </li>
                 <li>
-                  <Link to="/">Proceedings</Link>
+                  <Link to="/upcoming-event">Upcoming Events</Link>
                 </li>
                 <li>
-                  <Link to="/">Upcoming Events</Link>
+                  <Link to="/contact">Contact</Link>
                 </li>
                
                 {/* <li>
@@ -59,16 +59,16 @@ export const FooterOne = () => {
               </h2>
               <ul className="td_footer_widget_menu">
                 <li>
-                  <Link to="/">Past Events</Link>
+                  <Link to="/past-event">Past Events</Link>
                 </li>
                 <li>
-                  <Link to="/">Media</Link>
+                  <Link to="/media">Media</Link>
                 </li>
                 <li>
-                  <Link to="/">Academic Council</Link>
+                  <Link to="/committee">Committee</Link>
                 </li>
                 <li>
-                  <Link to="/">Accomodation</Link>
+                  <Link to="/conference">Conference</Link>
                 </li>
                 {/* <li>
                   <Link to="/">Web design</Link>
@@ -140,5 +140,5 @@ export const FooterOne = () => {
         </div>
       </div>
     </footer>
-  );
+  );
 };
