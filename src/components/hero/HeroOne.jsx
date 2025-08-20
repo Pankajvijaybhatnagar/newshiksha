@@ -164,82 +164,68 @@ export const HeroOne = () => {
       </section>
 
       <div className="container">
-        <div className="td_hero_btn_group">
-          <Link
-            to="/https://shikshamahakumb.co.in/registration"
-            className="td_btn td_style_1 td_radius_10 td_medium td_fs_20 wow fadeInUp"
-            data-wow-duration="0.9s"
-            data-wow-delay="0.35s"
-          >
-            <span className="td_btn_in td_white_color td_accent_bg">
-              <span>Register to Participate in Shiksha Mahakumbh 2025</span>
-              <svg
-                width="19"
-                height="20"
-                viewBox="0 0 19 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M15.1575 4.34302L3.84375 15.6567"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-                <path
-                  d="M15.157 11.4142C15.157 11.4142 16.0887 5.2748 15.157 4.34311C14.2253 3.41142 8.08594 4.34314 8.08594 4.34314"
-                  stroke="currentColor"
-                  strokeWidth="1.5"
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                />
-              </svg>
-            </span>
-          </Link>
-          <Link
-            to="/https://shikshamahakumb.co.in/exhibition"
-            className="td_btn td_style_1 td_radius_10 td_medium td_fs_20 wow fadeInUp"
-            data-wow-duration="0.9s"
-            data-wow-delay="0.35s"
-          >
-            <span className="td_btn_in td_white_color td_accent_bg">
-              <span>Demonstration of Startups /Innovative projects display at Shiksha Mahakumbh 2025</span>
-              <svg
-                width="21"
-                height="20"
-                viewBox="0 0 21 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                <path
-                  d="M10.7945 12.2734H8.95703C8.74129 12.2734 8.56641 12.4484 8.56641 12.6641V14.768C8.56641 14.9837 8.74129 15.1587 8.95703 15.1587H10.7945C11.0102 15.1587 11.1851 14.9837 11.1851 14.768V12.6641C11.1851 12.4483 11.0102 12.2734 10.7945 12.2734ZM10.4038 14.3774H9.34766V13.0547H10.4038V14.3774Z"
-                  fill="currentColor"
-                />
-              </svg>
-            </span>
-          </Link>
-          <Link
-            to="#"
-            className="td_btn td_style_1 td_radius_10 td_medium td_fs_20 wow fadeInUp"
-            data-wow-duration="0.9s"
-            data-wow-delay="0.35s"
-          >
-            <span className="td_btn_in td_white_color td_accent_bg">
-              <span>Chat With Our Team</span>
-              <svg
-                width="21"
-                height="20"
-                viewBox="0 0 21 20"
-                fill="none"
-                xmlns="http://www.w3.org/2000/svg"
-              >
-                {/* SVG chat icon kept intact */}
-              </svg>
-            </span>
-          </Link>
-        </div>
-      </div>
+  <div className="td_hero_btn_group">
+    <Link
+      to="https://shikshamahakumb.co.in/registration"
+      className="td_btn td_style_1 td_radius_10 td_medium td_fs_20 wow fadeInUp"
+      data-wow-duration="0.9s"
+      data-wow-delay="0.35s"
+    >
+      <span className="td_btn_in td_white_color td_accent_bg">
+        <span>Register Now Shiksha Mahakumb 2025</span>
+        <svg
+          width="19"
+          height="20"
+          viewBox="0 0 19 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M15.1575 4.34302L3.84375 15.6567"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+          <path
+            d="M15.157 11.4142C15.157 11.4142 16.0887 5.2748 15.157 4.34311C14.2253 3.41142 8.08594 4.34314 8.08594 4.34314"
+            stroke="currentColor"
+            strokeWidth="1.5"
+            strokeLinecap="round"
+            strokeLinejoin="round"
+          />
+        </svg>
+      </span>
+    </Link>
+
+    <Link
+      to="https://shikshamahakumb.co.in/exhibition"
+      className="td_btn td_style_1 td_radius_10 td_medium td_fs_20 wow fadeInUp"
+      data-wow-duration="0.9s"
+      data-wow-delay="0.35s"
+    >
+      <span className="td_btn_in td_white_color td_accent_bg">
+        <span>Exhibition Shiksha Mahakumb 2025 </span>
+        <svg
+          width="21"
+          height="20"
+          viewBox="0 0 21 20"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            d="M10.7945 12.2734H8.95703C8.74129 12.2734 8.56641 12.4484 8.56641 12.6641V14.768C8.56641 14.9837 8.74129 15.1587 8.95703 15.1587H10.7945C11.0102 15.1587 11.1851 14.9837 11.1851 14.768V12.6641C11.1851 12.4483 11.0102 12.2734 10.7945 12.2734ZM10.4038 14.3774H9.34766V13.0547H10.4038V14.3774Z"
+            fill="currentColor"
+          />
+        </svg>
+      </span>
+    </Link>
+
+   
+     
+  </div>
+</div>
+
 
       <style jsx>{`
         .notice-box {
