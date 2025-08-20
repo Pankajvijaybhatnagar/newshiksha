@@ -73,11 +73,11 @@ export const EventDetailsContent = () => {
 
   return (
     <div>
-      <h2 style={{ textAlign: "center", margin: "3rem" }}>{event.title}</h2>
+      <h2 style={{ textAlign: "center", margin: "3rem" }}></h2>
       <img src={event.image} alt={event.title} style={{ height: "20rem", display: "block", margin: "0 auto" }} />
-      <p style={{ textAlign: "center", }}>{event.description}</p>
+      {/* <p style={{ textAlign: "center", }}>{event.description}</p>
       <p style={{ textAlign: "center", }}>{event.date}</p>
-      <p style={{ textAlign: "center", }}>{event.venue}</p>
+      <p style={{ textAlign: "center", }}>{event.venue}</p> */}
       {/* Unique content for each event below */}
       {event.id === 1 && (
         <div style={{

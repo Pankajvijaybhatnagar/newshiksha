@@ -121,6 +121,9 @@ export const  ShikshaMaha =()=> {
       <div style={contentContainer}>
         <h1 style={headingStyle}>Shiksha MahaKumbh</h1>
         <p style={paragraphStyle}>
+         Shiksha Mahakumbh is the brainchild of Dr. Thakur SKR, a prominent ISRO scientis.
+        </p>
+        <p style={paragraphStyle}>
          The inaugural edition of Shiksha Mahakumbh i.e., National Conference on Recent Advances in School Education (RASE 2023) was organised by Sarvhitkari Educational Society, a prominent unit of Vidya Bharti –Akhil Bhartiya Shiksha Sansthan in the state of Punjab, in collaboration with Dr. B. R. Ambedkar National Institute of Technology Jalandhar. The conference was held from June 9 to 11, 2023, at the esteemed premises of Dr. B. R. Ambedkar National Institute of Technology, Jalandhar.
         </p>
         <p style={paragraphStyle}>
