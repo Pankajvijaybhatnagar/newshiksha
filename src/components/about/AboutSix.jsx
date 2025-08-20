@@ -8,13 +8,27 @@ import aboutIcon1 from "../../assets/img/home_6/about_icon_1.svg";
 export const AboutSix = () => {
   // Academic Partners logos array
   const academicPartners = [
-    { id: 1, name: 'Partner 1', logo: 'https://via.placeholder.com/120x80/4A90E2/white?text=Academic+1' },
-    { id: 2, name: 'Partner 2', logo: 'https://via.placeholder.com/120x80/4A90E2/white?text=Academic+2' },
-    { id: 3, name: 'Partner 3', logo: 'https://via.placeholder.com/120x80/4A90E2/white?text=Academic+3' },
-    { id: 4, name: 'Partner 4', logo: 'https://via.placeholder.com/120x80/4A90E2/white?text=Academic+4' },
-    { id: 5, name: 'Partner 5', logo: 'https://via.placeholder.com/120x80/4A90E2/white?text=Academic+5' },
-    { id: 6, name: 'Partner 6', logo: 'https://via.placeholder.com/120x80/4A90E2/white?text=Academic+6' },
-  ];
+  { id: 1, name: 'Partner 1', logo: '/ourpartners/1.png' },
+  { id: 2, name: 'Partner 2', logo: '/ourpartners/2.png' },
+  { id: 3, name: 'Partner 3', logo: '/ourpartners/3.png' },
+  { id: 4, name: 'Partner 4', logo: '/ourpartners/4.png' },
+  { id: 5, name: 'Partner 5', logo: '/ourpartners/5.png' },
+  { id: 6, name: 'Partner 6', logo: '/ourpartners/6.png' },
+  { id: 7, name: 'Partner 7', logo: '/ourpartners/7.png' },
+  { id: 8, name: 'Partner 8', logo: '/ourpartners/8.jpg' },
+  { id: 9, name: 'Partner 9', logo: '/ourpartners/9.png' },
+  { id: 10, name: 'Partner 10', logo: '/ourpartners/10.png' },
+  { id: 11, name: 'Partner 11', logo: '/ourpartners/11.png' },
+  { id: 12, name: 'Partner 12', logo: '/ourpartners/12.jpg' },
+  { id: 13, name: 'Partner 13', logo: '/ourpartners/13.png' },
+  { id: 14, name: 'Partner 14', logo: '/ourpartners/14.png' },
+  { id: 15, name: 'Partner 15', logo: '/ourpartners/15.jpg' },
+  { id: 16, name: 'Partner 16', logo: '/ourpartners/16.png' },
+  { id: 17, name: 'Partner 17', logo: '/ourpartners/17.jpg' },
+  { id: 18, name: 'Partner 18', logo: '/ourpartners/18.png' },
+  { id: 19, name: 'Partner 19', logo: '/ourpartners/19.png' },
+  { id: 20, name: 'Partner 20', logo: '/ourpartners/20.png' },
+  ]
 
   // Media Partners logos array
   const mediaPartners = [
