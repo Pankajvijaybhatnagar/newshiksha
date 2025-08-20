@@ -57,16 +57,28 @@ const ImageSlider = () => {
     },
     {
       id: 3,
-      image: "/img/Press8.jpg",
+      image: "/pics2025/abc1.jpeg",
       title: "Limited Time - 50% Off", 
       subtitle: "Don't Miss This Exclusive Opportunity"
     },
-    // {
-    //   id: 4,
-    //   image: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&auto=format&fit=crop&w=1200&q=80",
-    //   title: "Try Risk-Free for 7 Days",
-    //   subtitle: "Experience Complete Learning System"
-    // }
+   {
+      id: 4,
+      image: "/pics2025/abc2.jpeg",
+      title: "Limited Time - 50% Off", 
+      subtitle: "Don't Miss This Exclusive Opportunity"
+    },
+    {
+      id: 5,
+      image: "/pics2025/abc3.jpeg",
+      title: "Limited Time - 50% Off", 
+      subtitle: "Don't Miss This Exclusive Opportunity"
+    },
+    {
+      id: 6,
+      image: "/pics2025/abc4.jpeg",
+      title: "Limited Time - 50% Off", 
+      subtitle: "Don't Miss This Exclusive Opportunity"
+    },
   ];
 
   useEffect(() => {
