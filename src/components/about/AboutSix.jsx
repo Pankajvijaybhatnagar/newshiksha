@@ -76,7 +76,7 @@ export const AboutSix = () => {
                 padding: '15px',
                 minWidth: '140px',
                 height: '100px',
-                boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
+                // boxShadow: '0 4px 6px rgba(0, 0, 0, 0.1)',
                 transition: 'box-shadow 0.3s ease'
               }}
               onMouseEnter={(e) => e.target.style.boxShadow = '0 8px 15px rgba(0, 0, 0, 0.15)'}
