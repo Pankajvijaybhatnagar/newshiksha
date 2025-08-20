@@ -32,11 +32,11 @@ export const AboutSix = () => {
 
   // Media Partners logos array
   const mediaPartners = [
-    { id: 1, name: 'Media 1', logo: 'https://via.placeholder.com/120x80/E24A4A/white?text=Media+1' },
-    { id: 2, name: 'Media 2', logo: 'https://via.placeholder.com/120x80/E24A4A/white?text=Media+2' },
-    { id: 3, name: 'Media 3', logo: 'https://via.placeholder.com/120x80/E24A4A/white?text=Media+3' },
-    { id: 4, name: 'Media 4', logo: 'https://via.placeholder.com/120x80/E24A4A/white?text=Media+4' },
-    { id: 5, name: 'Media 5', logo: 'https://via.placeholder.com/120x80/E24A4A/white?text=Media+5' },
+    { id: 1, name: 'Media 1', logo: 'img/BW.jpg' },
+    { id: 2, name: 'Media 2', logo: 'img/dainik.jpg' },
+    { id: 3, name: 'Media 3', logo: 'img/utam.png' },
+    // { id: 4, name: 'Media 4', logo: 'https://via.placeholder.com/120x80/E24A4A/white?text=Media+4' },
+    // { id: 5, name: 'Media 5', logo: 'https://via.placeholder.com/120x80/E24A4A/white?text=Media+5' },
   ];
 
   // Sponsors logos array
