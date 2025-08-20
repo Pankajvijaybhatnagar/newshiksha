@@ -41,14 +41,16 @@ export const AboutSix = () => {
 
   // Sponsors logos array
   const sponsors = [
-    { id: 1, name: 'Sponsor 1', logo: 'https://via.placeholder.com/120x80/50C878/white?text=Sponsor+1' },
-    { id: 2, name: 'Sponsor 2', logo: 'https://via.placeholder.com/120x80/50C878/white?text=Sponsor+2' },
-    { id: 3, name: 'Sponsor 3', logo: 'https://via.placeholder.com/120x80/50C878/white?text=Sponsor+3' },
-    { id: 4, name: 'Sponsor 4', logo: 'https://via.placeholder.com/120x80/50C878/white?text=Sponsor+4' },
-    { id: 5, name: 'Sponsor 5', logo: 'https://via.placeholder.com/120x80/50C878/white?text=Sponsor+5' },
-    { id: 6, name: 'Sponsor 6', logo: 'https://via.placeholder.com/120x80/50C878/white?text=Sponsor+6' },
-    { id: 7, name: 'Sponsor 7', logo: 'https://via.placeholder.com/120x80/50C878/white?text=Sponsor+7' },
-    { id: 8, name: 'Sponsor 8', logo: 'https://via.placeholder.com/120x80/50C878/white?text=Sponsor+8' },
+    { id: 1, name: 'Sponsor 1', logo: 'l1.jpeg' },
+    { id: 2, name: 'Sponsor 2', logo: 'l2.png' },
+    { id: 3, name: 'Sponsor 3', logo: 'l3.jpg' },
+    { id: 4, name: 'Sponsor 4', logo: 'l4.png' },
+    { id: 5, name: 'Sponsor 5', logo: 'l5.png' },
+    { id: 6, name: 'Sponsor 6', logo: 'l6.png' },
+    { id: 7, name: 'Sponsor 7', logo: 'l7.png' },
+    { id: 8, name: 'Sponsor 8', logo: 'l8.png' },
+    { id: 9, name: 'Sponsor 9', logo: 'l9.jpg' },
+    
   ];
 
   // Scrolling logo component
