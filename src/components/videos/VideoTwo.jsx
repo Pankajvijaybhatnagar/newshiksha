@@ -51,7 +51,7 @@ const ImageSlider = () => {
     },
     {
       id: 2,
-      image: "/img/pp3.jpeg", 
+      image: "/img/pp3.jpg", 
       title: "Premium Learning Program",
       subtitle: "Unlock Advanced Features & Personalized Learning"
     },

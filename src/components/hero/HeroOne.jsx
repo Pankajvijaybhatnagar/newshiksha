@@ -124,7 +124,7 @@ export const HeroOne = () => {
               Join a multi-edition national initiative uniting educators, innovators, and policymakers to shape a future-ready, inclusive education system rooted in Indian values.
             </p>
             <Link
-              to="/courses-grid-view"
+              to="/"
               className="td_btn td_style_1 td_radius_10 td_medium"
             >
               <span className="td_btn_in td_white_color td_accent_bg">
@@ -166,7 +166,7 @@ export const HeroOne = () => {
       <div className="container">
         <div className="td_hero_btn_group">
           <Link
-            to="/"
+            to="/https://shikshamahakumb.co.in/registration"
             className="td_btn td_style_1 td_radius_10 td_medium td_fs_20 wow fadeInUp"
             data-wow-duration="0.9s"
             data-wow-delay="0.35s"
@@ -198,13 +198,13 @@ export const HeroOne = () => {
             </span>
           </Link>
           <Link
-            to="/"
+            to="/https://shikshamahakumb.co.in/exhibition"
             className="td_btn td_style_1 td_radius_10 td_medium td_fs_20 wow fadeInUp"
             data-wow-duration="0.9s"
             data-wow-delay="0.35s"
           >
             <span className="td_btn_in td_white_color td_accent_bg">
-              <span>Join the Movement</span>
+              <span>Demonstration of Startups /Innovative projects display at Shiksha Mahakumbh 2025</span>
               <svg
                 width="21"
                 height="20"
