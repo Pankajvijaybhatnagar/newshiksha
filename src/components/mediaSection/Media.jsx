@@ -322,7 +322,7 @@ export const Media = () => {
           title="Shiksha Mahakumbh"
           year="2024"
           digitalLink="/media/shikshaMahakumbh2024"
-          printLink="https://www.rase.co.in/BatonCeremony"
+          printLink="https://www.  /BatonCeremony"
           pastTitle="Shiksha Mahakumbh"
           pastYear="2023"
           pastDigitalLink="/media/shikshaMahakumbh2023"

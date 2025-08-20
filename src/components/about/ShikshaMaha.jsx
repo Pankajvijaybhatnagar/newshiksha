@@ -136,8 +136,8 @@ export const  ShikshaMaha =()=> {
         </p>
         <p style={paragraphStyle}>Shiksha MahaKumbh</p>
       </div> <div style={anchorContainer}>
-        <a href="https://sk23.rase.co.in/" target="_blank" style={anchorStyle}>SK 2023</a>
-        <a href="https://sk24.rase.co.in/" target="_blank"  style={anchorStyle}>SK 2024</a>
+        <a href="https://sk23.  /" target="_blank" style={anchorStyle}>SK 2023</a>
+        <a href="https://sk24.  /" target="_blank"  style={anchorStyle}>SK 2024</a>
         <a href="/shikshaMahakumbh2025" target="_blank" style={anchorStyle}>SK 2025</a>
       </div>
     </>

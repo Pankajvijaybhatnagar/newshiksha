@@ -133,8 +133,8 @@ export const  Shiksha =()=> {
           Shiksha Kumbh promises to be a beacon of educational innovation, collaboration, and empowerment, reinforcing our mission to revitalize education and ensure its alignment with India's timeless cultural and philosophical values. We invite you to join us on this incredible journey as we work together to redefine education and ensure the welfare of all.
         </p>
       </div> <div style={anchorContainer}>
-        <a href="https://sk23.rase.co.in/" target="_blank" style={anchorStyle}>SK 2023</a>
-        <a href="https://sk24.rase.co.in/" target="_blank"  style={anchorStyle}>SK 2024</a>
+        <a href="https://sk23.  /" target="_blank" style={anchorStyle}>SK 2023</a>
+        <a href="https://sk24.  /" target="_blank"  style={anchorStyle}>SK 2024</a>
         <a href="/shikshaMahakumbh2025" target="_blank" style={anchorStyle}>SK 2025</a>
       </div>
     </>

@@ -94,7 +94,7 @@ export const Photo = () => {
         </a>
         <p style={contentStyle}>Baton Ceremony Photos:</p>
         <a
-          href="https://www.rase.co.in/BatonCeremony"
+          href="https://www.  /BatonCeremony"
           target="_blank"
           style={linkStyle}
         >
@@ -102,7 +102,7 @@ export const Photo = () => {
         </a>
         <p style={contentStyle}>Residential Camp Photos:</p>
         <a
-          href="https://www.rase.co.in/ResidentialCamp"
+          href="https://www.  /ResidentialCamp"
           target="_blank"
           style={linkStyle}
         >
