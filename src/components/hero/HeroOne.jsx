@@ -166,7 +166,7 @@ export const HeroOne = () => {
       <div className="container">
         <div className="td_hero_btn_group">
           <Link
-            to="/courses-grid-view"
+            to="/"
             className="td_btn td_style_1 td_radius_10 td_medium td_fs_20 wow fadeInUp"
             data-wow-duration="0.9s"
             data-wow-delay="0.35s"
@@ -198,7 +198,7 @@ export const HeroOne = () => {
             </span>
           </Link>
           <Link
-            to="/signup"
+            to="/"
             className="td_btn td_style_1 td_radius_10 td_medium td_fs_20 wow fadeInUp"
             data-wow-duration="0.9s"
             data-wow-delay="0.35s"
