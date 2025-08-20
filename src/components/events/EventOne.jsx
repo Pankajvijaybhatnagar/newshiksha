@@ -2,9 +2,9 @@ import React from "react";
 import { Link } from "react-router-dom";
 
 import eventThumb1 from "/img/niper3.jpeg";
-import eventThumb2 from "../../assets/img/home_1/event_thumb_2.jpg";
-import eventThumb3 from "../../assets/img/home_1/event_thumb_3.jpg";
-import eventThumb4 from "../../assets/img/home_1/event_thumb_4.jpg";
+import eventThumb2 from "/img/jawahar.jpeg";
+import eventThumb3 from "/img/iitjammu.jpeg";
+import eventThumb4 from "/img/bhopal.jpeg";
 
 export const EventOne = () => {
   // Events data array
@@ -18,7 +18,7 @@ export const EventOne = () => {
       location: "	NIPER Mohali, Punjab",
       image: eventThumb1,
       isFeatured: true,
-      link: "/upcoming-event"
+      link: "/"
     },
     {
       id: 2,
@@ -29,7 +29,7 @@ export const EventOne = () => {
       location: "	Jawaharlal Nehru University, New Delhi",
       image: eventThumb2,
       isFeatured: false,
-      link: "/event-details"
+      link: "/"
     },
     {
       id: 3,
@@ -40,7 +40,7 @@ export const EventOne = () => {
       location: "	Indian Institute of Technology Jammu",
       image: eventThumb3,
       isFeatured: false,
-      link: "/event-details"
+      link: "/"
     },
     {
       id: 4,
@@ -51,7 +51,7 @@ export const EventOne = () => {
       location: "Innovation Hall, Bhopal",
       image: eventThumb4,
       isFeatured: false,
-      link: "/event-details"
+      link: "/"
     },
     // {
     //   id: 5,
