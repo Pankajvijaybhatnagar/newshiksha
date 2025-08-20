@@ -281,7 +281,7 @@ function App() {
       🎉 <strong>शिक्षा महाकुंभ अभियान</strong>
     </p>
     <p className="welcome-text secondary">
-      5th Edition is going to be held at NIPER, Mohali from 31st October to 2nd November 2025.
+      5th Edition is going to be held at NIPER, Mohali from 31<sup>st</sup> October to 2<sup>nd</sup>November 2025.
     </p>
     
     <div className="features-list">

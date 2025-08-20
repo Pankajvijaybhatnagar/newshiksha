@@ -13,7 +13,7 @@ export const EventOne = () => {
       id: 1,
       title: "शिक्षा महाकुंभ 2025",
       description: "इस अभियान का पंचम संस्करण 31 अक्टूबर से 2 नवम्बर 2025 तक राष्ट्रीय औषधि शिक्षा एवं अनुसंधान संस्थान (NIPER) मोहाली में आयोजित किया जाएगा।",
-      date: "31st October – 2nd November 2025",
+      date: "31<sup>st</sup> October – 2<sup>nd</sup>November 2025",
       time: "09:30 am – 11:00 am",
       location: "	NIPER Mohali, Punjab",
       image: eventThumb1,
