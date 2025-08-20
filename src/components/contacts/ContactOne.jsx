@@ -33,7 +33,7 @@ export const ContactOne = () => {
                       <p className="td_fs_18 td_heading_color td_medium td_mb_10 td_opacity_7">
                         <a>+91 7903431900 </a> |&nbsp;&nbsp;
                         <a>+91 9463231250 </a>|&nbsp;&nbsp;<br/>
-                        <a>172 408 7787 </a>&nbsp;
+                        <a>  </a>&nbsp;
                       </p>
                       <p className="td_fs_18 td_heading_color td_medium mb-0 td_opacity_7">
                         <a href="mailto:info@shikshamahakumbh.com">info@shikshamahakumbh.com</a>

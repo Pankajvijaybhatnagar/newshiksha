@@ -29,7 +29,7 @@ export const HeaderSidebar = ({ showSidebar, toggleSidebar }) => {
               <span>
                 <a href="tel:+91 7903431900">+91 7903431900   </a> <br />
                 <a href="tel:+91 9463231250">  +91 9463231250  </a><br />
-                <a href="tel:172 408 7787"> 172 408 7787  </a>
+                <a href="tel: ">    </a>
               </span>
             </li>
             <li>
