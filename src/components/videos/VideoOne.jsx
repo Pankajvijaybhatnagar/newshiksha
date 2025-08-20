@@ -149,7 +149,7 @@ export const VideoOne = () => {
             <p className="td_fs_18 td_light td_white_color td_mb_4">
               Email Us:
             </p>
-            <h3 className="td_fs_36 mb-0 td_white_color">
+            <h3 className="td_fs_25 mb-0 td_white_color">
               <a href="mailto:info@shikshamahakumbh.com">info@shikshamahakumbh.com</a>
             </h3>
           </div>
