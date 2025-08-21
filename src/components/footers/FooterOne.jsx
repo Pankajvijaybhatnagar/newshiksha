@@ -42,6 +42,9 @@ export const FooterOne = () => {
                 <li>
                   <Link to="/upcoming-event">Upcoming Events</Link>
                 </li>
+                 <li>
+                  <Link to="/academic_Council">Academic Council</Link>
+                </li>
                 <li>
                   <Link to="/contact">Contact</Link>
                 </li>
