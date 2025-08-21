@@ -153,7 +153,10 @@ export const EventOne = () => {
             <ul className="td_card_meta td_mp_0 td_fs_18 td_medium td_heading_color">
               <li>
                 <CalendarIcon />
-                <span>{event.date}</span>
+                
+                <span
+                dangerouslySetInnerHTML={{ __html: event.date }}
+                ></span>
               </li>
               <li>
                 <ClockIcon />
