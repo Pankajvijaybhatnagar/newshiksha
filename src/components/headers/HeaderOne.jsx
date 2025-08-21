@@ -52,17 +52,17 @@ export const HeaderOne = () => {
                         </li>
                         <li className="menu-item-has-children td_mega_menu">
                           <Link to="/products">About</Link>
-                          <ul className="absolute left-0 z-50 hidden group-hover:block bg-white shadow-lg p-4 td_mega_wrapper">
-                            <li><Link to="/about">Introduction</Link></li>
-                            <li><Link to="/about/ShikshaKumbh">Shiksha Kumbh</Link></li>
-                            <li><Link to="/about/ShikshaMahaKumbh">Shiksha MahaKumbh</Link></li>
-                            <li><a href="/abhiyanphotoframe.pdf" target="_blank">Abhiyan in Photo Frames</a></li>
-                            <li><a href="/smk 3.pdf" target="_blank">Shiksha Mahakumbh 3.0 in Photo Frame</a></li>
-                            <li><Link to="/about/ShikshaVibhag">शैक्षिक विभाग - Shaikshik Vibha</Link></li>
-                            <li><Link to="/about/VitVibhag">वित्त विभाग - Vitt Vibhag</Link></li>
-                            <li><Link to="/about/pracharVibhag">प्रचार विभाग - Prachar Vibhag</Link></li>
-                            <li><Link to="/about/samparkVibhag">संपर्क विभाग - Sampark Vibhag</Link></li>
-                            <li><Link to="/about/prabandhanVibhag">प्रबंधन विभाग - Prabandhan Vibhag</Link></li>
+                          <ul className="absolute left-0 z-50 hidden group-hover:block shadow-lg p-4 td_mega_wrapper" style={{backgroundColor: '#890c25'}}>
+                            <li><Link to="/about" className="text-white hover:text-gray-200">Introduction</Link></li>
+                            <li><Link to="/about/ShikshaKumbh" className="text-white hover:text-gray-200">Shiksha Kumbh</Link></li>
+                            <li><Link to="/about/ShikshaMahaKumbh" className="text-white hover:text-gray-200">Shiksha MahaKumbh</Link></li>
+                            <li><a href="/abhiyanphotoframe.pdf" target="_blank" className="text-white hover:text-gray-200">Abhiyan in Photo Frames</a></li>
+                            <li><a href="/smk 3.pdf" target="_blank" className="text-white hover:text-gray-200">Shiksha Mahakumbh 3.0 in Photo Frame</a></li>
+                            <li><Link to="/about/ShikshaVibhag" className="text-white hover:text-gray-200">शैक्षिक विभाग - Shaikshik Vibha</Link></li>
+                            <li><Link to="/about/VitVibhag" className="text-white hover:text-gray-200">वित्त विभाग - Vitt Vibhag</Link></li>
+                            <li><Link to="/about/pracharVibhag" className="text-white hover:text-gray-200">प्रचार विभाग - Prachar Vibhag</Link></li>
+                            <li><Link to="/about/samparkVibhag" className="text-white hover:text-gray-200">संपर्क विभाग - Sampark Vibhag</Link></li>
+                            <li><Link to="/about/prabandhanVibhag" className="text-white hover:text-gray-200">प्रबंधन विभाग - Prabandhan Vibhag</Link></li>
                           </ul>
                         </li>
                         <li>
@@ -70,8 +70,8 @@ export const HeaderOne = () => {
                         </li>
                         <li className="menu-item-has-children td_mega_menu">
                           <Link to="/students-registration">Program</Link>
-                          <ul className="absolute left-0 z-50 hidden group-hover:block bg-white shadow-lg p-4 ">
-                            <li><Link to="/shikshaMahakumbh2025">SHIKSHA MAHAKUMBH 2025</Link></li>
+                          <ul className="absolute left-0 z-50 hidden group-hover:block shadow-lg p-4" style={{backgroundColor: '#890c25'}}>
+                            <li><Link to="/shikshaMahakumbh2025" className="text-white hover:text-gray-200">SHIKSHA MAHAKUMBH 2025</Link></li>
                           </ul>
                         </li>
 
@@ -85,47 +85,47 @@ export const HeaderOne = () => {
                       <ul className="td_nav_list">
                         <li className="menu-item-has-children td_mega_menu">
                           <Link to="#">Pages</Link>
-                          <ul className="td_mega_wrapper">
+                          <ul className="td_mega_wrapper" style={{backgroundColor: '#890c25'}}>
                             <li className="menu-item-has-children">
-                              <h4>Gallery</h4>
+                              <h4 className="text-white">Gallery</h4>
                               <li className="menu-item-has-children">
 
                                 <ul>
-                                  <li><Link to="/photos">Photos</Link></li>
-                                  <li><Link to="/videos">Videos</Link></li>
-                                  <li><Link to="/media">Media</Link></li>
-                                  <li><Link to="/press-release">Press Release</Link></li>
+                                  <li><Link to="/photos" className="text-white hover:text-gray-200">Photos</Link></li>
+                                  <li><Link to="/videos" className="text-white hover:text-gray-200">Videos</Link></li>
+                                  <li><Link to="/media" className="text-white hover:text-gray-200">Media</Link></li>
+                                  <li><Link to="/press-release" className="text-white hover:text-gray-200">Press Release</Link></li>
                                 </ul>
                               </li>
                             </li>
                             <li className="menu-item-has-children">
-                              <h4>Brochure</h4>
+                              <h4 className="text-white">Brochure</h4>
                               <ul>
-                                <li><a href="/conference" target="_blank" rel="noopener noreferrer">Conference</a></li>
-                                <li><Link to="/sponsor">Sponsor</Link></li>
+                                <li><a href="/conference" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-200">Conference</a></li>
+                                <li><Link to="/sponsor" className="text-white hover:text-gray-200">Sponsor</Link></li>
                               </ul>
                             </li>
                             <li className="menu-item-has-children">
-                              <h4>Other Pages</h4>
+                              <h4 className="text-white">Other Pages</h4>
                               <ul>
                                 <li>
-                                  <a href="https://pub.dhe.org.in/" target="_blank" rel="noopener noreferrer">
+                                  <a href="https://pub.dhe.org.in/" target="_blank" rel="noopener noreferrer" className="text-white hover:text-gray-200">
                                     Publications
                                   </a>
                                 </li>
-                                <li><Link to="/committee">Committee</Link></li>
+                                <li><Link to="/committee" className="text-white hover:text-gray-200">Committee</Link></li>
                                
-                                <li><Link to="/paper-submission">Paper Submission</Link></li>
-                                <li><Link to="/wishes-received">Wishes Received</Link></li>
+                                <li><Link to="/paper-submission" className="text-white hover:text-gray-200">Paper Submission</Link></li>
+                                <li><Link to="/wishes-received" className="text-white hover:text-gray-200">Wishes Received</Link></li>
                               </ul>
                             </li>
                           </ul>
                         </li>
                         <li className="menu-item-has-children">
                           <Link to="#">Events</Link>
-                          <ul className="absolute left-0 z-50 hidden group-hover:block bg-white shadow-lg p-4">
-                            <li><Link to="/past-event">Past Event</Link></li>
-                            <li><Link to="/upcoming-event">Upcoming Event</Link></li>
+                          <ul className="absolute left-0 z-50 hidden group-hover:block shadow-lg p-4" style={{backgroundColor: '#890c25'}}>
+                            <li><Link to="/past-event" className="text-white hover:text-gray-200">Past Event</Link></li>
+                            <li><Link to="/upcoming-event" className="text-white hover:text-gray-200">Upcoming Event</Link></li>
                           </ul>
                         </li>
                         <li>
@@ -157,6 +157,6 @@ export const HeaderOne = () => {
       </header>
 
       <HeaderSidebar showSidebar={showSidebar} toggleSidebar={toggleSidebar} />
-    </>
-  );
+    </>
+  );
 };
