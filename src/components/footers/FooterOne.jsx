@@ -19,7 +19,8 @@ export const FooterOne = () => {
               <ul className="td_footer_address_widget td_medium td_mp_0">
                 <li>
                   <i className="fa-solid fa-phone-volume"></i>
-                  <a href="cal:‪+91 7903431900‬">‪+91 7903431900‬</a>
+                  <a href="cal:‪+91 7903431900‬">‪+91 7903431900‬</a>,
+                  <a href="cal:+919463231250">‪+91 9463231250‬</a>
                 </li>
                 <li>
                   <i className="fa-solid fa-location-dot"></i>Plot No. 1, Sector 71, Sahibzada Ajit Singh Nagar, Punjab 160071
