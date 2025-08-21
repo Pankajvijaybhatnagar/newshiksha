@@ -137,6 +137,7 @@ export const Media = () => {
     const [showArchive, setShowArchive] = useState(false);
 
     return (
+      
       <div style={sectionStyle}>
         <div style={sectionHeaderStyle}>
           <h2 style={{ fontSize: "2rem", color: "#890c25", fontWeight: "bold", margin: 0 }}>
@@ -311,22 +312,22 @@ export const Media = () => {
           title="Shiksha Kumbh"
           year="2024"
           digitalLink="/media/digital-media"
-          printLink="https://drive.google.com/drive/folders/1SgwPcXC3xRR7V3hAtKJSzeggBB9Xpwnk"
+          printLink="/media/print-media"
           pastTitle="Shiksha Kumbh"
           pastYear="2023"
           pastDigitalLink="/media/digital-media2023"
-          pastPrintLink="https://drive.google.com/drive/folders/1SgwPcXC3xRR7V3hAtKJSzeggBB9Xpwnk"
+          pastPrintLink="/media/print-media"
         />
 
         <MediaSection
           title="Shiksha Mahakumbh"
           year="2024"
           digitalLink="/media/shikshaMahakumbh2024"
-          printLink="https://www.  /BatonCeremony"
+          printLink="/media/print-media"
           pastTitle="Shiksha Mahakumbh"
           pastYear="2023"
           pastDigitalLink="/media/shikshaMahakumbh2023"
-          pastPrintLink="https://drive.google.com/drive/folders/1SgwPcXC3xRR7V3hAtKJSzeggBB9Xpwnk"
+          pastPrintLink="/media/print-media"
         />
       </div>
     </div>

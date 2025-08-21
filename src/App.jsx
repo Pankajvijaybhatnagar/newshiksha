@@ -56,7 +56,8 @@ import { Maha2023Digital} from "./pages/mediaSection/Maha2023Digital";
 import { Merchandise } from "./pages/merchandise/Merchandise";
 import { Conference } from "./pages/confer/Conference";
 import { Committee } from "./pages/commit/Committee";
-
+import { Print } from "./pages/mediaSection/Print";
+import { Academic } from "./pages/academic/Academic";
 
 
 
@@ -230,6 +231,8 @@ function App() {
       <Route path="/press-release/:id" element={<PressDetails />} />
       <Route path="/media" element={<MediaPage />} />
       <Route path="/media/digital-media" element={<DigitalPage />} />
+      <Route path="/media/print-media" element={<Print />} />
+
       <Route path="/media/digital-media2023" element={<Digital2023Page />} />
       <Route path="/media/shikshaMahakumbh2024" element={<MahaDigital />} />
       <Route path="/media/shikshaMahakumbh2023" element={<Maha2023Digital />} />
@@ -239,6 +242,7 @@ function App() {
       <Route path="/wishes-received" element={<Wishes />} />
       <Route path="/shikshaMahakumbh2025" element={<NewProgram />} />
       <Route path="/committee" element={<Committee />} />
+      <Route path="/academic_Council" element={<Academic />} />
 
 
 
