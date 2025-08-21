@@ -49,7 +49,7 @@ export const FooterOne = () => {
                 <li>
                   <Link to="/contact">Contact</Link>
                 </li>
-               
+                
                 {/* <li>
                   <Link to="/privacy">Privacy Policy</Link>
                 </li> */}
@@ -74,9 +74,12 @@ export const FooterOne = () => {
                 <li>
                   <Link to="/conference">Conference</Link>
                 </li>
-                {/* <li>
-                  <Link to="/">Web design</Link>
-                </li> */}
+                <li>
+                  <Link to="/academic-council">Academic Council</Link>
+                </li>
+                <li>
+                  <Link to="/media/print-media">Print media</Link>
+                </li>
                 {/* <li>
                   <Link to="/">Life Coach</Link>
                 </li> */}
