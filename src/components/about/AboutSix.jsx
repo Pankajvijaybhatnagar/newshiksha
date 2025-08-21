@@ -370,7 +370,7 @@ export const AboutSix = () => {
               fontWeight: 'bold', 
               textAlign: 'center', 
               marginBottom: '40px', 
-              color: '#333' 
+              color: '#890c25' 
             }}>
               Academic Partners
             </h2>
@@ -384,7 +384,7 @@ export const AboutSix = () => {
               fontWeight: 'bold', 
               textAlign: 'center', 
               marginBottom: '40px', 
-              color: '#333' 
+              color: '#890c25' 
             }}>
               Media Partners
             </h2>
@@ -398,7 +398,7 @@ export const AboutSix = () => {
               fontWeight: 'bold', 
               textAlign: 'center', 
               marginBottom: '40px', 
-              color: '#333' 
+              color: '#890c25' 
             }}>
               Sponsors
             </h2>
