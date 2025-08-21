@@ -242,7 +242,7 @@ function App() {
       <Route path="/wishes-received" element={<Wishes />} />
       <Route path="/shikshaMahakumbh2025" element={<NewProgram />} />
       <Route path="/committee" element={<Committee />} />
-      <Route path="/academic_Council" element={<Academic />} />
+      <Route path="/academic-council" element={<Academic />} />
 
 
 
