@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
 
 export const VideoTwo = () => {
   const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 1200);
@@ -367,9 +368,23 @@ const NoticeBar = () => {
   }, []);
 
   const notices = [
-    "🎓 2nd Edition of शिक्षा महाकुंभ 2.0 is going to held at Kurukshetra University on December 16-17, 2024",
-    "📢शिक्षा महाकुंभ-2024 (द्वितीय संस्करण) 23 एवं 24 नवम्बर 2024,गीता निकेतन आवासीय विद्यालय, कुरुक्षेत्र",
-    "🏆A Grand Start to Shiksha Mahakumbh 2.0: Baton Ceremony Successfully Concluded Kurukshetra, November 20, 2024",
+    {
+      title: "🎓 शिक्षा महाकुंभ अभियान – 5th Edition is going to be held at NIPER, Mohali from 31-10-25 to 2-11-25",
+      link: "https://shikshamahakumb.co.in/registration",
+      linkText: "click",
+      new:true,
+    },
+    {
+      title: "🎓 2nd Edition of शिक्षा महाकुंभ 2.0 is going to held at Kurukshetra University on December 16-17, 2024",
+
+    },
+    {
+      title: "📢शिक्षा महाकुंभ-2024 (द्वितीय संस्करण) 23 एवं 24 नवम्बर 2024,गीता निकेतन आवासीय विद्यालय, कुरुक्षेत्र"
+    },
+    {
+      title: "🏆A Grand Start to Shiksha Mahakumbh 2.0: Baton Ceremony Successfully Concluded Kurukshetra, November 20, 2024"
+    }
+    
   ];
 
   const isMobile = windowWidth <= 480;
@@ -395,6 +410,7 @@ const NoticeBar = () => {
         margin: '0 auto'
       }}
     >
+      
       {/* Header */}
       <div 
         style={{
@@ -408,7 +424,7 @@ const NoticeBar = () => {
           style={{
             fontSize: isMobile ? '1rem' : isSmallTablet ? '1.1rem' : '1.3rem',
             fontWeight: 'bold',
-            color: '#333',
+            color: '#890c25',
             margin: '0',
             lineHeight: '1.2'
           }}
@@ -440,13 +456,13 @@ const NoticeBar = () => {
             <div 
               key={index}
               style={{
-                backgroundColor: '#f8f9fa',
-                border: '1px solid #dee2e6',
+                backgroundColor: '#ffeaeaff',
+                border: '1px solid #890c25',
                 borderRadius: '4px',
                 padding: isMobile ? '10px' : '12px',
                 fontSize: isMobile ? '12px' : isSmallTablet ? '13px' : '14px',
                 lineHeight: '1.4',
-                color: '#333',
+                color: '#000000ff',
                 transition: 'background-color 0.3s',
                 cursor: 'pointer',
                 wordWrap: 'break-word',
@@ -460,7 +476,23 @@ const NoticeBar = () => {
                 e.target.style.backgroundColor = '#f8f9fa';
               }}
             >
-              {notice}
+              {
+                notice?.new && <img style={{width:'30px'}} src="https://lh3.googleusercontent.com/proxy/UlovrTB8WfaENh3_wgq7NvBS45Y4zkzzaRUPU7HocjPdBFFD9qTKcKN0xoyw7QUys7kYlqWiKs3DempO8-WKPv_lZxwsOaU" alt="" />
+              }
+              {notice?.title}
+              {
+              <Link 
+                to={notice?.link || '#'}
+                style={{
+                  color: '#dc3545',
+                  textDecoration: 'underline',
+                  fontWeight: 'bold',
+                  marginLeft: '4px'
+                }
+              }>
+                {notice?.linkText || 'Learn More'}
+              </Link>
+}
             </div>
           ))}
         </div>
