@@ -1,22 +1,24 @@
 import { defineConfig } from 'vite'
 import react from '@vitejs/plugin-react'
-import { ViteSitemapPlugin } from 'vite-plugin-sitemap'
+import Sitemap from 'vite-plugin-sitemap'   // <-- default export
 
 export default defineConfig({
   plugins: [
     react(),
-    ViteSitemapPlugin({
-      hostname: 'https://www.shikshamahakumbh.com', // ✅ Your domain
-      routes: [
+    Sitemap({
+      hostname: 'https://www.shikshamahakumbh.com',
+      // If your routes are client-side (SPA), list them here:
+      dynamicRoutes: [
         '/', 
         '/about',
         '/registration',
         '/conference',
         '/contact',
-        // 👉 add more routes here as your app grows
+        // add more as needed
       ],
-      changefreq: 'weekly',
-      priority: 0.8,
+      // optional:
+      readable: false,     // compact XML
+      outDir: 'dist',      // where Vercel serves from
     }),
   ],
 })
