@@ -58,6 +58,7 @@ import { Conference } from "./pages/confer/Conference";
 import { Committee } from "./pages/commit/Committee";
 import { Print } from "./pages/mediaSection/Print";
 import { Academic } from "./pages/academic/Academic";
+import { Newform } from "./pages/newform/newform";
 
 
 
@@ -243,6 +244,7 @@ function App() {
       <Route path="/shikshaMahakumbh2025" element={<NewProgram />} />
       <Route path="/committee" element={<Committee />} />
       <Route path="/academic-council" element={<Academic />} />
+      <Route path="/newform" element={<Newform />} />
 
 
 
