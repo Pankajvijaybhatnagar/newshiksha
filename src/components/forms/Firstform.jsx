@@ -64,7 +64,7 @@ export const Firstform = () => {
             margin-bottom: 2rem;
             letter-spacing: 1px;
             text-shadow: 0 2px 12px rgba(137,12,37,0.08);
-            background: linear-gradient(90deg, #890c25 60%, #a59059 100%);
+            background: linear-gradient(90deg, #890c25 60%, #890c25 100%);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
@@ -73,7 +73,7 @@ export const Firstform = () => {
             display: block;
             font-size: 1.1rem;
             font-weight: 600;
-            color: #a59059;
+            color: #890c25;
             margin-bottom: 4px;
             letter-spacing: 0.5px;
             text-align: left;
@@ -102,7 +102,7 @@ export const Firstform = () => {
             max-width: 500px;
             padding: 14px 18px;
             border-radius: 12px;
-            border: 2px solid #a59059;
+            border: 2px solid #890c25;
             background: #fff;
             color: #222;
             font-size: 1.08rem;
@@ -124,7 +124,7 @@ export const Firstform = () => {
           .btn{
               padding: 14px 18px !important;
               color: black !important;
-              background: #a59059 !important;
+              background: #890c25 !important;
               margin-top: 20px !important;
           }
           .h:hover {
@@ -134,7 +134,7 @@ export const Firstform = () => {
           }
       `}</style>
 
-      <div className="td_form_card td_style_1 max-w-4xl mx-auto">
+      <div className="td_form_card td_style_1 max-w-4xl mx-auto border border-danger">
         <div className="td_form_card_in p-6 md:p-10 my">
           <h2 className="td_form_title text-center text-2xl md:text-3xl mb-8">
             Event Registration

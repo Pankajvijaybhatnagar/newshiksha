@@ -37,13 +37,13 @@ import { BlogDetails } from "./pages/blogs/BlogDetails";
 import { Contact } from "./pages/contact/Contact";
 import { PressRelease } from "./pages/press/PressRelease";
 import { PressDetails } from "./pages/press/PressDetails";
-import {MediaPage} from "./pages/mediaSection/MediaPage";
-import {Submit} from "./pages/paper/Submit";
-import {Sponsors} from "./pages/sponsor/Sponsors"; 
-import {DigitalPage} from "./pages/mediaSection/DigitalPage";
+import { MediaPage } from "./pages/mediaSection/MediaPage";
+import { Submit } from "./pages/paper/Submit";
+import { Sponsors } from "./pages/sponsor/Sponsors";
+import { DigitalPage } from "./pages/mediaSection/DigitalPage";
 import { Wishes } from "./pages/wishes/Wishes";
 import { NewProgram } from "./pages/program/NewProgram";
-import {ShikhsaKumbh} from "./pages/about/Shikshakumbh";
+import { ShikhsaKumbh } from "./pages/about/Shikshakumbh";
 import { ShikhsaMahaKumbh } from "./pages/about/ShikshaMAhaKumbh";
 import { ShikhsaVibhag } from "./pages/about/ShikshaVibhag";
 import { VitVibhag } from "./pages/about/VitVibhag";
@@ -52,16 +52,14 @@ import { SamparkVibhag } from "./pages/about/Sampark";
 import { Prabandhan } from "./pages/about/Prabhandh";
 import { Digital2023Page } from "./pages/mediaSection/Digital2023Page";
 import { MahaDigital } from "./pages/mediaSection/MahaDigital";
-import { Maha2023Digital} from "./pages/mediaSection/Maha2023Digital";
+import { Maha2023Digital } from "./pages/mediaSection/Maha2023Digital";
 import { Merchandise } from "./pages/merchandise/Merchandise";
 import { Conference } from "./pages/confer/Conference";
 import { Committee } from "./pages/commit/Committee";
 import { Print } from "./pages/mediaSection/Print";
 import { Academic } from "./pages/academic/Academic";
 import { Newform } from "./pages/newform/newform";
-
-
-
+import AdminHome from "./pages/admin/AdminHome";
 
 // Enhanced Beautiful Popup Component
 const Popup = ({ isOpen, onClose, title, children }) => {
@@ -84,26 +82,30 @@ const Popup = ({ isOpen, onClose, title, children }) => {
   };
 
   return (
-    <div 
-      className={`popup-overlay ${isClosing ? 'closing' : ''}`} 
+    <div
+      className={`popup-overlay ${isClosing ? "closing" : ""}`}
       onClick={handleOverlayClick}
     >
-      <div className={`popup-content ${isClosing ? 'closing' : ''}`}>
+      <div className={`popup-content ${isClosing ? "closing" : ""}`}>
         {/* Decorative background elements */}
         <div className="popup-bg-decoration">
           <div className="decoration-circle circle-1"></div>
           <div className="decoration-circle circle-2"></div>
           <div className="decoration-circle circle-3"></div>
         </div>
-        
+
         {/* Close button */}
-        <button className="popup-close" onClick={handleClose} aria-label="Close popup">
+        <button
+          className="popup-close"
+          onClick={handleClose}
+          aria-label="Close popup"
+        >
           <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
-            <path 
-              d="M18 6L6 18M6 6l12 12" 
-              stroke="currentColor" 
-              strokeWidth="2" 
-              strokeLinecap="round" 
+            <path
+              d="M18 6L6 18M6 6l12 12"
+              stroke="currentColor"
+              strokeWidth="2"
+              strokeLinecap="round"
               strokeLinejoin="round"
             />
           </svg>
@@ -112,45 +114,25 @@ const Popup = ({ isOpen, onClose, title, children }) => {
         {/* Content */}
         <div className="popup-inner">
           <div className="popup-header">
-           <div className="welcome-icon">
-  <img 
-    src="/img/logo_black.png" 
-    alt="Welcome Icon" 
-    width="48" 
-    height="48" 
-    style={{ borderRadius: '4px' }} 
-  />
-</div>
+            <div className="welcome-icon">
+              <img
+                src="/img/logo_black.png"
+                alt="Welcome Icon"
+                width="48"
+                height="48"
+                style={{ borderRadius: "4px" }}
+              />
+            </div>
 
             <h2 className="popup-title">{title}</h2>
           </div>
-          
-          <div className="popup-body">
-            {children}
-          </div>
+
+          <div className="popup-body">{children}</div>
         </div>
       </div>
     </div>
   );
 };
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 function App() {
   useWow();
@@ -173,167 +155,171 @@ function App() {
     setShowPopup(false);
   };
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
   return (
     <>
-    <Routes>
-      <Route path="/" element={<HomeOne />} />
-      <Route path="/home-v2" element={<HomeTwo />} />
-      <Route path="/home-v3" element={<HomeThree />} />
-      <Route path="/home-v4" element={<HomeFour />} />
-      <Route path="/home-v5" element={<HomeFive />} />
-      <Route path="/home-v6" element={<HomeSix />} />
-      <Route path="/home-v7" element={<HomeSeven />} />
-      <Route path="/home-v8" element={<HomeEight />} />
-      <Route path="/courses-grid-view" element={<CoursesGridView />} />
-      <Route path="/courses-list-view" element={<CoursesListView />} />
-      <Route
-        path="/courses-grid-with-sidebar"
-        element={<CoursesGridSidebar />}
-      />
-      <Route path="/course-details" element={<CoursesDetails />} />
-      <Route path="/about" element={<About />} />
-      <Route path="/about/ShikshaKumbh" element={<ShikhsaKumbh />} />
-      <Route path="/about/ShikshaMahaKumbh" element={<ShikhsaMahaKumbh />} />
-      <Route path="/about/ShikshaVibhag" element={<ShikhsaVibhag />} />
-      <Route path="/about/VitVibhag" element={<VitVibhag />} />
-      <Route path="/about/pracharVibhag" element={<Prachar />} />
-      <Route path="/about/SamparkVibhag" element={<SamparkVibhag />} />
-      <Route path="/about/prabandhanVibhag" element={<Prabandhan />} />
-      <Route path="/conference" element={<Conference />} />
+      <Routes>
+        <Route path="/" element={<HomeOne />} />
+        <Route path="/home-v2" element={<HomeTwo />} />
+        <Route path="/home-v3" element={<HomeThree />} />
+        <Route path="/home-v4" element={<HomeFour />} />
+        <Route path="/home-v5" element={<HomeFive />} />
+        <Route path="/home-v6" element={<HomeSix />} />
+        <Route path="/home-v7" element={<HomeSeven />} />
+        <Route path="/home-v8" element={<HomeEight />} />
+        <Route path="/courses-grid-view" element={<CoursesGridView />} />
+        <Route path="/courses-list-view" element={<CoursesListView />} />
+        <Route
+          path="/courses-grid-with-sidebar"
+          element={<CoursesGridSidebar />}
+        />
+        <Route path="/course-details" element={<CoursesDetails />} />
+        <Route path="/about" element={<About />} />
+        <Route path="/about/ShikshaKumbh" element={<ShikhsaKumbh />} />
+        <Route path="/about/ShikshaMahaKumbh" element={<ShikhsaMahaKumbh />} />
+        <Route path="/about/ShikshaVibhag" element={<ShikhsaVibhag />} />
+        <Route path="/about/VitVibhag" element={<VitVibhag />} />
+        <Route path="/about/pracharVibhag" element={<Prachar />} />
+        <Route path="/about/SamparkVibhag" element={<SamparkVibhag />} />
+        <Route path="/about/prabandhanVibhag" element={<Prabandhan />} />
+        <Route path="/conference" element={<Conference />} />
 
-      <Route path="/event" element={<Event />} />
-      <Route path="/past-event" element={<PastEvent />} />
-      <Route path="/event/:id" element={<EventDetails />} />
-      <Route path="/upcoming-event" element={<UpcomingEvent />} />
-      <Route path="/upcoming-event/shiksha-mahakumbh-2025" element={<UpcomingEvent />} />
-      <Route path="/photos" element={<Pic />} />
-      <Route path="/videos" element={<Vid />} />
-      <Route path="/press-release" element={<PressRelease />} />
-      <Route path="/press-release/:id" element={<PressDetails />} />
-      <Route path="/media" element={<MediaPage />} />
-      <Route path="/media/digital-media" element={<DigitalPage />} />
-      <Route path="/media/print-media" element={<Print />} />
+        <Route path="/event" element={<Event />} />
+        <Route path="/past-event" element={<PastEvent />} />
+        <Route path="/event/:id" element={<EventDetails />} />
+        <Route path="/upcoming-event" element={<UpcomingEvent />} />
+        <Route
+          path="/upcoming-event/shiksha-mahakumbh-2025"
+          element={<UpcomingEvent />}
+        />
+        <Route path="/photos" element={<Pic />} />
+        <Route path="/videos" element={<Vid />} />
+        <Route path="/press-release" element={<PressRelease />} />
+        <Route path="/press-release/:id" element={<PressDetails />} />
+        <Route path="/media" element={<MediaPage />} />
+        <Route path="/media/digital-media" element={<DigitalPage />} />
+        <Route path="/media/print-media" element={<Print />} />
 
-      <Route path="/media/digital-media2023" element={<Digital2023Page />} />
-      <Route path="/media/shikshaMahakumbh2024" element={<MahaDigital />} />
-      <Route path="/media/shikshaMahakumbh2023" element={<Maha2023Digital />} />
-      <Route path="/merchandise" element={<Merchandise />} />
-      <Route path="/paper-submission" element={<Submit />} />
-      <Route path="/sponsor" element={<Sponsors />} />
-      <Route path="/wishes-received" element={<Wishes />} />
-      <Route path="/shikshaMahakumbh2025" element={<NewProgram />} />
-      <Route path="/committee" element={<Committee />} />
-      <Route path="/academic-council" element={<Academic />} />
-      <Route path="/newform" element={<Newform />} />
+        <Route path="/media/digital-media2023" element={<Digital2023Page />} />
+        <Route path="/media/shikshaMahakumbh2024" element={<MahaDigital />} />
+        <Route
+          path="/media/shikshaMahakumbh2023"
+          element={<Maha2023Digital />}
+        />
+        <Route path="/merchandise" element={<Merchandise />} />
+        <Route path="/paper-submission" element={<Submit />} />
+        <Route path="/sponsor" element={<Sponsors />} />
+        <Route path="/wishes-received" element={<Wishes />} />
+        <Route path="/shikshaMahakumbh2025" element={<NewProgram />} />
+        <Route path="/committee" element={<Committee />} />
+        <Route path="/academic-council" element={<Academic />} />
+        <Route path="/registration" element={<Newform />} />
 
-
-
-      <Route path="/event-details" element={<EventDetails />} />
-      <Route path="/team-members" element={<TeamMembers />} />
-      <Route path="/team-member-details" element={<TeamMemberDetails />} />
-      <Route
-        path="/students-registration"
-        element={<StudentRegistration />}
-      />
-      <Route
-        path="/instructor-registrations"
-        element={<InstructorRegistrations />}
-      />
-      <Route path="/signup" element={<Signup />} />
-      <Route path="/signin" element={<Signin />} />
-      <Route path="/faqs" element={<Faq />} />
-      <Route path="/cart" element={<Cart />} />
-      <Route path="/checkout" element={<Checkout />} />
-      <Route path="/blog" element={<Blog />} />
-      <Route path="/blog-with-sidebar" element={<BlogWithSidebar />} />
-      <Route path="/blog-details" element={<BlogDetails />} />
-      <Route path="/contact" element={<Contact />} />
-      <Route path="*" element={<Error />} />
-    </Routes>
-
-
-
-
-
+        <Route path="/event-details" element={<EventDetails />} />
+        <Route path="/team-members" element={<TeamMembers />} />
+        <Route path="/team-member-details" element={<TeamMemberDetails />} />
+        <Route
+          path="/students-registration"
+          element={<StudentRegistration />}
+        />
+        <Route
+          path="/instructor-registrations"
+          element={<InstructorRegistrations />}
+        />
+        <Route path="/signup" element={<Signup />} />
+        <Route path="/signin" element={<Signin />} />
+        <Route path="/faqs" element={<Faq />} />
+        <Route path="/cart" element={<Cart />} />
+        <Route path="/checkout" element={<Checkout />} />
+        <Route path="/blog" element={<Blog />} />
+        <Route path="/blog-with-sidebar" element={<BlogWithSidebar />} />
+        <Route path="/blog-details" element={<BlogDetails />} />
+        <Route path="/contact" element={<Contact />} />
+        <Route path="*" element={<Error />} />
 
 
- <Popup 
-  isOpen={showPopup} 
-  onClose={closePopup}
-  title="शिक्षा महाकुंभ अभियान"
->
-  <div className="welcome-content">
-    <p className="welcome-text main">
-      🎉 <strong>शिक्षा महाकुंभ अभियान</strong>
-    </p>
-    <p className="welcome-text secondary">
-      5th Edition is going to be held at NIPER, Mohali from 31<sup>st</sup> October to 2<sup>nd</sup>November 2025.
-    </p>
-    
-    <div className="features-list">
-      <div className="feature-item">
-        <span className="feature-icon">📚</span>
-        <span>ज्ञानवर्धक सत्र</span>
-      </div>
-      <div className="feature-item">
-        <span className="feature-icon">🎯</span>
-        <span>विशेष आयोजन</span>
-      </div>
-      <div className="feature-item">
-        <span className="feature-icon">🏆</span>
-        <span>विशेषज्ञ संसाधन</span>
-      </div>
-    </div>
-    
-    <div className="popup-actions">
-    <a 
-  href="https://shikshamahakumb.co.in/registration" 
-  className="btn-primary" 
-  onClick={closePopup}
-  style={{ display: 'inline-flex', alignItems: 'center', textDecoration: 'none' }}
->
-  <span>अभी जुड़ें</span>
-  <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
-    <path 
-      d="M5 12h14m-7-7l7 7-7 7" 
-      stroke="currentColor" 
-      strokeWidth="2" 
-      strokeLinecap="round" 
-      strokeLinejoin="round"
-    />
-  </svg>
-</a>
 
-      <button 
-        onClick={closePopup}
-        className="btn-secondary"
+
+         {/* admin routes */}
+
+        <Route path="/admin" element={<AdminHome />} />
+        <Route path="/admin/conclave-registration" element={<AdminHome />} />
+        <Route path="/admin/programs-school-student" element={<AdminHome />} />
+        <Route path="/admin/dhe-english-olympiad" element={<AdminHome />} />
+        <Route path="/admin/best-practices" element={<AdminHome />} />
+        <Route path="/admin/project-display-hei" element={<AdminHome />} />
+        <Route path="/admin/project-display-school" element={<AdminHome />} />
+        <Route path="/admin/general-registration" element={<AdminHome />} />
+        <Route path="/admin/volunteer-registration" element={<AdminHome />} />
+        <Route path="/admin/organizer-registration" element={<AdminHome />} />
+        <Route
+          path="/admin/talent-registration-teacher"
+          element={<AdminHome />}
+        />
+        <Route
+          path="/admin/talent-registration-student"
+          element={<AdminHome />}
+        />
+        <Route path="/admin/settings" element={<AdminHome />} />
+      </Routes>
+
+      <Popup
+        isOpen={showPopup}
+        onClose={closePopup}
+        title="शिक्षा महाकुंभ अभियान"
       >
-        बाद में
-      </button>
-    </div>
-  </div>
-</Popup>
+        <div className="welcome-content">
+          <p className="welcome-text main">
+            🎉 <strong>शिक्षा महाकुंभ अभियान</strong>
+          </p>
+          <p className="welcome-text secondary">
+            5th Edition is going to be held at NIPER, Mohali from 31
+            <sup>st</sup> October to 2<sup>nd</sup>November 2025.
+          </p>
 
+          <div className="features-list">
+            <div className="feature-item">
+              <span className="feature-icon">📚</span>
+              <span>ज्ञानवर्धक सत्र</span>
+            </div>
+            <div className="feature-item">
+              <span className="feature-icon">🎯</span>
+              <span>विशेष आयोजन</span>
+            </div>
+            <div className="feature-item">
+              <span className="feature-icon">🏆</span>
+              <span>विशेषज्ञ संसाधन</span>
+            </div>
+          </div>
+
+          <div className="popup-actions">
+            <a
+              href="https://shikshamahakumb.co.in/registration"
+              className="btn-primary"
+              onClick={closePopup}
+              style={{
+                display: "inline-flex",
+                alignItems: "center",
+                textDecoration: "none",
+              }}
+            >
+              <span>अभी जुड़ें</span>
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none">
+                <path
+                  d="M5 12h14m-7-7l7 7-7 7"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                />
+              </svg>
+            </a>
+
+            <button onClick={closePopup} className="btn-secondary">
+              बाद में
+            </button>
+          </div>
+        </div>
+      </Popup>
 
       <style jsx>{`
         .popup-overlay {
@@ -342,7 +328,11 @@ function App() {
           left: 0;
           width: 100vw;
           height: 100vh;
-          background: linear-gradient(135deg, rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.4));
+          background: linear-gradient(
+            135deg,
+            rgba(0, 0, 0, 0.7),
+            rgba(0, 0, 0, 0.4)
+          );
           backdrop-filter: blur(8px);
           -webkit-backdrop-filter: blur(8px);
           display: flex;
@@ -365,8 +355,7 @@ function App() {
           width: 100%;
           max-height: 90vh;
           overflow: hidden;
-          box-shadow: 
-            0 25px 50px -12px rgba(0, 0, 0, 0.25),
+          box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25),
             0 0 0 1px rgba(255, 255, 255, 0.1);
           animation: popupSlideIn 0.5s cubic-bezier(0.34, 1.56, 0.64, 1);
           transform-origin: center;
@@ -389,7 +378,11 @@ function App() {
         .decoration-circle {
           position: absolute;
           border-radius: 50%;
-          background: linear-gradient(135deg, rgba(240, 59, 59, 0.1), rgba(255, 165, 0, 0.1));
+          background: linear-gradient(
+            135deg,
+            rgba(240, 59, 59, 0.1),
+            rgba(255, 165, 0, 0.1)
+          );
           animation: float 6s ease-in-out infinite;
         }
 
@@ -588,13 +581,21 @@ function App() {
         }
 
         @keyframes overlayFadeIn {
-          from { opacity: 0; }
-          to { opacity: 1; }
+          from {
+            opacity: 0;
+          }
+          to {
+            opacity: 1;
+          }
         }
 
         @keyframes overlayFadeOut {
-          from { opacity: 1; }
-          to { opacity: 0; }
+          from {
+            opacity: 1;
+          }
+          to {
+            opacity: 0;
+          }
         }
 
         @keyframes popupSlideIn {
@@ -631,9 +632,16 @@ function App() {
         }
 
         @keyframes float {
-          0%, 100% { transform: translateY(0px) rotate(0deg); }
-          33% { transform: translateY(-10px) rotate(1deg); }
-          66% { transform: translateY(5px) rotate(-1deg); }
+          0%,
+          100% {
+            transform: translateY(0px) rotate(0deg);
+          }
+          33% {
+            transform: translateY(-10px) rotate(1deg);
+          }
+          66% {
+            transform: translateY(5px) rotate(-1deg);
+          }
         }
 
         /* Mobile Responsive */
@@ -712,24 +720,8 @@ function App() {
           }
         }
       `}</style>
-    
-
-
-
-
-
-
-
-
-
-
-</>
-
+    </>
   );
 }
 
 export default App;
-
-
-
-
