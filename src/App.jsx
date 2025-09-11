@@ -60,6 +60,7 @@ import { Print } from "./pages/mediaSection/Print";
 import { Academic } from "./pages/academic/Academic";
 import { Newform } from "./pages/newform/newform";
 import AdminHome from "./pages/admin/AdminHome";
+import AdminSettings from "./pages/admin/AdminSettings";
 
 // Enhanced Beautiful Popup Component
 const Popup = ({ isOpen, onClose, title, children }) => {
@@ -259,7 +260,7 @@ function App() {
           path="/admin/talent-registration-student"
           element={<AdminHome />}
         />
-        <Route path="/admin/settings" element={<AdminHome />} />
+        <Route path="/admin/settings" element={<AdminSettings />} />
       </Routes>
 
       <Popup
