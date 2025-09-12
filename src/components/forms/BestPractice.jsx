@@ -1,11 +1,37 @@
 // filename: bestpractice.jsx
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 
-export const BestPractice = ({ formData, handleChange }) => {
+export const BestPractice = () => {
+  const [formData, setFormData] = useState({
+    bestPracticeTitle: "",
+    bestPracticeOrg: "",
+    bestPracticeArea: "",
+    bestPracticeDescription: "",
+    bestPracticeOutcomes: "",
+    bestPracticeScope: "",
+    bestPracticeContact: "",
+    bestPracticeAffiliation: "",
+    bestPracticeAccommodation: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Best Practice Form Submitted:", formData);
+    // 👉 Add your API call or submission logic here
+  };
+
   return (
-    <div className="row">
+    <form onSubmit={handleSubmit} className="row">
       {/* Title */}
       <div className="col-md-12 mb-3">
         <label className="td_form_label">Title of the Best Practice*</label>
@@ -129,7 +155,7 @@ export const BestPractice = ({ formData, handleChange }) => {
         <label className="td_form_label">Do you need Accommodation?*</label>
         <select
           name="bestPracticeAccommodation"
-          value={formData.bestPracticeAccommodation || ""}
+          value={formData.bestPracticeAccommodation}
           onChange={handleChange}
           className="form-select built"
           required
@@ -139,6 +165,9 @@ export const BestPractice = ({ formData, handleChange }) => {
           <option value="no">No</option>
         </select>
       </div>
-    </div>
+
+      {/* Submit */}
+     
+    </form>
   );
 };

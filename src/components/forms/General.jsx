@@ -1,11 +1,41 @@
 // filename: general.jsx
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 
-export const General = ({ formData, handleChange }) => {
+export const General = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    designation: "",
+    org: "",
+    address: "",
+    delegateCategory: "",
+    accommodation: "",
+    registrationFee: "",
+    transactionId: "",
+    feeReceipt: null,
+    panNumber: "",
+    affiliation: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value, type, files } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: type === "file" ? files[0] : value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("General Registration Form Submitted:", formData);
+    // 👉 Add your API call or submission logic here
+  };
+
   return (
-    <div className="row">
+    <form onSubmit={handleSubmit} className="row">
       {/* Full Name */}
       <div className="col-md-6 mb-3">
         <label className="td_form_label">Full Name*</label>
@@ -136,7 +166,7 @@ export const General = ({ formData, handleChange }) => {
         <input
           type="text"
           name="registrationFee"
-          value={formData.registrationFee || ""}
+          value={formData.registrationFee}
           onChange={handleChange}
           className="form-control built"
           placeholder="Mentioned as per category"
@@ -150,7 +180,7 @@ export const General = ({ formData, handleChange }) => {
         <input
           type="text"
           name="transactionId"
-          value={formData.transactionId || ""}
+          value={formData.transactionId}
           onChange={handleChange}
           className="form-control built"
         />
@@ -173,7 +203,7 @@ export const General = ({ formData, handleChange }) => {
         <input
           type="text"
           name="panNumber"
-          value={formData.panNumber || ""}
+          value={formData.panNumber}
           onChange={handleChange}
           className="form-control built"
         />
@@ -181,7 +211,9 @@ export const General = ({ formData, handleChange }) => {
 
       {/* Affiliation */}
       <div className="col-md-6 mb-3">
-        <label className="td_form_label">Are you from Vidya Bharti / Non-Vidya Bharti?*</label>
+        <label className="td_form_label">
+          Are you from Vidya Bharti / Non-Vidya Bharti?*
+        </label>
         <select
           name="affiliation"
           value={formData.affiliation}
@@ -194,6 +226,13 @@ export const General = ({ formData, handleChange }) => {
           <option value="non-vidya-bharti">Non-Vidya Bharti</option>
         </select>
       </div>
-    </div>
+
+      {/* Submit */}
+      <div className="col-12 text-end mt-3">
+        <button type="submit" className="btn btn-primary">
+          Submit
+        </button>
+      </div>
+    </form>
   );
 };

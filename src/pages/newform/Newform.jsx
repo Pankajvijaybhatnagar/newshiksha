@@ -5,8 +5,8 @@ import { Firstform } from "../../components/forms/Firstform.jsx";
 export const Newform = () => {
   return (
     <Layout
-      breadcrumbTitle={"Merchandise"}
-      breadcrumbSubtitle={"Team Members"}
+      breadcrumbTitle={"Event Resistration"}
+      breadcrumbSubtitle={""}
     >
       <Firstform />
     </Layout>

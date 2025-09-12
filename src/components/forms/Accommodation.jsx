@@ -1,11 +1,44 @@
 // filename: accommodation.jsx
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 
-export const Accommodation = ({ formData, handleChange }) => {
+export const Accommodation = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    designation: "",
+    org: "",
+    address: "",
+    arrivalDate: "",
+    departureDate: "",
+    delegateCategory: "",
+    eventName: "",
+    numPeople: "",
+    accommodationFee: "",
+    feeReceipt: null,
+    transactionId: "",
+    affiliation: "",
+    needAccommodation: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value, type, files } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: type === "file" ? files[0] : value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Form submitted:", formData);
+    // 👉 Add API call or form submission logic here
+  };
+
   return (
-    <div className="row">
+    <form onSubmit={handleSubmit} className="row">
       <div className="col-md-6 mb-3">
         <label className="td_form_label">Name*</label>
         <input
@@ -155,7 +188,7 @@ export const Accommodation = ({ formData, handleChange }) => {
         <input
           type="text"
           name="accommodationFee"
-          value={formData.accommodationFee || ""}
+          value={formData.accommodationFee}
           onChange={handleChange}
           className="form-control built"
           placeholder="Mentioned as per category"
@@ -179,7 +212,7 @@ export const Accommodation = ({ formData, handleChange }) => {
         <input
           type="text"
           name="transactionId"
-          value={formData.transactionId || ""}
+          value={formData.transactionId}
           onChange={handleChange}
           className="form-control built"
           required
@@ -205,7 +238,7 @@ export const Accommodation = ({ formData, handleChange }) => {
         <label className="td_form_label">Do you need Accommodation?*</label>
         <select
           name="needAccommodation"
-          value={formData.needAccommodation || ""}
+          value={formData.needAccommodation}
           onChange={handleChange}
           className="form-select built"
           required
@@ -215,6 +248,8 @@ export const Accommodation = ({ formData, handleChange }) => {
           <option value="no">No</option>
         </select>
       </div>
-    </div>
+
+      
+    </form>
   );
 };

@@ -1,11 +1,46 @@
 // filename: conclave.jsx
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 
-export const Conclave = ({ formData, handleChange }) => {
+export const Conclave = () => {
+  const [formData, setFormData] = useState({
+    // Personal Details
+    name: "",
+    gender: "",
+    designation: "",
+    org: "",
+    phone: "",
+    email: "",
+    address: "",
+    affiliation: "",
+
+    // Conclave
+    conclaveSelection: "",
+
+    // Accommodation
+    accommodation: "",
+    arrivalDate: "",
+    departureDate: "",
+    numPeople: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Conclave Form Submitted:", formData);
+    // 👉 Add your API call or submission logic here
+  };
+
   return (
-    <div className="row">
+    <form onSubmit={handleSubmit} className="row">
       {/* ---------------- Personal Details ---------------- */}
       <div className="col-md-6 mb-3">
         <label className="td_form_label">Full Name*</label>
@@ -114,7 +149,7 @@ export const Conclave = ({ formData, handleChange }) => {
 
       {/* ---------------- Conclave Selection ---------------- */}
       <div className="col-md-6 mb-3">
-        <label className="td_form_label">Conclave Selection</label>
+        <label className="td_form_label">Conclave Selection*</label>
         <select
           name="conclaveSelection"
           value={formData.conclaveSelection}
@@ -123,18 +158,42 @@ export const Conclave = ({ formData, handleChange }) => {
           required
         >
           <option value="">-- Select a Conclave --</option>
-          <option value="National Education Leadership Conclave">National Education Leadership Conclave</option>
-          <option value="School Transformation & Leadership Conclave">School Transformation & Leadership Conclave</option>
-          <option value="Teachers of Bharat Conclave">Teachers of Bharat Conclave</option>
-          <option value="Global Partnerships & Knowledge Diplomacy Conclave">Global Partnerships & Knowledge Diplomacy Conclave</option>
-          <option value="Policy, Governance & Innovation Conclave">Policy, Governance & Innovation Conclave</option>
-          <option value="Social Responsibility & Equity Conclave">Social Responsibility & Equity Conclave</option>
-          <option value="Student Changemakers Conclave">Student Changemakers Conclave</option>
-          <option value="Research, Science & Knowledge Systems Conclave">Research, Science & Knowledge Systems Conclave</option>
-          <option value="Media, Narratives & Digital Influence Conclave">Media, Narratives & Digital Influence Conclave</option>
-          <option value="Grassroots & Community Education Conclave">Grassroots & Community Education Conclave</option>
-          <option value="Inclusion & Differently-Abled Learning Conclave">Inclusion & Differently-Abled Learning Conclave</option>
-          <option value="Parents & Civil Society Conclave">Parents & Civil Society Conclave</option>
+          <option value="National Education Leadership Conclave">
+            National Education Leadership Conclave
+          </option>
+          <option value="School Transformation & Leadership Conclave">
+            School Transformation & Leadership Conclave
+          </option>
+          <option value="Teachers of Bharat Conclave">
+            Teachers of Bharat Conclave
+          </option>
+          <option value="Global Partnerships & Knowledge Diplomacy Conclave">
+            Global Partnerships & Knowledge Diplomacy Conclave
+          </option>
+          <option value="Policy, Governance & Innovation Conclave">
+            Policy, Governance & Innovation Conclave
+          </option>
+          <option value="Social Responsibility & Equity Conclave">
+            Social Responsibility & Equity Conclave
+          </option>
+          <option value="Student Changemakers Conclave">
+            Student Changemakers Conclave
+          </option>
+          <option value="Research, Science & Knowledge Systems Conclave">
+            Research, Science & Knowledge Systems Conclave
+          </option>
+          <option value="Media, Narratives & Digital Influence Conclave">
+            Media, Narratives & Digital Influence Conclave
+          </option>
+          <option value="Grassroots & Community Education Conclave">
+            Grassroots & Community Education Conclave
+          </option>
+          <option value="Inclusion & Differently-Abled Learning Conclave">
+            Inclusion & Differently-Abled Learning Conclave
+          </option>
+          <option value="Parents & Civil Society Conclave">
+            Parents & Civil Society Conclave
+          </option>
         </select>
       </div>
 
@@ -143,7 +202,7 @@ export const Conclave = ({ formData, handleChange }) => {
         <label className="td_form_label">Do you require Accommodation?*</label>
         <select
           name="accommodation"
-          value={formData.accommodation || ""}
+          value={formData.accommodation}
           onChange={handleChange}
           className="form-select built"
           required
@@ -193,6 +252,9 @@ export const Conclave = ({ formData, handleChange }) => {
           </div>
         </>
       )}
-    </div>
+
+      {/* Submit */}
+     
+    </form>
   );
 };

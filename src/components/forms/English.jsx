@@ -1,11 +1,53 @@
 // filename: english.jsx
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 
-export const English = ({ formData, handleChange }) => {
+export const English = () => {
+  const [formData, setFormData] = useState({
+    // School Details
+    schoolName: "",
+    schoolAddress: "",
+    principalName: "",
+    schoolEmail: "",
+    coordinatorName: "",
+    coordinatorContact: "",
+
+    // Student Details
+    studentName: "",
+    parentName: "",
+    studentClass: "",
+    rollNo: "",
+    dob: "",
+    gender: "",
+
+    // Fee Details
+    paymentMode: "",
+    transactionId: "",
+    feeReceipt: null,
+    paymentDate: "",
+    panNumber: "",
+
+    // Affiliation
+    affiliation: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value, type, files } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: type === "file" ? files[0] : value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("English Olympiad Form Submitted:", formData);
+    // 👉 Add your API call or form submission logic here
+  };
+
   return (
-    <div className="row">
+    <form onSubmit={handleSubmit} className="row">
       {/* ---------------- School Details ---------------- */}
       <div className="col-12 mb-4">
         <h5>🏫 School Details</h5>
@@ -61,7 +103,9 @@ export const English = ({ formData, handleChange }) => {
       </div>
 
       <div className="col-md-6 mb-3">
-        <label className="td_form_label">School Coordinator’s Name (for Olympiad)*</label>
+        <label className="td_form_label">
+          School Coordinator’s Name (for Olympiad)*
+        </label>
         <input
           type="text"
           name="coordinatorName"
@@ -73,7 +117,9 @@ export const English = ({ formData, handleChange }) => {
       </div>
 
       <div className="col-md-6 mb-3">
-        <label className="td_form_label">Coordinator’s Contact Number & Email*</label>
+        <label className="td_form_label">
+          Coordinator’s Contact Number & Email*
+        </label>
         <input
           type="text"
           name="coordinatorContact"
@@ -176,7 +222,9 @@ export const English = ({ formData, handleChange }) => {
 
       <div className="col-md-12 mb-3">
         <label className="td_form_label">Fee: ₹100 per student</label>
-        <p className="text-muted">Please complete the payment before submitting the form.</p>
+        <p className="text-muted">
+          Please complete the payment before submitting the form.
+        </p>
       </div>
 
       <div className="col-md-6 mb-3">
@@ -196,7 +244,9 @@ export const English = ({ formData, handleChange }) => {
       </div>
 
       <div className="col-md-6 mb-3">
-        <label className="td_form_label">Transaction ID / Receipt Number*</label>
+        <label className="td_form_label">
+          Transaction ID / Receipt Number*
+        </label>
         <input
           type="text"
           name="transactionId"
@@ -244,7 +294,9 @@ export const English = ({ formData, handleChange }) => {
 
       {/* Affiliation */}
       <div className="col-md-6 mb-3">
-        <label className="td_form_label">Are you from Vidya Bharti / Non-Vidya Bharti?*</label>
+        <label className="td_form_label">
+          Are you from Vidya Bharti / Non-Vidya Bharti?*
+        </label>
         <select
           name="affiliation"
           value={formData.affiliation}
@@ -257,6 +309,9 @@ export const English = ({ formData, handleChange }) => {
           <option value="non-vidya-bharti">Non-Vidya Bharti</option>
         </select>
       </div>
-    </div>
+
+      {/* Submit */}
+     
+    </form>
   );
 };

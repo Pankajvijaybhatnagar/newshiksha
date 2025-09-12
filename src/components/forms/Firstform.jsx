@@ -8,9 +8,9 @@ import { General } from "./General";
 import { Volunteer } from "./Volunteer";
 import { Talent } from "./Talent";
 import { BestPractice } from "./BestPractice";
-import {ProjectDisplay} from "./ProjectDisplay";
-import {English} from "./English";
- 
+import { ProjectDisplay } from "./ProjectDisplay";
+import { English } from "./English";
+
 export const Firstform = () => {
   const [event, setEvent] = useState("");
   const [registrationType, setRegistrationType] = useState("");
@@ -70,7 +70,7 @@ export const Firstform = () => {
       <style>{`
           .td_form_title {
             font-size: 1.5rem;
-            font-weight: 700;
+            // font-weight: 700;
             color: #890c25;
             text-align: center;
             margin-bottom: 2rem;
@@ -123,7 +123,7 @@ export const Firstform = () => {
 
       <div className="card container">
         <div className="card-body p-3 p-md-5">
-          <h2 className="td_form_title mb-4">Event Registration</h2>
+          {/* <h2 className="td_form_title mb-4">Event Registration</h2> */}
 
           <form onSubmit={handleSubmit} className="td_form">
             {/* Select Event + Registration Type */}
@@ -167,7 +167,7 @@ export const Firstform = () => {
             </div>
 
             {/* Example: Project Display */}
-           
+
 
             {/* Example: Abstract */}
             {registrationType === "submit-abstract" && (
@@ -222,15 +222,11 @@ export const Firstform = () => {
             {registrationType === "project-display" && <ProjectDisplay formData={formData} handleChange={handleChange} />}
 
             {/* English Olympiad */}
-              {registrationType === "DHE English Olympiad" && <English formData={formData} handleChange={handleChange} />}
+            {registrationType === "DHE English Olympiad" && <English formData={formData} handleChange={handleChange} />}
             {/* Submit */}
-            <div className="text-center">
-              <button
-                type="submit"
-                disabled={!event || !registrationType}
-                className="btn btn-custom w-100 w-md-50"
-              >
-                Submit Registration
+            <div className="col-md-12 ">
+              <button type="submit" className="btn btn-primary text-center " style={{margin:"0 auto"}}>
+                Submit
               </button>
             </div>
           </form>
