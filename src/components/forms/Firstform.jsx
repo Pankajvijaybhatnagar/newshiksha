@@ -14,54 +14,10 @@ import { English } from "./English";
 export const Firstform = () => {
   const [event, setEvent] = useState("");
   const [registrationType, setRegistrationType] = useState("");
-  const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    org: "",
-    projectTitle: "",
-    abstract: "",
-    file: null,
-    gender: "",
-    designation: "",
-    address: "",
-    affiliation: "",
-    conclaveSelection: "",
-    accommodation: "",
-    arrivalDate: "",
-    departureDate: "",
-    numPeople: "",
-    delegateCategory: "",
-    eventName: "",
-    accommodationFee: "",
-    feeReceipt: null,
-    transactionId: "",
-    needAccommodation: "",
-  });
-
-  const handleChange = (e) => {
-    const { name, value, type, checked, files } = e.target;
-
-    if (type === "checkbox") {
-      setFormData((prev) => {
-        const current = prev[name] || [];
-        return {
-          ...prev,
-          [name]: checked
-            ? [...current, value] // add if checked
-            : current.filter((v) => v !== value), // remove if unchecked
-        };
-      });
-    } else if (files) {
-      setFormData((prev) => ({ ...prev, [name]: files[0] }));
-    } else {
-      setFormData((prev) => ({ ...prev, [name]: value }));
-    }
-  };
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form Submitted:", { event, registrationType, formData });
+    console.log("Form Submitted:", { event, registrationType });
     alert("Form submitted successfully!");
   };
 
@@ -70,7 +26,6 @@ export const Firstform = () => {
       <style>{`
           .td_form_title {
             font-size: 1.5rem;
-            // font-weight: 700;
             color: #890c25;
             text-align: center;
             margin-bottom: 2rem;
@@ -123,8 +78,6 @@ export const Firstform = () => {
 
       <div className="card container">
         <div className="card-body p-3 p-md-5">
-          {/* <h2 className="td_form_title mb-4">Event Registration</h2> */}
-
           <form onSubmit={handleSubmit} className="td_form">
             {/* Select Event + Registration Type */}
             <div className="row mb-3">
@@ -140,6 +93,7 @@ export const Firstform = () => {
                   <option value="smk3">Shiksha Mahakumbh 5.0</option>
                 </select>
               </div>
+
               <div className="col-md-6 mb-3">
                 <label className="td_form_label">Select Registration Type</label>
                 <select
@@ -149,84 +103,45 @@ export const Firstform = () => {
                   required
                 >
                   <option value="">-- Select an option --</option>
-                  {/* <option value="delegate">Delegate</option> */}
                   <option value="conclave">Conclave</option>
-                  <option value="programs-for-school-student">Programs for School Student</option>
-                  <option value="best-practices">Best Practices by Organisation and Individual</option>
-                  <option value="DHE English Olympiad">DHE English Olympiad</option>
+                  <option value="programs-for-school-student">
+                    Programs for School Student
+                  </option>
+                  <option value="best-practices">
+                    Best Practices by Organisation and Individual
+                  </option>
+                  <option value="DHE English Olympiad">
+                    DHE English Olympiad
+                  </option>
                   <option value="project-display">Project Display</option>
                   <option value="accommodation">Accommodation</option>
                   <option value="organizer">Organizer</option>
-                  <option value="General Registration Form">General Registration Form</option>
+                  <option value="General Registration Form">
+                    General Registration Form
+                  </option>
                   <option value="talent">Talent</option>
                   <option value="volunteer">Volunteer</option>
-                  {/* <option value="ngo">NGO</option>
-                  <option value="submit-abstract">Submit Abstract</option>
-                  <option value="submit-paper">Submit Full-Length Paper</option> */}
                 </select>
               </div>
             </div>
 
-            {/* Example: Project Display */}
+            {/* ✅ Conditional Form Sections */}
+            {registrationType === "conclave" && <Conclave />}
+            {registrationType === "accommodation" && <Accommodation />}
+            {registrationType === "General Registration Form" && <General />}
+            {registrationType === "volunteer" && <Volunteer />}
+            {registrationType === "talent" && <Talent />}
+            {registrationType === "best-practices" && <BestPractice />}
+            {registrationType === "project-display" && <ProjectDisplay />}
+            {registrationType === "DHE English Olympiad" && <English />}
 
-
-            {/* Example: Abstract */}
-            {registrationType === "submit-abstract" && (
-              <div className="row mb-3">
-                <div className="col-md-12">
-                  <label className="td_form_label">Abstract</label>
-                  <textarea
-                    name="abstract"
-                    value={formData.abstract}
-                    onChange={handleChange}
-                    rows="4"
-                    className="built form-control"
-                  ></textarea>
-                </div>
-              </div>
-            )}
-
-            {/* Example: Paper Upload */}
-            {registrationType === "submit-paper" && (
-              <div className="row mb-3">
-                <div className="col-md-12">
-                  <label className="td_form_label">Upload Full-Length Paper</label>
-                  <input
-                    type="file"
-                    name="file"
-                    onChange={handleChange}
-                    className="built form-control"
-                  />
-                </div>
-              </div>
-            )}
-
-            {/* ✅ Conclave Section */}
-            {registrationType === "conclave" && <Conclave formData={formData} handleChange={handleChange} />}
-
-            {/* ✅ Accommodation Section Example */}
-            {registrationType === "accommodation" && <Accommodation formData={formData} handleChange={handleChange} />}
-
-            { /* General resigtration form */}
-            {registrationType === "General Registration Form" && <General formData={formData} handleChange={handleChange} />}
-
-            {/* Volunteer */}
-            {registrationType === "volunteer" && <Volunteer formData={formData} handleChange={handleChange} />}
-
-            {/* Talent */}
-            {registrationType === "talent" && <Talent formData={formData} handleChange={handleChange} />}
-
-            {/* //Best Practices */}
-            {registrationType === "best-practices" && <BestPractice formData={formData} handleChange={handleChange} />}
-
-            {/* Project Display */}
-            {registrationType === "project-display" && <ProjectDisplay formData={formData} handleChange={handleChange} />}
-
-            {/* English Olympiad */}
-            {registrationType === "DHE English Olympiad" && <English formData={formData} handleChange={handleChange} />}
             {/* Submit */}
-            <div className="col-md-12 ">
-              <button type="submit" className="btn btn-primary text-center " style={{margin:"0 auto"}}>
+            <div className="col-md-12 text-center">
+              <button
+                type="submit"
+                className="btn btn-primary"
+                style={{ margin: "0 auto" }}
+              >
                 Submit
               </button>
             </div>

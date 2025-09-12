@@ -1,17 +1,57 @@
 // filename: projectdisplay.jsx
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 
-export const ProjectDisplay = ({ formData, handleChange }) => {
+export const ProjectDisplay = () => {
+  const [formData, setFormData] = useState({
+    projectType: "",
+
+    // Common fields
+    projectName: "",
+    projectDescription: "",
+    projectPpt: null,
+    projectVideo: null,
+    email: "",
+    phone: "",
+    teamSize: "",
+    teamDetails: null,
+    feeReceipt: null,
+    panNumber: "",
+    affiliation: "",
+    accommodation: "",
+
+    // HEI specific
+    instituteName: "",
+    instituteAddress: "",
+
+    // School specific
+    schoolName: "",
+    schoolAddress: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value, type, files } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: type === "file" ? files[0] : value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Project Display Form Submitted:", formData);
+    // 👉 Add your API call or submission logic here
+  };
+
   return (
-    <div className="row">
+    <form onSubmit={handleSubmit} className="row">
       {/* First selection: HEI or School */}
       <div className="col-md-6 mb-4">
         <label className="td_form_label">Select Institution Type*</label>
         <select
           name="projectType"
-          value={formData.projectType || ""}
+          value={formData.projectType}
           onChange={handleChange}
           className="form-select built"
           required
@@ -166,7 +206,9 @@ export const ProjectDisplay = ({ formData, handleChange }) => {
               className="form-control built"
               required
             />
-            <small className="text-muted">UTR No. / Transaction ID / Cheque No. mandatory</small>
+            <small className="text-muted">
+              UTR No. / Transaction ID / Cheque No. mandatory
+            </small>
           </div>
 
           <div className="col-md-6 mb-3">
@@ -201,7 +243,7 @@ export const ProjectDisplay = ({ formData, handleChange }) => {
             <label className="td_form_label">Do you need Accommodation?*</label>
             <select
               name="accommodation"
-              value={formData.accommodation || ""}
+              value={formData.accommodation}
               onChange={handleChange}
               className="form-select built"
               required
@@ -222,7 +264,6 @@ export const ProjectDisplay = ({ formData, handleChange }) => {
             <hr />
           </div>
 
-          {/* Reuse same fields, but use School wording */}
           <div className="col-md-6 mb-3">
             <label className="td_form_label">Project Name*</label>
             <input
@@ -359,7 +400,9 @@ export const ProjectDisplay = ({ formData, handleChange }) => {
               className="form-control built"
               required
             />
-            <small className="text-muted">UTR No. / Transaction ID / Cheque No. mandatory</small>
+            <small className="text-muted">
+              UTR No. / Transaction ID / Cheque No. mandatory
+            </small>
           </div>
 
           <div className="col-md-6 mb-3">
@@ -394,7 +437,7 @@ export const ProjectDisplay = ({ formData, handleChange }) => {
             <label className="td_form_label">Do you need Accommodation?</label>
             <select
               name="accommodation"
-              value={formData.accommodation || ""}
+              value={formData.accommodation}
               onChange={handleChange}
               className="form-select built"
               required
@@ -406,6 +449,9 @@ export const ProjectDisplay = ({ formData, handleChange }) => {
           </div>
         </>
       )}
-    </div>
+
+      {/* Submit */}
+      
+    </form>
   );
 };

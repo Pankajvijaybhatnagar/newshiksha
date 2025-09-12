@@ -1,11 +1,46 @@
 // filename: volunteer.jsx
 "use client";
 
-import React from "react";
+import React, { useState } from "react";
 
-export const Volunteer = ({ formData, handleChange }) => {
+export const Volunteer = () => {
+  const [formData, setFormData] = useState({
+    name: "",
+    email: "",
+    phone: "",
+    gender: "",
+    dob: "",
+    age: "",
+    qualification: "",
+    org: "",
+    designation: "",
+    city: "",
+    volunteerCategory: "",
+    languages: "",
+    availability: "",
+    specificDates: "",
+    experience: "",
+    emergencyContact: "",
+    affiliation: "",
+    needAccommodation: "",
+  });
+
+  const handleChange = (e) => {
+    const { name, value } = e.target;
+    setFormData((prev) => ({
+      ...prev,
+      [name]: value,
+    }));
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+    console.log("Volunteer Form Submitted:", formData);
+    // 👉 Add your API call / submission logic here
+  };
+
   return (
-    <div className="row">
+    <form onSubmit={handleSubmit} className="row">
       {/* Full Name */}
       <div className="col-md-6 mb-3">
         <label className="td_form_label">Full Name*</label>
@@ -205,7 +240,7 @@ export const Volunteer = ({ formData, handleChange }) => {
           <input
             type="text"
             name="specificDates"
-            value={formData.specificDates || ""}
+            value={formData.specificDates}
             onChange={handleChange}
             className="form-control built"
           />
@@ -217,7 +252,7 @@ export const Volunteer = ({ formData, handleChange }) => {
         <label className="td_form_label">Previous Volunteering Experience (if any)</label>
         <textarea
           name="experience"
-          value={formData.experience || ""}
+          value={formData.experience}
           onChange={handleChange}
           rows="3"
           className="form-control built"
@@ -259,7 +294,7 @@ export const Volunteer = ({ formData, handleChange }) => {
         <label className="td_form_label">Do you need Accommodation?*</label>
         <select
           name="needAccommodation"
-          value={formData.needAccommodation || ""}
+          value={formData.needAccommodation}
           onChange={handleChange}
           className="form-select built"
           required
@@ -269,6 +304,9 @@ export const Volunteer = ({ formData, handleChange }) => {
           <option value="no">No</option>
         </select>
       </div>
-    </div>
+
+      {/* Submit */}
+    
+    </form>
   );
 };
