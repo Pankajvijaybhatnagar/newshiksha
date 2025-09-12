@@ -149,19 +149,20 @@ export const Firstform = () => {
                   required
                 >
                   <option value="">-- Select an option --</option>
-                  <option value="delegate">Delegate</option>
+                  {/* <option value="delegate">Delegate</option> */}
+                  <option value="conclave">Conclave</option>
+                  <option value="programs-for-school-student">Programs for School Student</option>
+                  <option value="best-practices">Best Practices by Organisation and Individual</option>
+                  <option value="DHE English Olympiad">DHE English Olympiad</option>
                   <option value="project-display">Project Display</option>
+                  <option value="accommodation">Accommodation</option>
+                  <option value="organizer">Organizer</option>
+                  <option value="General Registration Form">General Registration Form</option>
                   <option value="talent">Talent</option>
                   <option value="volunteer">Volunteer</option>
-                  <option value="ngo">NGO</option>
-                  <option value="conclave">Conclave</option>
+                  {/* <option value="ngo">NGO</option>
                   <option value="submit-abstract">Submit Abstract</option>
-                  <option value="submit-paper">Submit Full-Length Paper</option>
-                  <option value="best-practices">Best Practices by Organisation and Individual</option>
-                  <option value="organizer">Organizer</option>
-                  <option value="accommodation">Accommodation</option>
-                  <option value="General Registration Form">General Registration Form</option>
-                  <option value="DHE English Olympiad">DHE English Olympiad</option>
+                  <option value="submit-paper">Submit Full-Length Paper</option> */}
                 </select>
               </div>
             </div>

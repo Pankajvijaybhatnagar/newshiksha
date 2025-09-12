@@ -214,6 +214,7 @@ function App() {
         <Route path="/committee" element={<Committee />} />
         <Route path="/academic-council" element={<Academic />} />
         <Route path="/registration" element={<Newform />} />
+        <Route path="/registration/new" element={<Newform />} />
 
         <Route path="/event-details" element={<EventDetails />} />
         <Route path="/team-members" element={<TeamMembers />} />
