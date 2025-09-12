@@ -1,9 +1,9 @@
 // filename: talent.jsx
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-export const Talent = () => {
+export const Talent = ({ onDataChange }) => {
   const [formData, setFormData] = useState({
     talentType: "",
 
@@ -38,7 +38,6 @@ export const Talent = () => {
   const handleChange = (e) => {
     const { name, value, type, files, checked } = e.target;
 
-    // handle checkboxes (multi-select)
     if (name === "studentCategory" || name === "teacherCategory") {
       setFormData((prev) => {
         let updated = [...(prev[name] || [])];
@@ -57,14 +56,15 @@ export const Talent = () => {
     }
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Talent Form Submitted:", formData);
-    // 👉 Add your API call / submission logic here
-  };
+  // 🔔 Pass data to parent whenever it changes
+  useEffect(() => {
+    if (onDataChange) {
+      onDataChange(formData);
+    }
+  }, [formData, onDataChange]);
 
   return (
-    <form onSubmit={handleSubmit} className="row">
+    <div className="row">
       {/* Selection: Student or Teacher */}
       <div className="col-md-6 mb-4">
         <label className="td_form_label">Select Category Type*</label>
@@ -161,53 +161,29 @@ export const Talent = () => {
             />
           </div>
 
+          {/* Categories */}
           <div className="col-md-12 mb-3">
             <label className="td_form_label">Select Category (choose one or more)*</label>
-
-            <div className="form-check">
-              <input
-                className="form-check-input"
-                type="checkbox"
-                id="studentAcademic"
-                name="studentCategory"
-                value="academic"
-                checked={formData.studentCategory.includes("academic")}
-                onChange={handleChange}
-              />
-              <label className="form-check-label" htmlFor="studentAcademic">
-                📘 Academic Excellence (95%+ in 10th/12th Board Exam)
-              </label>
-            </div>
-
-            <div className="form-check">
-              <input
-                className="form-check-input"
-                type="checkbox"
-                id="studentSports"
-                name="studentCategory"
-                value="sports"
-                checked={formData.studentCategory.includes("sports")}
-                onChange={handleChange}
-              />
-              <label className="form-check-label" htmlFor="studentSports">
-                🏆 Sports / Competition (National / International Level)
-              </label>
-            </div>
-
-            <div className="form-check">
-              <input
-                className="form-check-input"
-                type="checkbox"
-                id="studentSocial"
-                name="studentCategory"
-                value="social"
-                checked={formData.studentCategory.includes("social")}
-                onChange={handleChange}
-              />
-              <label className="form-check-label" htmlFor="studentSocial">
-                🌍 Social Service / Environmental Contribution
-              </label>
-            </div>
+            {["academic", "sports", "social"].map((val, i) => (
+              <div className="form-check" key={i}>
+                <input
+                  className="form-check-input"
+                  type="checkbox"
+                  id={`student_${val}`}
+                  name="studentCategory"
+                  value={val}
+                  checked={formData.studentCategory.includes(val)}
+                  onChange={handleChange}
+                />
+                <label className="form-check-label" htmlFor={`student_${val}`}>
+                  {val === "academic"
+                    ? "📘 Academic Excellence (95%+ in 10th/12th Board Exam)"
+                    : val === "sports"
+                    ? "🏆 Sports / Competition (National / International Level)"
+                    : "🌍 Social Service / Environmental Contribution"}
+                </label>
+              </div>
+            ))}
           </div>
 
           <div className="col-md-12 mb-3">
@@ -231,15 +207,11 @@ export const Talent = () => {
               className="form-control built"
               required
             />
-            <small className="text-muted">
-              Max 5 MB | Marksheet / Certificate / Award Letter | Photo / Media (optional)
-            </small>
+            <small className="text-muted">Max 5 MB | Marksheet / Certificate / Award Letter</small>
           </div>
 
           <div className="col-md-12 mb-4">
-            <label className="td_form_label">
-              Are you from Vidya Bharti / Non-Vidya Bharti?*
-            </label>
+            <label className="td_form_label">Are you from Vidya Bharti / Non-Vidya Bharti?*</label>
             <select
               name="studentAffiliation"
               value={formData.studentAffiliation}
@@ -323,38 +295,27 @@ export const Talent = () => {
             />
           </div>
 
+          {/* Categories */}
           <div className="col-md-12 mb-3">
             <label className="td_form_label">Select Category (choose one or more)*</label>
-
-            <div className="form-check">
-              <input
-                className="form-check-input"
-                type="checkbox"
-                id="teacherInnovative"
-                name="teacherCategory"
-                value="innovative"
-                checked={formData.teacherCategory.includes("innovative")}
-                onChange={handleChange}
-              />
-              <label className="form-check-label" htmlFor="teacherInnovative">
-                💡 Innovative Teaching Practices
-              </label>
-            </div>
-
-            <div className="form-check">
-              <input
-                className="form-check-input"
-                type="checkbox"
-                id="teacherNeedy"
-                name="teacherCategory"
-                value="needy"
-                checked={formData.teacherCategory.includes("needy")}
-                onChange={handleChange}
-              />
-              <label className="form-check-label" htmlFor="teacherNeedy">
-                🤝 Education for the Needy (Social / Voluntary Service)
-              </label>
-            </div>
+            {["innovative", "needy"].map((val, i) => (
+              <div className="form-check" key={i}>
+                <input
+                  className="form-check-input"
+                  type="checkbox"
+                  id={`teacher_${val}`}
+                  name="teacherCategory"
+                  value={val}
+                  checked={formData.teacherCategory.includes(val)}
+                  onChange={handleChange}
+                />
+                <label className="form-check-label" htmlFor={`teacher_${val}`}>
+                  {val === "innovative"
+                    ? "💡 Innovative Teaching Practices"
+                    : "🤝 Education for the Needy (Social / Voluntary Service)"}
+                </label>
+              </div>
+            ))}
           </div>
 
           <div className="col-md-12 mb-3">
@@ -450,9 +411,6 @@ export const Talent = () => {
           </div>
         </>
       )}
-
-      {/* Submit */}
-      
-    </form>
+    </div>
   );
 };

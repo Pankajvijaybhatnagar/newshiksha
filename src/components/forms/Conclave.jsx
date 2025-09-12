@@ -1,9 +1,9 @@
 // filename: conclave.jsx
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-export const Conclave = () => {
+export const Conclave = ({ onDataChange }) => {
   const [formData, setFormData] = useState({
     // Personal Details
     name: "",
@@ -25,6 +25,7 @@ export const Conclave = () => {
     numPeople: "",
   });
 
+  // Handle input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -33,14 +34,15 @@ export const Conclave = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Conclave Form Submitted:", formData);
-    // 👉 Add your API call or submission logic here
-  };
+  // Lift data up to parent whenever formData changes
+  useEffect(() => {
+    if (onDataChange) {
+      onDataChange(formData);
+    }
+  }, [formData, onDataChange]);
 
   return (
-    <form onSubmit={handleSubmit} className="row">
+    <div className="row">
       {/* ---------------- Personal Details ---------------- */}
       <div className="col-md-6 mb-3">
         <label className="td_form_label">Full Name*</label>
@@ -252,9 +254,6 @@ export const Conclave = () => {
           </div>
         </>
       )}
-
-      {/* Submit */}
-     
-    </form>
+    </div>
   );
 };

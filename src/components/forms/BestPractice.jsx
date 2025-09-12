@@ -1,9 +1,9 @@
 // filename: bestpractice.jsx
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-export const BestPractice = () => {
+export const BestPractice = ({ onDataChange }) => {
   const [formData, setFormData] = useState({
     bestPracticeTitle: "",
     bestPracticeOrg: "",
@@ -16,6 +16,7 @@ export const BestPractice = () => {
     bestPracticeAccommodation: "",
   });
 
+  // Handle input changes
   const handleChange = (e) => {
     const { name, value } = e.target;
     setFormData((prev) => ({
@@ -24,14 +25,15 @@ export const BestPractice = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Best Practice Form Submitted:", formData);
-    // 👉 Add your API call or submission logic here
-  };
+  // Send form data up to parent on every change
+  useEffect(() => {
+    if (onDataChange) {
+      onDataChange(formData);
+    }
+  }, [formData, onDataChange]);
 
   return (
-    <form onSubmit={handleSubmit} className="row">
+    <div className="row">
       {/* Title */}
       <div className="col-md-12 mb-3">
         <label className="td_form_label">Title of the Best Practice*</label>
@@ -104,7 +106,9 @@ export const BestPractice = () => {
           className="form-control built"
           required
         ></textarea>
-        <small className="text-muted">Include both quantitative & qualitative results</small>
+        <small className="text-muted">
+          Include both quantitative & qualitative results
+        </small>
       </div>
 
       {/* Scope for Replication */}
@@ -136,7 +140,9 @@ export const BestPractice = () => {
 
       {/* Affiliation */}
       <div className="col-md-6 mb-3">
-        <label className="td_form_label">Are you from Vidya Bharti / Non-Vidya Bharti?*</label>
+        <label className="td_form_label">
+          Are you from Vidya Bharti / Non-Vidya Bharti?*
+        </label>
         <select
           name="bestPracticeAffiliation"
           value={formData.bestPracticeAffiliation}
@@ -165,9 +171,6 @@ export const BestPractice = () => {
           <option value="no">No</option>
         </select>
       </div>
-
-      {/* Submit */}
-     
-    </form>
+    </div>
   );
 };

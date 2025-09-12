@@ -1,9 +1,9 @@
 // filename: projectdisplay.jsx
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-export const ProjectDisplay = () => {
+export const ProjectDisplay = ({ onDataChange }) => {
   const [formData, setFormData] = useState({
     projectType: "",
 
@@ -38,14 +38,15 @@ export const ProjectDisplay = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Project Display Form Submitted:", formData);
-    // 👉 Add your API call or submission logic here
-  };
+  // Notify parent about data changes
+  useEffect(() => {
+    if (onDataChange) {
+      onDataChange(formData);
+    }
+  }, [formData, onDataChange]);
 
   return (
-    <form onSubmit={handleSubmit} className="row">
+    <div className="row">
       {/* First selection: HEI or School */}
       <div className="col-md-6 mb-4">
         <label className="td_form_label">Select Institution Type*</label>
@@ -449,9 +450,6 @@ export const ProjectDisplay = () => {
           </div>
         </>
       )}
-
-      {/* Submit */}
-      
-    </form>
+    </div>
   );
 };

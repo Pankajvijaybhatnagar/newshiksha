@@ -1,9 +1,9 @@
 // filename: volunteer.jsx
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-export const Volunteer = () => {
+export const Volunteer = ({ onDataChange }) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -33,14 +33,15 @@ export const Volunteer = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Volunteer Form Submitted:", formData);
-    // 👉 Add your API call / submission logic here
-  };
+  // 🔔 Pass data up to parent
+  useEffect(() => {
+    if (onDataChange) {
+      onDataChange(formData);
+    }
+  }, [formData, onDataChange]);
 
   return (
-    <form onSubmit={handleSubmit} className="row">
+    <div className="row">
       {/* Full Name */}
       <div className="col-md-6 mb-3">
         <label className="td_form_label">Full Name*</label>
@@ -304,9 +305,6 @@ export const Volunteer = () => {
           <option value="no">No</option>
         </select>
       </div>
-
-      {/* Submit */}
-    
-    </form>
+    </div>
   );
 };

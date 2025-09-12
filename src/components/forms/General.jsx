@@ -1,9 +1,9 @@
 // filename: general.jsx
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-export const General = () => {
+export const General = ({ onDataChange }) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -28,14 +28,15 @@ export const General = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("General Registration Form Submitted:", formData);
-    // 👉 Add your API call or submission logic here
-  };
+  // notify parent about data changes
+  useEffect(() => {
+    if (onDataChange) {
+      onDataChange(formData);
+    }
+  }, [formData, onDataChange]);
 
   return (
-    <form onSubmit={handleSubmit} className="row">
+    <div className="row">
       {/* Full Name */}
       <div className="col-md-6 mb-3">
         <label className="td_form_label">Full Name*</label>
@@ -226,13 +227,6 @@ export const General = () => {
           <option value="non-vidya-bharti">Non-Vidya Bharti</option>
         </select>
       </div>
-
-      {/* Submit */}
-      <div className="col-12 text-end mt-3">
-        <button type="submit" className="btn btn-primary">
-          Submit
-        </button>
-      </div>
-    </form>
+    </div>
   );
 };

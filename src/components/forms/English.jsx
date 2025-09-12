@@ -1,9 +1,9 @@
 // filename: english.jsx
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-export const English = () => {
+export const English = ({ onDataChange }) => {
   const [formData, setFormData] = useState({
     // School Details
     schoolName: "",
@@ -32,6 +32,7 @@ export const English = () => {
     affiliation: "",
   });
 
+  // Handle changes
   const handleChange = (e) => {
     const { name, value, type, files } = e.target;
     setFormData((prev) => ({
@@ -40,14 +41,15 @@ export const English = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("English Olympiad Form Submitted:", formData);
-    // 👉 Add your API call or form submission logic here
-  };
+  // Notify parent when data changes
+  useEffect(() => {
+    if (onDataChange) {
+      onDataChange(formData);
+    }
+  }, [formData, onDataChange]);
 
   return (
-    <form onSubmit={handleSubmit} className="row">
+    <div className="row">
       {/* ---------------- School Details ---------------- */}
       <div className="col-12 mb-4">
         <h5>🏫 School Details</h5>
@@ -309,9 +311,6 @@ export const English = () => {
           <option value="non-vidya-bharti">Non-Vidya Bharti</option>
         </select>
       </div>
-
-      {/* Submit */}
-     
-    </form>
+    </div>
   );
 };

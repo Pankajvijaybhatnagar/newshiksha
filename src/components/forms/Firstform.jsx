@@ -10,14 +10,20 @@ import { Talent } from "./Talent";
 import { BestPractice } from "./BestPractice";
 import { ProjectDisplay } from "./ProjectDisplay";
 import { English } from "./English";
+import {Organizer} from "./Organizer";
 
 export const Firstform = () => {
   const [event, setEvent] = useState("");
   const [registrationType, setRegistrationType] = useState("");
+  const [formData, setFormData] = useState({}); // Central store of child data
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    console.log("Form Submitted:", { event, registrationType });
+    console.log("✅ Final Submitted Data:", {
+      event,
+      registrationType,
+      formData,
+    });
     alert("Form submitted successfully!");
   };
 
@@ -79,7 +85,7 @@ export const Firstform = () => {
       <div className="card container">
         <div className="card-body p-3 p-md-5">
           <form onSubmit={handleSubmit} className="td_form">
-            {/* Select Event + Registration Type */}
+            {/* Event & Registration Type */}
             <div className="row mb-3">
               <div className="col-md-6 mb-3">
                 <label className="td_form_label">Select Event</label>
@@ -121,21 +127,41 @@ export const Firstform = () => {
                   </option>
                   <option value="talent">Talent</option>
                   <option value="volunteer">Volunteer</option>
+                  <option value="organizer">Organizer</option>
                 </select>
               </div>
             </div>
 
-            {/* ✅ Conditional Form Sections */}
-            {registrationType === "conclave" && <Conclave />}
-            {registrationType === "accommodation" && <Accommodation />}
-            {registrationType === "General Registration Form" && <General />}
-            {registrationType === "volunteer" && <Volunteer />}
-            {registrationType === "talent" && <Talent />}
-            {registrationType === "best-practices" && <BestPractice />}
-            {registrationType === "project-display" && <ProjectDisplay />}
-            {registrationType === "DHE English Olympiad" && <English />}
+            {/* Conditional Components with onDataChange */}
+            {registrationType === "conclave" && (
+              <Conclave onDataChange={setFormData} />
+            )}
+            {registrationType === "accommodation" && (
+              <Accommodation onDataChange={setFormData} />
+            )}
+            {registrationType === "General Registration Form" && (
+              <General onDataChange={setFormData} />
+            )}
+            {registrationType === "volunteer" && (
+              <Volunteer onDataChange={setFormData} />
+            )}
+            {registrationType === "talent" && (
+              <Talent onDataChange={setFormData} />
+            )}
+            {registrationType === "best-practices" && (
+              <BestPractice onDataChange={setFormData} />
+            )}
+            {registrationType === "project-display" && (
+              <ProjectDisplay onDataChange={setFormData} />
+            )}
+            {registrationType === "DHE English Olympiad" && (
+              <English onDataChange={setFormData} />
+            )}
+            {registrationType === "organizer" && (
+              <Organizer onDataChange={setFormData} />
+            )}
 
-            {/* Submit */}
+            {/* Submit Button */}
             <div className="col-md-12 text-center">
               <button
                 type="submit"

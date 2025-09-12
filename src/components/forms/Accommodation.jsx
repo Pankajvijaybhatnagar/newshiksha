@@ -1,9 +1,9 @@
 // filename: accommodation.jsx
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
-export const Accommodation = () => {
+export const Accommodation = ({ onDataChange }) => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -23,6 +23,7 @@ export const Accommodation = () => {
     needAccommodation: "",
   });
 
+  // Handle changes
   const handleChange = (e) => {
     const { name, value, type, files } = e.target;
     setFormData((prev) => ({
@@ -31,14 +32,15 @@ export const Accommodation = () => {
     }));
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    console.log("Form submitted:", formData);
-    // 👉 Add API call or form submission logic here
-  };
+  // Push form data up to parent whenever it changes
+  useEffect(() => {
+    if (onDataChange) {
+      onDataChange(formData);
+    }
+  }, [formData, onDataChange]);
 
   return (
-    <form onSubmit={handleSubmit} className="row">
+    <div className="row">
       <div className="col-md-6 mb-3">
         <label className="td_form_label">Name*</label>
         <input
@@ -220,7 +222,9 @@ export const Accommodation = () => {
       </div>
 
       <div className="col-md-6 mb-3">
-        <label className="td_form_label">Are you from Vidya Bharti / Non-Vidya Bharti?*</label>
+        <label className="td_form_label">
+          Are you from Vidya Bharti / Non-Vidya Bharti?*
+        </label>
         <select
           name="affiliation"
           value={formData.affiliation}
@@ -248,8 +252,6 @@ export const Accommodation = () => {
           <option value="no">No</option>
         </select>
       </div>
-
-      
-    </form>
+    </div>
   );
 };
