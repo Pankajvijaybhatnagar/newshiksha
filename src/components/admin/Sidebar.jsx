@@ -5,10 +5,7 @@ const Sidebar = () => {
   const location = useLocation();
 
 const SideBarMenus = [
-  {
-    name: "Dashboard",
-    link: "/admin",
-  },
+  
   {
     name: "Conclave Registration",
     link: "/admin/conclave-registration",
@@ -67,14 +64,19 @@ const SideBarMenus = [
 
 
   return (
-    <div className="border shadow shadow-lg">
-      <ul className="list-group list-group-flush">
+    <div style={{
+      fontSize:14
+    }} className=" shadow shadow-lg ">
+      <span className="fw-bold text-center px-3 mb fs-5  ">
+        <img style={{width:150,marginBottom:10, marginTop:5}} src="/img/logo_black.png" alt="" />
+      </span>
+      <ul className="list-group list-group-flush ">
         {SideBarMenus.map((item) => {
           const isActive = matchPath({ path: item.link, end: false }, location.pathname);
           return (
             <li
               key={item.link}
-              className={`list-group-item py-1 ${isActive ? "active" : ""}`}
+              className={`list-group-item py-0  ${isActive ? "bg-white " : "bg-danger-subtle"}`}
               aria-current={isActive ? "true" : undefined}
             >
               <Link to={item.link}>{item.name}</Link>
