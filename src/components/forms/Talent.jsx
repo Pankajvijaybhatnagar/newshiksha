@@ -103,30 +103,57 @@ export const Talent = ({ formData, handleChange }) => {
           </div>
 
           <div className="col-md-12 mb-3">
-            <label className="td_form_label">
-              Select Category (choose one or more)*
-            </label>
-            <select
-              multiple
-              name="studentCategory"
-              value={formData.studentCategory || []}
-              onChange={handleChange}
-              className="form-select built"
-              required
-            >
-              <option value="academic">
-                📘 Academic Excellence (95%+ in 10th/12th Board Exam)
-              </option>
-              <option value="sports">
-                🏆 Sports / Competition (National / International Level)
-              </option>
-              <option value="social">
-                🌍 Social Service / Environmental Contribution
-              </option>
-            </select>
-            <small className="text-muted">
-              Hold CTRL (Windows) or CMD (Mac) to select multiple
-            </small>
+
+            <div className="col-md-12 mb-3">
+              <label className="td_form_label">Select Category (choose one or more)*</label>
+
+              <div className="form-check">
+                <input
+                  className="form-check-input"
+                  type="checkbox"
+                  id="studentAcademic"
+                  name="studentCategory"
+                  value="academic"
+                  checked={formData.studentCategory?.includes("academic")}
+                  onChange={handleChange}
+                  required={formData.studentCategory?.length === 0} // at least one required
+                />
+                <label className="form-check-label" htmlFor="studentAcademic">
+                  📘 Academic Excellence (95%+ in 10th/12th Board Exam)
+                </label>
+              </div>
+
+              <div className="form-check">
+                <input
+                  className="form-check-input"
+                  type="checkbox"
+                  id="studentSports"
+                  name="studentCategory"
+                  value="sports"
+                  checked={formData.studentCategory?.includes("sports")}
+                  onChange={handleChange}
+                />
+                <label className="form-check-label" htmlFor="studentSports">
+                  🏆 Sports / Competition (National / International Level)
+                </label>
+              </div>
+
+              <div className="form-check">
+                <input
+                  className="form-check-input"
+                  type="checkbox"
+                  id="studentSocial"
+                  name="studentCategory"
+                  value="social"
+                  checked={formData.studentCategory?.includes("social")}
+                  onChange={handleChange}
+                />
+                <label className="form-check-label" htmlFor="studentSocial">
+                  🌍 Social Service / Environmental Contribution
+                </label>
+              </div>
+            </div>
+
           </div>
 
           <div className="col-md-12 mb-3">
@@ -246,26 +273,40 @@ export const Talent = ({ formData, handleChange }) => {
           </div>
 
           <div className="col-md-12 mb-3">
-            <label className="td_form_label">
-              Select Category (choose one or more)*
-            </label>
-            <select
-              multiple
-              name="teacherCategory"
-              value={formData.teacherCategory || []}
-              onChange={handleChange}
-              className="form-select built"
-              required
-            >
-              <option value="innovative">💡 Innovative Teaching Practices</option>
-              <option value="needy">
+            <label className="td_form_label">Select Category (choose one or more)*</label>
+
+            <div className="form-check">
+              <input
+                className="form-check-input"
+                type="checkbox"
+                id="teacherInnovative"
+                name="teacherCategory"
+                value="innovative"
+                checked={formData.teacherCategory?.includes("innovative")}
+                onChange={handleChange}
+                required={formData.teacherCategory?.length === 0} // ensure at least one selected
+              />
+              <label className="form-check-label" htmlFor="teacherInnovative">
+                💡 Innovative Teaching Practices
+              </label>
+            </div>
+
+            <div className="form-check">
+              <input
+                className="form-check-input"
+                type="checkbox"
+                id="teacherNeedy"
+                name="teacherCategory"
+                value="needy"
+                checked={formData.teacherCategory?.includes("needy")}
+                onChange={handleChange}
+              />
+              <label className="form-check-label" htmlFor="teacherNeedy">
                 🤝 Education for the Needy (Social / Voluntary Service)
-              </option>
-            </select>
-            <small className="text-muted">
-              Hold CTRL (Windows) or CMD (Mac) to select multiple
-            </small>
+              </label>
+            </div>
           </div>
+
 
           <div className="col-md-12 mb-3">
             <label className="td_form_label">

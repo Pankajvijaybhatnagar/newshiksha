@@ -4,9 +4,12 @@
 import React, { useState } from "react";
 import { Conclave } from "./Conclave";
 import { Accommodation } from "./Accommodation";
-import {General} from "./General";
-import {Volunteer} from "./Volunteer";
+import { General } from "./General";
+import { Volunteer } from "./Volunteer";
 import { Talent } from "./Talent";
+import { BestPractice } from "./BestPractice";
+import {ProjectDisplay} from "./ProjectDisplay";
+import {English} from "./English";
  
 export const Firstform = () => {
   const [event, setEvent] = useState("");
@@ -37,11 +40,23 @@ export const Firstform = () => {
   });
 
   const handleChange = (e) => {
-    const { name, value, files, type } = e.target;
-    setFormData((prev) => ({
-      ...prev,
-      [name]: files ? files[0] : value,
-    }));
+    const { name, value, type, checked, files } = e.target;
+
+    if (type === "checkbox") {
+      setFormData((prev) => {
+        const current = prev[name] || [];
+        return {
+          ...prev,
+          [name]: checked
+            ? [...current, value] // add if checked
+            : current.filter((v) => v !== value), // remove if unchecked
+        };
+      });
+    } else if (files) {
+      setFormData((prev) => ({ ...prev, [name]: files[0] }));
+    } else {
+      setFormData((prev) => ({ ...prev, [name]: value }));
+    }
   };
 
   const handleSubmit = (e) => {
@@ -54,7 +69,7 @@ export const Firstform = () => {
     <div className="form-bg px-4 py-4" style={{ marginLeft: "42px" }}>
       <style>{`
           .td_form_title {
-            font-size: 2.2rem;
+            font-size: 1.5rem;
             font-weight: 700;
             color: #890c25;
             text-align: center;
@@ -142,29 +157,17 @@ export const Firstform = () => {
                   <option value="conclave">Conclave</option>
                   <option value="submit-abstract">Submit Abstract</option>
                   <option value="submit-paper">Submit Full-Length Paper</option>
-                  <option value="best-practices">Best Practices</option>
+                  <option value="best-practices">Best Practices by Organisation and Individual</option>
                   <option value="organizer">Organizer</option>
                   <option value="accommodation">Accommodation</option>
                   <option value="General Registration Form">General Registration Form</option>
+                  <option value="DHE English Olympiad">DHE English Olympiad</option>
                 </select>
               </div>
             </div>
 
             {/* Example: Project Display */}
-            {registrationType === "project-display" && (
-              <div className="row mb-3">
-                <div className="col-md-12">
-                  <label className="td_form_label">Project Title</label>
-                  <input
-                    type="text"
-                    name="projectTitle"
-                    value={formData.projectTitle}
-                    onChange={handleChange}
-                    className="built form-control"
-                  />
-                </div>
-              </div>
-            )}
+           
 
             {/* Example: Abstract */}
             {registrationType === "submit-abstract" && (
@@ -212,6 +215,14 @@ export const Firstform = () => {
             {/* Talent */}
             {registrationType === "talent" && <Talent formData={formData} handleChange={handleChange} />}
 
+            {/* //Best Practices */}
+            {registrationType === "best-practices" && <BestPractice formData={formData} handleChange={handleChange} />}
+
+            {/* Project Display */}
+            {registrationType === "project-display" && <ProjectDisplay formData={formData} handleChange={handleChange} />}
+
+            {/* English Olympiad */}
+              {registrationType === "DHE English Olympiad" && <English formData={formData} handleChange={handleChange} />}
             {/* Submit */}
             <div className="text-center">
               <button
