@@ -10,21 +10,186 @@ import { Talent } from "./Talent";
 import { BestPractice } from "./BestPractice";
 import { ProjectDisplay } from "./ProjectDisplay";
 import { English } from "./English";
-import {Organizer} from "./Organizer";
+import { Organizer } from "./Organizer";
+
+import { config } from "../../conf/config"; // ✅ import apiBaseUrl
 
 export const Firstform = () => {
   const [event, setEvent] = useState("");
   const [registrationType, setRegistrationType] = useState("");
-  const [formData, setFormData] = useState({}); // Central store of child data
+  const [formData, setFormData] = useState({});
+  const [loading, setLoading] = useState(false);
 
-  const handleSubmit = (e) => {
+  // 🔗 Map registrationType -> API endpoint
+  const endpointMap = {
+    conclave: "/api/conclave/register",
+    "programs-for-school-student": "/api/student-programs/register",
+    "DHE English Olympiad": "/api/olympiad/register",
+    "best-practices": "/api/best-practices/register",
+    "project-display": "/api/project-display/register",
+    accommodation: "/api/accommodation/register",
+    "General Registration Form": "/api/general/register",
+    volunteer: "/api/volunteer/register",
+    talentStudent: "/api/talent/student/register", // special case
+    talentTeacher: "/api/talent/teacher/register", // special case
+    organizer: "/api/organizer/register",
+  };
+
+  const handleSubmit = async (e) => {
     e.preventDefault();
-    console.log("✅ Final Submitted Data:", {
+
+    // Validate that formData has required fields
+    if (!formData || Object.keys(formData).length === 0) {
+      alert("Please fill in all required fields before submitting.");
+      return;
+    }
+
+    let endpoint = endpointMap[registrationType];
+    let payload = {
       event,
-      registrationType,
-      formData,
-    });
-    alert("Form submitted successfully!");
+      ...formData,
+    };
+
+    // Handle Talent special case
+    if (registrationType === "talent") {
+      if (formData?.talentType === "student") {
+        endpoint = endpointMap.talentStudent;
+        // Remove talentType from payload for cleaner data
+        const { talentType, ...cleanedData } = formData;
+        payload = {
+          event,
+          ...cleanedData,
+        };
+      } else if (formData?.talentType === "teacher") {
+        endpoint = endpointMap.talentTeacher;
+        // Remove talentType from payload for cleaner data
+        const { talentType, ...cleanedData } = formData;
+        payload = {
+          event,
+          ...cleanedData,
+        };
+      } else {
+        alert(
+          "Please select whether you are registering as a student or teacher for talent category."
+        );
+        return;
+      }
+    }
+
+    // Map field names based on registration type to match backend expectations
+    if (registrationType === "conclave") {
+      payload = {
+        event,
+        full_name: formData.full_name || "",
+        gender: formData.gender || "",
+        designation: formData.designation || "",
+        institution: formData.institution || "",
+        contact_number: formData.contact_number || formData.phone || "",
+        email: formData.email || "",
+        address: formData.address || "",
+        vidya_bharti_status: formData.vidya_bharti_status || "",
+        conclave_selection: formData.conclave_selection || "",
+        // Include any additional fields that might be in formData
+        ...Object.keys(formData).reduce((acc, key) => {
+          if (
+            ![
+              "full_name",
+              "gender",
+              "designation",
+              "institution",
+              "contact_number",
+              "phone",
+              "email",
+              "address",
+              "vidya_bharti_status",
+              "conclave_selection",
+            ].includes(key)
+          ) {
+            acc[key] = formData[key];
+          }
+          return acc;
+        }, {}),
+      };
+    }
+
+    if (!endpoint) {
+      alert("No API endpoint found for this registration type.");
+      return;
+    }
+
+    // Define required fields based on backend expectations
+    const requiredFieldsMap = {
+      conclave: [
+        "full_name",
+        "gender",
+        "designation",
+        "institution",
+        "contact_number",
+        "email",
+        "address",
+        "vidya_bharti_status",
+        "conclave_selection",
+      ],
+      accommodation: ["name", "email", "phone", "address"],
+      "General Registration Form": ["name", "email", "phone"],
+      volunteer: ["name", "email", "phone", "address"],
+      talent: ["full_name", "email", "phone"],
+      "best-practices": ["name", "email", "organization"],
+      "project-display": ["name", "email", "project_title"],
+      "DHE English Olympiad": ["name", "email", "school"],
+      organizer: ["name", "email", "phone", "organization"],
+    };
+
+    const requiredFields = requiredFieldsMap[registrationType] || [];
+    const missingFields = requiredFields.filter(
+      (field) => !payload[field] || payload[field].toString().trim() === ""
+    );
+
+    // if (missingFields.length > 0) {
+    //   alert(
+    //     `Please fill in the following required fields: ${missingFields.join(
+    //       ", "
+    //     )}`
+    //   );
+    //   return;
+    // }
+
+    console.log("payload Data", payload);
+
+    try {
+      setLoading(true);
+      const finalUrl = `${config.apiBaseUrl}${endpoint}`;
+      console.log("finalUri", config);
+
+      // 🔄 Convert payload into FormData
+      const formDataObj = new FormData();
+      for (const key in payload) {
+        formDataObj.append(key, payload[key]);
+      }
+
+      const res = await fetch(finalUrl, {
+        method: "POST",
+        body: formDataObj, // ✅ no headers, fetch sets correct multipart/form-data
+      });
+
+      const result = await res.json();
+      console.log("✅ Submission Result:", result);
+
+      if (res.ok) {
+        alert("Form submitted successfully!");
+        // Reset form after successful submission
+        setFormData({});
+        setRegistrationType("");
+      } else {
+        alert(`Error: ${result.message || "Something went wrong"}`);
+        console.error("❌ Server Error:", result);
+      }
+    } catch (err) {
+      console.error("❌ Submission failed:", err);
+      alert("Submission failed. Please try again later.");
+    } finally {
+      setLoading(false);
+    }
   };
 
   return (
@@ -101,7 +266,9 @@ export const Firstform = () => {
               </div>
 
               <div className="col-md-6 mb-3">
-                <label className="td_form_label">Select Registration Type</label>
+                <label className="td_form_label">
+                  Select Registration Type
+                </label>
                 <select
                   value={registrationType}
                   onChange={(e) => setRegistrationType(e.target.value)}
@@ -127,7 +294,6 @@ export const Firstform = () => {
                   </option>
                   <option value="talent">Talent</option>
                   <option value="volunteer">Volunteer</option>
-                  <option value="organizer">Organizer</option>
                 </select>
               </div>
             </div>
@@ -167,8 +333,9 @@ export const Firstform = () => {
                 type="submit"
                 className="btn btn-primary"
                 style={{ margin: "0 auto" }}
+                disabled={loading}
               >
-                Submit
+                {loading ? "Submitting..." : "Submit"}
               </button>
             </div>
           </form>

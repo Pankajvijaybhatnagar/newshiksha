@@ -6,23 +6,23 @@ import React, { useState, useEffect } from "react";
 export const Conclave = ({ onDataChange }) => {
   const [formData, setFormData] = useState({
     // Personal Details
-    name: "",
+    full_name: "",
     gender: "",
     designation: "",
-    org: "",
-    phone: "",
+    institution: "",
+    contact_number: "",
     email: "",
     address: "",
-    affiliation: "",
+    vidya_bharti_status: "",
 
     // Conclave
-    conclaveSelection: "",
+    conclave_selection: "",
 
     // Accommodation
-    accommodation: "",
-    arrivalDate: "",
-    departureDate: "",
-    numPeople: "",
+    accommodation_required: "",
+    arrival_date: "",
+    departure_date: "",
+    number_of_people: "",
   });
 
   // Handle input changes
@@ -48,8 +48,8 @@ export const Conclave = ({ onDataChange }) => {
         <label className="td_form_label">Full Name*</label>
         <input
           type="text"
-          name="name"
-          value={formData.name}
+          name="full_name"
+          value={formData.full_name}
           onChange={handleChange}
           className="form-control built"
           required
@@ -88,8 +88,8 @@ export const Conclave = ({ onDataChange }) => {
         <label className="td_form_label">Institution / Organization*</label>
         <input
           type="text"
-          name="org"
-          value={formData.org}
+          name="institution"
+          value={formData.institution}
           onChange={handleChange}
           className="form-control built"
           required
@@ -100,8 +100,8 @@ export const Conclave = ({ onDataChange }) => {
         <label className="td_form_label">Contact Number*</label>
         <input
           type="tel"
-          name="phone"
-          value={formData.phone}
+          name="contact_number"
+          value={formData.contact_number}
           onChange={handleChange}
           className="form-control built"
           required
@@ -137,15 +137,15 @@ export const Conclave = ({ onDataChange }) => {
           Are you from Vidya Bharti / Non-Vidya Bharti?*
         </label>
         <select
-          name="affiliation"
-          value={formData.affiliation}
+          name="vidya_bharti_status"
+          value={formData.vidya_bharti_status}
           onChange={handleChange}
           className="form-select built"
           required
         >
           <option value="">-- Select --</option>
-          <option value="vidya-bharti">Vidya Bharti</option>
-          <option value="non-vidya-bharti">Non-Vidya Bharti</option>
+          <option value="Vidya Bharti">Vidya Bharti</option>
+          <option value="Non-Vidya Bharti">Non-Vidya Bharti</option>
         </select>
       </div>
 
@@ -153,8 +153,8 @@ export const Conclave = ({ onDataChange }) => {
       <div className="col-md-6 mb-3">
         <label className="td_form_label">Conclave Selection*</label>
         <select
-          name="conclaveSelection"
-          value={formData.conclaveSelection}
+          name="conclave_selection"
+          value={formData.conclave_selection}
           onChange={handleChange}
           className="form-select built"
           required
@@ -203,26 +203,26 @@ export const Conclave = ({ onDataChange }) => {
       <div className="col-md-6 mb-3">
         <label className="td_form_label">Do you require Accommodation?*</label>
         <select
-          name="accommodation"
-          value={formData.accommodation}
+          name="accommodation_required"
+          value={formData.accommodation_required}
           onChange={handleChange}
           className="form-select built"
           required
         >
           <option value="">-- Select --</option>
-          <option value="yes">Yes</option>
-          <option value="no">No</option>
+          <option value="Yes">Yes</option>
+          <option value="No">No</option>
         </select>
       </div>
 
-      {formData.accommodation === "yes" && (
+      {formData.accommodation_required === "Yes" && (
         <>
           <div className="col-md-4 mb-3">
             <label className="td_form_label">Date of Arrival*</label>
             <input
               type="date"
-              name="arrivalDate"
-              value={formData.arrivalDate}
+              name="arrival_date"
+              value={formData.arrival_date}
               onChange={handleChange}
               className="form-control built"
               required
@@ -233,8 +233,8 @@ export const Conclave = ({ onDataChange }) => {
             <label className="td_form_label">Date of Departure*</label>
             <input
               type="date"
-              name="departureDate"
-              value={formData.departureDate}
+              name="departure_date"
+              value={formData.departure_date}
               onChange={handleChange}
               className="form-control built"
               required
@@ -245,8 +245,8 @@ export const Conclave = ({ onDataChange }) => {
             <label className="td_form_label">Number of People*</label>
             <input
               type="number"
-              name="numPeople"
-              value={formData.numPeople}
+              name="number_of_people"
+              value={formData.number_of_people}
               onChange={handleChange}
               className="form-control built"
               required
