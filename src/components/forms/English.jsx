@@ -6,30 +6,31 @@ import React, { useState, useEffect } from "react";
 export const English = ({ onDataChange }) => {
   const [formData, setFormData] = useState({
     // School Details
-    schoolName: "",
-    schoolAddress: "",
-    principalName: "",
-    schoolEmail: "",
-    coordinatorName: "",
-    coordinatorContact: "",
+    school_name: "",
+    school_address: "",
+    principal_name: "",
+    principal_email: "",
+    coordinator_name: "",
+    coordinator_contact: "",
+    coordinator_email: "",
 
     // Student Details
-    studentName: "",
-    parentName: "",
-    studentClass: "",
-    rollNo: "",
+    student_name: "",
+    parent_name: "",
+    class: "",
+    section_roll: "",
     dob: "",
     gender: "",
 
     // Fee Details
-    paymentMode: "",
-    transactionId: "",
-    feeReceipt: null,
-    paymentDate: "",
-    panNumber: "",
+    payment_mode: "",
+    transaction_id: "",
+    receipt_upload: null,
+    payment_date: "",
+    pan_number: "",
 
     // Affiliation
-    affiliation: "",
+    vidya_bharti_status: "",
   });
 
   // Handle changes
@@ -60,8 +61,8 @@ export const English = ({ onDataChange }) => {
         <label className="td_form_label">School Name*</label>
         <input
           type="text"
-          name="schoolName"
-          value={formData.schoolName}
+          name="school_name"
+          value={formData.school_name}
           onChange={handleChange}
           className="form-control built"
           required
@@ -72,8 +73,8 @@ export const English = ({ onDataChange }) => {
         <label className="td_form_label">School Address*</label>
         <input
           type="text"
-          name="schoolAddress"
-          value={formData.schoolAddress}
+          name="school_address"
+          value={formData.school_address}
           onChange={handleChange}
           className="form-control built"
           required
@@ -84,8 +85,8 @@ export const English = ({ onDataChange }) => {
         <label className="td_form_label">Principal’s Name*</label>
         <input
           type="text"
-          name="principalName"
-          value={formData.principalName}
+          name="principal_name"
+          value={formData.principal_name}
           onChange={handleChange}
           className="form-control built"
           required
@@ -93,39 +94,49 @@ export const English = ({ onDataChange }) => {
       </div>
 
       <div className="col-md-6 mb-3">
-        <label className="td_form_label">Email*</label>
+        <label className="td_form_label">Principal Email*</label>
         <input
           type="email"
-          name="schoolEmail"
-          value={formData.schoolEmail}
+          name="principal_email"
+          value={formData.principal_email}
           onChange={handleChange}
           className="form-control built"
           required
         />
       </div>
 
-      <div className="col-md-6 mb-3">
+      <div className="col-md-4 mb-3">
         <label className="td_form_label">
           School Coordinator’s Name (for Olympiad)*
         </label>
         <input
           type="text"
-          name="coordinatorName"
-          value={formData.coordinatorName}
+          name="coordinator_name"
+          value={formData.coordinator_name}
           onChange={handleChange}
           className="form-control built"
           required
         />
       </div>
 
-      <div className="col-md-6 mb-3">
-        <label className="td_form_label">
-          Coordinator’s Contact Number & Email*
-        </label>
+      <div className="col-md-4 mb-3">
+        <label className="td_form_label">Coordinator Contact*</label>
         <input
           type="text"
-          name="coordinatorContact"
-          value={formData.coordinatorContact}
+          name="coordinator_contact"
+          value={formData.coordinator_contact}
+          onChange={handleChange}
+          className="form-control built"
+          required
+        />
+      </div>
+
+      <div className="col-md-4 mb-3">
+        <label className="td_form_label">Coordinator Email*</label>
+        <input
+          type="email"
+          name="coordinator_email"
+          value={formData.coordinator_email}
           onChange={handleChange}
           className="form-control built"
           required
@@ -142,8 +153,8 @@ export const English = ({ onDataChange }) => {
         <label className="td_form_label">Full Name of Student*</label>
         <input
           type="text"
-          name="studentName"
-          value={formData.studentName}
+          name="student_name"
+          value={formData.student_name}
           onChange={handleChange}
           className="form-control built"
           required
@@ -154,8 +165,8 @@ export const English = ({ onDataChange }) => {
         <label className="td_form_label">Father’s / Mother’s Name*</label>
         <input
           type="text"
-          name="parentName"
-          value={formData.parentName}
+          name="parent_name"
+          value={formData.parent_name}
           onChange={handleChange}
           className="form-control built"
           required
@@ -168,8 +179,8 @@ export const English = ({ onDataChange }) => {
           type="number"
           min="1"
           max="10"
-          name="studentClass"
-          value={formData.studentClass}
+          name="class"
+          value={formData.class}
           onChange={handleChange}
           className="form-control built"
           required
@@ -180,8 +191,8 @@ export const English = ({ onDataChange }) => {
         <label className="td_form_label">Section / Roll No.*</label>
         <input
           type="text"
-          name="rollNo"
-          value={formData.rollNo}
+          name="section_roll"
+          value={formData.section_roll}
           onChange={handleChange}
           className="form-control built"
           required
@@ -232,8 +243,8 @@ export const English = ({ onDataChange }) => {
       <div className="col-md-6 mb-3">
         <label className="td_form_label">Mode of Payment*</label>
         <select
-          name="paymentMode"
-          value={formData.paymentMode}
+          name="payment_mode"
+          value={formData.payment_mode}
           onChange={handleChange}
           className="form-select built"
           required
@@ -246,13 +257,11 @@ export const English = ({ onDataChange }) => {
       </div>
 
       <div className="col-md-6 mb-3">
-        <label className="td_form_label">
-          Transaction ID / Receipt Number*
-        </label>
+        <label className="td_form_label">Transaction ID / Receipt Number*</label>
         <input
           type="text"
-          name="transactionId"
-          value={formData.transactionId}
+          name="transaction_id"
+          value={formData.transaction_id}
           onChange={handleChange}
           className="form-control built"
           required
@@ -263,7 +272,7 @@ export const English = ({ onDataChange }) => {
         <label className="td_form_label">Upload Receipt*</label>
         <input
           type="file"
-          name="feeReceipt"
+          name="receipt_upload"
           onChange={handleChange}
           className="form-control built"
           required
@@ -274,8 +283,8 @@ export const English = ({ onDataChange }) => {
         <label className="td_form_label">Date of Payment*</label>
         <input
           type="date"
-          name="paymentDate"
-          value={formData.paymentDate}
+          name="payment_date"
+          value={formData.payment_date}
           onChange={handleChange}
           className="form-control built"
           required
@@ -286,8 +295,8 @@ export const English = ({ onDataChange }) => {
         <label className="td_form_label">PAN Number*</label>
         <input
           type="text"
-          name="panNumber"
-          value={formData.panNumber}
+          name="pan_number"
+          value={formData.pan_number}
           onChange={handleChange}
           className="form-control built"
           required
@@ -300,15 +309,15 @@ export const English = ({ onDataChange }) => {
           Are you from Vidya Bharti / Non-Vidya Bharti?*
         </label>
         <select
-          name="affiliation"
-          value={formData.affiliation}
+          name="vidya_bharti_status"
+          value={formData.vidya_bharti_status}
           onChange={handleChange}
           className="form-select built"
           required
         >
           <option value="">-- Select --</option>
-          <option value="vidya-bharti">Vidya Bharti</option>
-          <option value="non-vidya-bharti">Non-Vidya Bharti</option>
+           <option value="Vidya Bharti">Vidya Bharti</option>
+          <option value="Non-Vidya Bharti">Non-Vidya Bharti</option>
         </select>
       </div>
     </div>
