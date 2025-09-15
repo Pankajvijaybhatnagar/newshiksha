@@ -25,7 +25,7 @@ export const English = ({ onDataChange }) => {
     // Fee Details
     payment_mode: "",
     transaction_id: "",
-    receipt_upload: null,
+    receipt: null,
     payment_date: "",
     pan_number: "",
 
@@ -272,7 +272,7 @@ export const English = ({ onDataChange }) => {
         <label className="td_form_label">Upload Receipt*</label>
         <input
           type="file"
-          name="receipt_upload"
+          name="receipt"
           onChange={handleChange}
           className="form-control built"
           required
