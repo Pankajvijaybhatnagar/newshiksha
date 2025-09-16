@@ -11,6 +11,7 @@ import { BestPractice } from "./BestPractice";
 import { ProjectDisplay } from "./ProjectDisplay";
 import { English } from "./English";
 import {Organizer} from "./Organizer";
+import { Program } from "./Program";
 
 export const Firstform = () => {
   const [event, setEvent] = useState("");
@@ -121,7 +122,7 @@ export const Firstform = () => {
                   </option>
                   <option value="project-display">Project Display</option>
                   <option value="accommodation">Accommodation</option>
-                  <option value="organizer">Organizer</option>
+                  
                   <option value="General Registration Form">
                     General Registration Form
                   </option>
@@ -159,6 +160,9 @@ export const Firstform = () => {
             )}
             {registrationType === "organizer" && (
               <Organizer onDataChange={setFormData} />
+            )}
+            {registrationType === "programs-for-school-student" && (
+              <Program onDataChange={setFormData} />
             )}
 
             {/* Submit Button */}
