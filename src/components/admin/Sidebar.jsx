@@ -34,11 +34,7 @@ const SideBarMenus = [
     name: "Project Display (School)",
     link: "/admin/project-display-school",
   },
-  {
-    name: "Accommodation",
-    link: "https://ac.shikshamahakumbh.com/",
-    external: true,
-  },
+
   {
     name: "General Registration Form",
     link: "/admin/general-registration",
@@ -69,7 +65,7 @@ const SideBarMenus = [
 
   return (
     <div style={{
-      fontSize:14
+      minWidth:'300px'
     }} className=" shadow shadow-lg ">
       <span className="fw-bold text-center px-3 mb fs-5  ">
         <img style={{width:150,marginBottom:10, marginTop:5}} src="/img/logo_black.png" alt="" />
@@ -80,7 +76,7 @@ const SideBarMenus = [
           return (
             <li
               key={item.link}
-              className={`list-group-item py-0  ${isActive ? "bg-white " : "bg-danger-subtle"}`}
+              className={`list-group-item py-1   ${isActive ? "bg-white fw-bold" : "bg-danger-subtle"}`}
               aria-current={isActive ? "true" : undefined}
             >
               <Link to={item.link}>{item.name}</Link>

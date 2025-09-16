@@ -3,17 +3,15 @@ import { Layout } from '../../layouts/Layout'
 import Sidebar from '../../components/admin/Sidebar'
 import AdminLayout from '../../components/admin/AdminLayout'
 import TablePage from './TablePage'
-import { Dashboard } from '../../components/admin/Dashboard'
+import { GeneralRegistrationTable } from '../../components/admin/GeneralRegistrationTable'
 
-const AdminHome = () => {
+const AdminGeneralRegistration = () => {
   return (
     
         <Layout>
             <div style={{paddingTop:'5.6rem'}} className=' d-flex w-full'>
                 <AdminLayout>
-                    <div className=' px-2'>
-                        <Dashboard/>
-                    </div>
+                    <GeneralRegistrationTable />
                 </AdminLayout>
                 
             </div>
@@ -23,4 +21,4 @@ const AdminHome = () => {
   )
 }
 
-export default AdminHome
+export default AdminGeneralRegistration

@@ -2,18 +2,15 @@ import React from 'react'
 import { Layout } from '../../layouts/Layout'
 import Sidebar from '../../components/admin/Sidebar'
 import AdminLayout from '../../components/admin/AdminLayout'
-import TablePage from './TablePage'
-import { Dashboard } from '../../components/admin/Dashboard'
+import { TalentRegistrationTable } from '../../components/admin/TalentRegistrationTable'
 
-const AdminHome = () => {
+const AdminTalentRegistration = () => {
   return (
     
         <Layout>
             <div style={{paddingTop:'5.6rem'}} className=' d-flex w-full'>
                 <AdminLayout>
-                    <div className=' px-2'>
-                        <Dashboard/>
-                    </div>
+                    <TalentRegistrationTable />
                 </AdminLayout>
                 
             </div>
@@ -23,4 +20,4 @@ const AdminHome = () => {
   )
 }
 
-export default AdminHome
+export default AdminTalentRegistration

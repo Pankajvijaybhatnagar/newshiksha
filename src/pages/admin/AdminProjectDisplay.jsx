@@ -4,15 +4,16 @@ import Sidebar from '../../components/admin/Sidebar'
 import AdminLayout from '../../components/admin/AdminLayout'
 import TablePage from './TablePage'
 import { Dashboard } from '../../components/admin/Dashboard'
+import { ProjectDisplayTable } from '../../components/admin/ProjectDisplayTable'
 
-const AdminHome = () => {
+const AdminProjectDisplay = () => {
   return (
     
         <Layout>
             <div style={{paddingTop:'5.6rem'}} className=' d-flex w-full'>
                 <AdminLayout>
                     <div className=' px-2'>
-                        <Dashboard/>
+                        <ProjectDisplayTable/>
                     </div>
                 </AdminLayout>
                 
@@ -23,4 +24,4 @@ const AdminHome = () => {
   )
 }
 
-export default AdminHome
+export default AdminProjectDisplay

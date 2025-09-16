@@ -61,10 +61,15 @@ import { Academic } from "./pages/academic/Academic";
 import { Newform } from "./pages/newform/newform";
 import AdminHome from "./pages/admin/AdminHome";
 import AdminSettings from "./pages/admin/AdminSettings";
-import AdminConclave from './pages/admin/AdminConclave'
-import AdminOlympiad from './pages/admin/AdminOlympiad'
-import AdminBestPractices from './pages/admin/AdminBestPractices'
+import AdminConclave from "./pages/admin/AdminConclave";
+import AdminOlympiad from "./pages/admin/AdminOlympiad";
+import AdminBestPractices from "./pages/admin/AdminBestPractices";
 import ProtectedRoute from "./layouts/ProtectedRoute";
+import AdminProjectDisplay from "./pages/admin/AdminProjectDisplay";
+import AdminGeneralRegistration from "./pages/admin/AdminGeneralRegistration";
+import AdminVolunteer from "./pages/admin/AdminVolunteer";
+import AdminOrganizerRegistration from "./pages/admin/AdminOrganizerRegistration";
+import AdminTalentRegistration from "./pages/admin/AdminTalentRegistration";
 
 // Enhanced Beautiful Popup Component
 const Popup = ({ isOpen, onClose, title, children }) => {
@@ -242,30 +247,112 @@ function App() {
         <Route path="/contact" element={<Contact />} />
         <Route path="*" element={<Error />} />
 
+        {/* admin routes */}
 
-
-
-         {/* admin routes */}
-
-        <Route path="/admin" element={<AdminHome />} />
-        <Route path="/admin/conclave-registration" element={<ProtectedRoute><AdminConclave /></ProtectedRoute>} />
-        <Route path="/admin/programs-school-student" element={<AdminHome />} />
-        <Route path="/admin/dhe-english-olympiad" element={<AdminOlympiad />} />
-        <Route path="/admin/best-practices" element={<AdminBestPractices />} />
-        <Route path="/admin/project-display-hei" element={<AdminHome />} />
-        <Route path="/admin/project-display-school" element={<AdminHome />} />
-        <Route path="/admin/general-registration" element={<AdminHome />} />
-        <Route path="/admin/volunteer-registration" element={<AdminHome />} />
-        <Route path="/admin/organizer-registration" element={<AdminHome />} />
+        <Route
+          path="/admin/dashboard"
+          element={
+            <ProtectedRoute>
+              <AdminHome />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/conclave-registration"
+          element={
+            <ProtectedRoute>
+              <AdminConclave />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/programs-school-student"
+          element={
+            <ProtectedRoute>
+              <AdminHome />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/dhe-english-olympiad"
+          element={
+            <ProtectedRoute>
+              <AdminOlympiad />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/best-practices"
+          element={
+            <ProtectedRoute>
+              <AdminBestPractices />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/project-display-hei"
+          element={
+            <ProtectedRoute>
+              <AdminProjectDisplay />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/project-display-school"
+          element={
+            <ProtectedRoute>
+              <AdminHome />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/general-registration"
+          element={
+            <ProtectedRoute>
+              <AdminGeneralRegistration />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/volunteer-registration"
+          element={
+            <ProtectedRoute>
+              <AdminVolunteer />
+            </ProtectedRoute>
+          }
+        />
+        <Route
+          path="/admin/organizer-registration"
+          element={
+            <ProtectedRoute>
+              <AdminOrganizerRegistration />
+            </ProtectedRoute>
+          }
+        />
         <Route
           path="/admin/talent-registration-teacher"
-          element={<AdminHome />}
+          element={
+            <ProtectedRoute>
+              <AdminTalentRegistration />
+            </ProtectedRoute>
+          }
         />
         <Route
           path="/admin/talent-registration-student"
-          element={<AdminHome />}
+          element={
+            <ProtectedRoute>
+              <AdminHome />
+            </ProtectedRoute>
+          }
         />
-        <Route path="/admin/settings" element={<AdminSettings />} />
+        <Route
+          path="/admin/settings"
+          element={
+            <ProtectedRoute>
+              <AdminSettings />
+            </ProtectedRoute>
+          }
+        />
       </Routes>
 
       <Popup
