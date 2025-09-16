@@ -70,6 +70,7 @@ import AdminGeneralRegistration from "./pages/admin/AdminGeneralRegistration";
 import AdminVolunteer from "./pages/admin/AdminVolunteer";
 import AdminOrganizerRegistration from "./pages/admin/AdminOrganizerRegistration";
 import AdminTalentRegistration from "./pages/admin/AdminTalentRegistration";
+import AdminStudentPrograms from "./pages/admin/AdminStudentPrograms";
 
 // Enhanced Beautiful Popup Component
 const Popup = ({ isOpen, onClose, title, children }) => {
@@ -277,7 +278,7 @@ function App() {
           path="/admin/programs-school-student"
           element={
             <ProtectedRoute>
-              <AdminHome />
+              <AdminStudentPrograms />
             </ProtectedRoute>
           }
         />

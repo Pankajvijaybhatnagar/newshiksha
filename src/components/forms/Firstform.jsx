@@ -261,7 +261,9 @@ export const Firstform = () => {
                   required
                 >
                   <option value="">-- Select an Event --</option>
-                  <option value="smk3">Shiksha Mahakumbh 5.0</option>
+                  <option selected value="smk3">
+                    Shiksha Mahakumbh 5.0
+                  </option>
                 </select>
               </div>
 
@@ -271,12 +273,26 @@ export const Firstform = () => {
                 </label>
                 <select
                   value={registrationType}
-                  onChange={(e) => setRegistrationType(e.target.value)}
+                  onChange={(e) => {
+                    if (e.target.value === "paper-submission") {
+                      window.location.href =
+                        "https://cmt3.research.microsoft.com/User/Login?ReturnUrl=%2FSK2025%2FSubmission%2Findex";
+                      return;
+                    }
+
+                    if (e.target.value === "accommodation") {
+                      window.location.href = "https://ac.shikshamahakumbh.com/";
+                      return;
+                    }
+
+                    setRegistrationType(e.target.value);
+                  }}
                   className="built form-select"
                   required
                 >
                   <option value="">-- Select an option --</option>
                   <option value="conclave">Conclave</option>
+                  <option value="paper-submission">Paper Submission</option>
                   <option value="programs-for-school-student">
                     Programs for School Student
                   </option>
