@@ -7,6 +7,10 @@ const Sidebar = () => {
 const SideBarMenus = [
   
   {
+    name: "Dashboard",
+    link: "/admin/dashboard",
+  },
+  {
     name: "Conclave Registration",
     link: "/admin/conclave-registration",
   },

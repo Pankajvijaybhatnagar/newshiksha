@@ -21,4 +21,13 @@ export default defineConfig({
       outDir: 'dist',      // where Vercel serves from
     }),
   ],
+  server: {
+    proxy: {
+      "/api": {
+        target: "https://forms.shikshamahakumbh.com", // Your backend
+        changeOrigin: true,
+        secure: false, // if using https and self-signed cert
+      },
+    },
+  },
 })

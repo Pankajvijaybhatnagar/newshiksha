@@ -61,6 +61,8 @@ import { Academic } from "./pages/academic/Academic";
 import { Newform } from "./pages/newform/newform";
 import AdminHome from "./pages/admin/AdminHome";
 import AdminSettings from "./pages/admin/AdminSettings";
+import AdminConclave from './pages/admin/AdminConclave'
+import ProtectedRoute from "./layouts/ProtectedRoute";
 
 // Enhanced Beautiful Popup Component
 const Popup = ({ isOpen, onClose, title, children }) => {
@@ -244,7 +246,7 @@ function App() {
          {/* admin routes */}
 
         <Route path="/admin" element={<AdminHome />} />
-        <Route path="/admin/conclave-registration" element={<AdminHome />} />
+        <Route path="/admin/conclave-registration" element={<ProtectedRoute><AdminConclave /></ProtectedRoute>} />
         <Route path="/admin/programs-school-student" element={<AdminHome />} />
         <Route path="/admin/dhe-english-olympiad" element={<AdminHome />} />
         <Route path="/admin/best-practices" element={<AdminHome />} />
