@@ -44,7 +44,7 @@ export const Signin = () => {
         // ✅ Save token to sessionStorage
         sessionStorage.setItem("token", result.token);
 
-        alert("Login successful!");
+        // alert("Login successful!");
         navigate("/admin"); // redirect to dashboard (change path as needed)
       } else {
         setErrorMsg(result.message || "Invalid credentials");
