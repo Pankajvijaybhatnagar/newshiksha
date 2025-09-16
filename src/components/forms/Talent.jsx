@@ -8,45 +8,42 @@ export const Talent = ({ onDataChange }) => {
     talentType: "",
 
     // Student fields
-    studentName: "",
-    studentEmail: "",
-    studentPhone: "",
-    studentDob: "",
-    studentClassBoard: "",
-    studentSchool: "",
-    studentCategory: [],
-    studentAchievement: "",
-    studentProof: null,
-    studentAffiliation: "",
+    full_name: "",
+    email: "",
+    contact_number: "",
+    dob: "",
+    class_board: "",
+    school_name_address: "",
+    category: [],
+    achievement_details: "",
+    achievement_proof: null,
+    media: null,
+    vidya_bharti_status: "",
 
     // Teacher fields
-    teacherName: "",
-    teacherEmail: "",
-    teacherPhone: "",
-    teacherDesignation: "",
-    teacherSchool: "",
-    teacherCategory: [],
-    teacherContribution: "",
-    teacherProof: null,
-    city: "",
-    languages: "",
-    needAccommodation: "",
+    designation_subject: "",
+    institution_name_address: "",
+    contribution_details: "",
+    city_state: "",
+    languages_known: "",
+    accommodation_required: "",
+    supporting_documents: null,
     photo: null,
-    affiliation: "",
   });
 
   const handleChange = (e) => {
     const { name, value, type, files, checked } = e.target;
 
-    if (name === "studentCategory" || name === "teacherCategory") {
+    // handle category checkboxes (multi-select)
+    if (name === "category") {
       setFormData((prev) => {
-        let updated = [...(prev[name] || [])];
+        let updated = [...(prev.category || [])];
         if (checked) {
           updated.push(value);
         } else {
           updated = updated.filter((item) => item !== value);
         }
-        return { ...prev, [name]: updated };
+        return { ...prev, category: updated };
       });
     } else {
       setFormData((prev) => ({
@@ -93,8 +90,8 @@ export const Talent = ({ onDataChange }) => {
             <label className="td_form_label">Full Name*</label>
             <input
               type="text"
-              name="studentName"
-              value={formData.studentName}
+              name="full_name"
+              value={formData.full_name}
               onChange={handleChange}
               className="form-control built"
               required
@@ -105,8 +102,8 @@ export const Talent = ({ onDataChange }) => {
             <label className="td_form_label">Email Address*</label>
             <input
               type="email"
-              name="studentEmail"
-              value={formData.studentEmail}
+              name="email"
+              value={formData.email}
               onChange={handleChange}
               className="form-control built"
               required
@@ -117,8 +114,8 @@ export const Talent = ({ onDataChange }) => {
             <label className="td_form_label">Contact Number*</label>
             <input
               type="tel"
-              name="studentPhone"
-              value={formData.studentPhone}
+              name="contact_number"
+              value={formData.contact_number}
               onChange={handleChange}
               className="form-control built"
               required
@@ -129,8 +126,8 @@ export const Talent = ({ onDataChange }) => {
             <label className="td_form_label">Date of Birth*</label>
             <input
               type="date"
-              name="studentDob"
-              value={formData.studentDob}
+              name="dob"
+              value={formData.dob}
               onChange={handleChange}
               className="form-control built"
               required
@@ -141,8 +138,8 @@ export const Talent = ({ onDataChange }) => {
             <label className="td_form_label">Class / Board*</label>
             <input
               type="text"
-              name="studentClassBoard"
-              value={formData.studentClassBoard}
+              name="class_board"
+              value={formData.class_board}
               onChange={handleChange}
               className="form-control built"
               required
@@ -153,8 +150,8 @@ export const Talent = ({ onDataChange }) => {
             <label className="td_form_label">School Name & Address*</label>
             <input
               type="text"
-              name="studentSchool"
-              value={formData.studentSchool}
+              name="school_name_address"
+              value={formData.school_name_address}
               onChange={handleChange}
               className="form-control built"
               required
@@ -170,9 +167,9 @@ export const Talent = ({ onDataChange }) => {
                   className="form-check-input"
                   type="checkbox"
                   id={`student_${val}`}
-                  name="studentCategory"
+                  name="category"
                   value={val}
-                  checked={formData.studentCategory.includes(val)}
+                  checked={formData.category.includes(val)}
                   onChange={handleChange}
                 />
                 <label className="form-check-label" htmlFor={`student_${val}`}>
@@ -189,8 +186,8 @@ export const Talent = ({ onDataChange }) => {
           <div className="col-md-12 mb-3">
             <label className="td_form_label">Details of Achievement*</label>
             <textarea
-              name="studentAchievement"
-              value={formData.studentAchievement}
+              name="achievement_details"
+              value={formData.achievement_details}
               onChange={handleChange}
               rows="3"
               className="form-control built"
@@ -202,7 +199,7 @@ export const Talent = ({ onDataChange }) => {
             <label className="td_form_label">Upload Proof of Achievement*</label>
             <input
               type="file"
-              name="studentProof"
+              name="achievement_proof"
               onChange={handleChange}
               className="form-control built"
               required
@@ -210,11 +207,22 @@ export const Talent = ({ onDataChange }) => {
             <small className="text-muted">Max 5 MB | Marksheet / Certificate / Award Letter</small>
           </div>
 
+          <div className="col-md-12 mb-3">
+            <label className="td_form_label">Upload Optional Media</label>
+            <input
+              type="file"
+              name="media"
+              onChange={handleChange}
+              className="form-control built"
+            />
+            <small className="text-muted">Optional | Images / Video (Max 5 MB)</small>
+          </div>
+
           <div className="col-md-12 mb-4">
             <label className="td_form_label">Are you from Vidya Bharti / Non-Vidya Bharti?*</label>
             <select
-              name="studentAffiliation"
-              value={formData.studentAffiliation}
+              name="vidya_bharti_status"
+              value={formData.vidya_bharti_status}
               onChange={handleChange}
               className="form-select built"
               required
@@ -239,8 +247,8 @@ export const Talent = ({ onDataChange }) => {
             <label className="td_form_label">Full Name*</label>
             <input
               type="text"
-              name="teacherName"
-              value={formData.teacherName}
+              name="full_name"
+              value={formData.full_name}
               onChange={handleChange}
               className="form-control built"
               required
@@ -251,8 +259,8 @@ export const Talent = ({ onDataChange }) => {
             <label className="td_form_label">Email Address*</label>
             <input
               type="email"
-              name="teacherEmail"
-              value={formData.teacherEmail}
+              name="email"
+              value={formData.email}
               onChange={handleChange}
               className="form-control built"
               required
@@ -263,8 +271,8 @@ export const Talent = ({ onDataChange }) => {
             <label className="td_form_label">Contact Number*</label>
             <input
               type="tel"
-              name="teacherPhone"
-              value={formData.teacherPhone}
+              name="contact_number"
+              value={formData.contact_number}
               onChange={handleChange}
               className="form-control built"
               required
@@ -275,8 +283,8 @@ export const Talent = ({ onDataChange }) => {
             <label className="td_form_label">Designation & Subject*</label>
             <input
               type="text"
-              name="teacherDesignation"
-              value={formData.teacherDesignation}
+              name="designation_subject"
+              value={formData.designation_subject}
               onChange={handleChange}
               className="form-control built"
               required
@@ -287,8 +295,8 @@ export const Talent = ({ onDataChange }) => {
             <label className="td_form_label">School / Institution Name & Address*</label>
             <input
               type="text"
-              name="teacherSchool"
-              value={formData.teacherSchool}
+              name="institution_name_address"
+              value={formData.institution_name_address}
               onChange={handleChange}
               className="form-control built"
               required
@@ -304,9 +312,9 @@ export const Talent = ({ onDataChange }) => {
                   className="form-check-input"
                   type="checkbox"
                   id={`teacher_${val}`}
-                  name="teacherCategory"
+                  name="category"
                   value={val}
-                  checked={formData.teacherCategory.includes(val)}
+                  checked={formData.category.includes(val)}
                   onChange={handleChange}
                 />
                 <label className="form-check-label" htmlFor={`teacher_${val}`}>
@@ -321,11 +329,10 @@ export const Talent = ({ onDataChange }) => {
           <div className="col-md-12 mb-3">
             <label className="td_form_label">Details of Contribution / Innovation*</label>
             <textarea
-              name="teacherContribution"
-              value={formData.teacherContribution}
+              name="contribution_details"
+              value={formData.contribution_details}
               onChange={handleChange}
               rows="5"
-              maxLength="500"
               className="form-control built"
               required
             ></textarea>
@@ -336,20 +343,20 @@ export const Talent = ({ onDataChange }) => {
             <label className="td_form_label">Upload Supporting Documents*</label>
             <input
               type="file"
-              name="teacherProof"
+              name="supporting_documents"
               onChange={handleChange}
               className="form-control built"
               required
             />
-            <small className="text-muted">Certificates / Media / Project Details | Max 5 MB</small>
+            <small className="text-muted">Certificates / Media | Max 5 MB</small>
           </div>
 
           <div className="col-md-6 mb-3">
             <label className="td_form_label">City / State*</label>
             <input
               type="text"
-              name="city"
-              value={formData.city}
+              name="city_state"
+              value={formData.city_state}
               onChange={handleChange}
               className="form-control built"
               required
@@ -360,10 +367,9 @@ export const Talent = ({ onDataChange }) => {
             <label className="td_form_label">Languages Known*</label>
             <input
               type="text"
-              name="languages"
-              value={formData.languages}
+              name="languages_known"
+              value={formData.languages_known}
               onChange={handleChange}
-              placeholder="English / Hindi / Regional Language / Others"
               className="form-control built"
               required
             />
@@ -372,8 +378,8 @@ export const Talent = ({ onDataChange }) => {
           <div className="col-md-6 mb-3">
             <label className="td_form_label">Do you need Accommodation?</label>
             <select
-              name="needAccommodation"
-              value={formData.needAccommodation}
+              name="accommodation_required"
+              value={formData.accommodation_required}
               onChange={handleChange}
               className="form-select built"
             >
@@ -398,15 +404,15 @@ export const Talent = ({ onDataChange }) => {
           <div className="col-md-12 mb-3">
             <label className="td_form_label">Are you from Vidya Bharti / Non-Vidya Bharti?*</label>
             <select
-              name="affiliation"
-              value={formData.affiliation}
+              name="vidya_bharti_status"
+              value={formData.vidya_bharti_status}
               onChange={handleChange}
               className="form-select built"
               required
             >
               <option value="">-- Select --</option>
-              <option value="vidya-bharti">Vidya Bharti</option>
-              <option value="non-vidya-bharti">Non-Vidya Bharti</option>
+              <option value="vidya Bharti">Vidya Bharti</option>
+              <option value="Non-Vidya Bharti">Non-Vidya Bharti</option>
             </select>
           </div>
         </>

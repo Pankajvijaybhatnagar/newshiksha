@@ -339,21 +339,14 @@ function App() {
           }
         />
         <Route
-          path="/admin/talent-registration-teacher"
+          path="/admin/talent-registration"
           element={
             <ProtectedRoute>
               <AdminTalentRegistration />
             </ProtectedRoute>
           }
         />
-        <Route
-          path="/admin/talent-registration-student"
-          element={
-            <ProtectedRoute>
-              <AdminHome />
-            </ProtectedRoute>
-          }
-        />
+       
         <Route
           path="/admin/settings"
           element={

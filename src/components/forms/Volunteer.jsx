@@ -5,24 +5,24 @@ import React, { useState, useEffect } from "react";
 
 export const Volunteer = ({ onDataChange }) => {
   const [formData, setFormData] = useState({
-    name: "",
+    full_name: "",
     email: "",
-    phone: "",
+    contact_number: "",
     gender: "",
     dob: "",
     age: "",
-    qualification: "",
-    org: "",
+    educational_qualification: "",
+    institution_name: "",
     designation: "",
-    city: "",
-    volunteerCategory: "",
-    languages: "",
+    city_state: "",
+    volunteer_category: "",
+    languages_known: "",
     availability: "",
-    specificDates: "",
-    experience: "",
-    emergencyContact: "",
-    affiliation: "",
-    needAccommodation: "",
+    specific_dates: "",
+    previous_experience: "",
+    emergency_contact: "",
+    vidya_bharti_status: "",
+    accommodation_required: "",
   });
 
   const handleChange = (e) => {
@@ -47,8 +47,8 @@ export const Volunteer = ({ onDataChange }) => {
         <label className="td_form_label">Full Name*</label>
         <input
           type="text"
-          name="name"
-          value={formData.name}
+          name="full_name"
+          value={formData.full_name}
           onChange={handleChange}
           placeholder="Enter your full name"
           className="form-control built"
@@ -75,8 +75,8 @@ export const Volunteer = ({ onDataChange }) => {
         <label className="td_form_label">Contact Number*</label>
         <input
           type="tel"
-          name="phone"
-          value={formData.phone}
+          name="contact_number"
+          value={formData.contact_number}
           onChange={handleChange}
           placeholder="10-digit mobile number"
           className="form-control built"
@@ -133,8 +133,8 @@ export const Volunteer = ({ onDataChange }) => {
         <label className="td_form_label">Educational Qualification*</label>
         <input
           type="text"
-          name="qualification"
-          value={formData.qualification}
+          name="educational_qualification"
+          value={formData.educational_qualification}
           onChange={handleChange}
           placeholder="Enter current qualification"
           className="form-control built"
@@ -147,8 +147,8 @@ export const Volunteer = ({ onDataChange }) => {
         <label className="td_form_label">Institution / Organisation Name*</label>
         <input
           type="text"
-          name="org"
-          value={formData.org}
+          name="institution_name"
+          value={formData.institution_name}
           onChange={handleChange}
           className="form-control built"
           required
@@ -172,8 +172,8 @@ export const Volunteer = ({ onDataChange }) => {
         <label className="td_form_label">City / State*</label>
         <input
           type="text"
-          name="city"
-          value={formData.city}
+          name="city_state"
+          value={formData.city_state}
           onChange={handleChange}
           className="form-control built"
           required
@@ -184,8 +184,8 @@ export const Volunteer = ({ onDataChange }) => {
       <div className="col-md-12 mb-3">
         <label className="td_form_label">Volunteer Category Preference*</label>
         <select
-          name="volunteerCategory"
-          value={formData.volunteerCategory}
+          name="volunteer_category"
+          value={formData.volunteer_category}
           onChange={handleChange}
           className="form-select built"
           required
@@ -209,8 +209,8 @@ export const Volunteer = ({ onDataChange }) => {
         <label className="td_form_label">Languages Known*</label>
         <input
           type="text"
-          name="languages"
-          value={formData.languages}
+          name="languages_known"
+          value={formData.languages_known}
           onChange={handleChange}
           placeholder="English / Hindi / Regional Language / Others"
           className="form-control built"
@@ -240,8 +240,8 @@ export const Volunteer = ({ onDataChange }) => {
           <label className="td_form_label">Mention Specific Dates</label>
           <input
             type="text"
-            name="specificDates"
-            value={formData.specificDates}
+            name="specific_dates"
+            value={formData.specific_dates}
             onChange={handleChange}
             className="form-control built"
           />
@@ -252,8 +252,8 @@ export const Volunteer = ({ onDataChange }) => {
       <div className="col-md-12 mb-3">
         <label className="td_form_label">Previous Volunteering Experience (if any)</label>
         <textarea
-          name="experience"
-          value={formData.experience}
+          name="previous_experience"
+          value={formData.previous_experience}
           onChange={handleChange}
           rows="3"
           className="form-control built"
@@ -265,8 +265,8 @@ export const Volunteer = ({ onDataChange }) => {
         <label className="td_form_label">Emergency Contact*</label>
         <input
           type="text"
-          name="emergencyContact"
-          value={formData.emergencyContact}
+          name="emergency_contact"
+          value={formData.emergency_contact}
           onChange={handleChange}
           placeholder="Name, Relationship, Mobile Number"
           className="form-control built"
@@ -278,8 +278,8 @@ export const Volunteer = ({ onDataChange }) => {
       <div className="col-md-6 mb-3">
         <label className="td_form_label">Are you from Vidya Bharti / Non-Vidya Bharti?*</label>
         <select
-          name="affiliation"
-          value={formData.affiliation}
+          name="vidya_bharti_status"
+          value={formData.vidya_bharti_status}
           onChange={handleChange}
           className="form-select built"
           required
@@ -294,8 +294,8 @@ export const Volunteer = ({ onDataChange }) => {
       <div className="col-md-6 mb-3">
         <label className="td_form_label">Do you need Accommodation?*</label>
         <select
-          name="needAccommodation"
-          value={formData.needAccommodation}
+          name="accommodation_required"
+          value={formData.accommodation_required}
           onChange={handleChange}
           className="form-select built"
           required

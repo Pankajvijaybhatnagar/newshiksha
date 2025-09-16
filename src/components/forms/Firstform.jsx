@@ -304,7 +304,7 @@ export const Firstform = () => {
                   </option>
                   <option value="project-display">Project Display</option>
                   <option value="accommodation">Accommodation</option>
-                  <option value="organizer">Organizer</option>
+                  {/* <option value="organizer">Organizer</option> */}
                   <option value="General Registration Form">
                     General Registration Form
                   </option>

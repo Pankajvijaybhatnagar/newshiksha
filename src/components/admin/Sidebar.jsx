@@ -47,13 +47,10 @@ const Sidebar = () => {
       link: "/admin/organizer-registration",
     },
     {
-      name: "Talent Registration (Teacher)",
-      link: "/admin/talent-registration-teacher",
+      name: "Talent Registration",
+      link: "/admin/talent-registration",
     },
-    {
-      name: "Talent Registration (Student)",
-      link: "/admin/talent-registration-student",
-    },
+    
     {
       name: "Settings",
       link: "/admin/settings",
