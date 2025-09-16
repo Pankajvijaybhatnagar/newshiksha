@@ -285,8 +285,8 @@ export const Volunteer = ({ onDataChange }) => {
           required
         >
           <option value="">-- Select --</option>
-          <option value="vidya-bharti">Vidya Bharti</option>
-          <option value="non-vidya-bharti">Non-Vidya Bharti</option>
+          <option value="Vidya Bharti">Vidya Bharti</option>
+          <option value="Non-Vidya Bharti">Non-Vidya Bharti</option>
         </select>
       </div>
 
