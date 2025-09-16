@@ -58,7 +58,7 @@ import { Conference } from "./pages/confer/Conference";
 import { Committee } from "./pages/commit/Committee";
 import { Print } from "./pages/mediaSection/Print";
 import { Academic } from "./pages/academic/Academic";
-import { Newform } from "./pages/newform/newform";
+import { Newform } from "./pages/newform/Newform";
 import AdminHome from "./pages/admin/AdminHome";
 import AdminSettings from "./pages/admin/AdminSettings";
 import AdminConclave from "./pages/admin/AdminConclave";
