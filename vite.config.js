@@ -7,18 +7,7 @@ export default defineConfig({
     react(),
     Sitemap({
       hostname: 'https://www.shikshamahakumbh.com',
-      // If your routes are client-side (SPA), list them here:
-      dynamicRoutes: [
-        '/', 
-        '/about',
-        '/registration',
-        '/conference',
-        '/contact',
-        // add more as needed
-      ],
-      // optional:
-      readable: false,     // compact XML
-      outDir: 'dist',      // where Vercel serves from
+       generateRobotsTxt: false, 
     }),
   ],
   server: {
