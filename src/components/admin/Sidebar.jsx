@@ -14,7 +14,7 @@ const Sidebar = () => {
       link: "/admin/conclave-registration",
     },
     {
-      name: "Programs for School Student",
+      name: "Programs School Student",
       link: "/admin/programs-school-student",
     },
     {
@@ -29,13 +29,13 @@ const Sidebar = () => {
       name: "Project Display (HEI)",
       link: "/admin/project-display-hei",
     },
-    {
-      name: "Project Display (School)",
-      link: "/admin/project-display-school",
-    },
+    // {
+    //   name: "Project Display (School)",
+    //   link: "/admin/project-display-school",
+    // },
 
     {
-      name: "General Registration Form",
+      name: "General Registration ",
       link: "/admin/general-registration",
     },
     {
@@ -66,7 +66,8 @@ const Sidebar = () => {
   return (
     <div
       style={{
-        minWidth: "300px",
+        minWidth: "210px",
+        fontSize:14
       }}
       className=" shadow shadow-lg d-flex flex-column "
     >

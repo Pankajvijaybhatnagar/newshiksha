@@ -115,7 +115,7 @@ export const ConclaveTable = () => {
       {loading ? (
         <p>Loading...</p>
       ) : (
-        <table className="table table-sm table-striped table-bordered">
+        <table className="table table-sm table-striped table-bordered table-responsive">
           <thead className="table-danger">
             <tr>
               <th>Full Name</th>

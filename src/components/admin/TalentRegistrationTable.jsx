@@ -26,6 +26,7 @@ export const TalentRegistrationTable = () => {
         { headers: { Authorization: `Bearer ${token}` } }
       );
       const result = await res.json();
+      console.log(result);
       setData(result.data || []);
       setTotalPages(result.pagination?.pages || 1);
     } catch (error) {
@@ -158,29 +159,66 @@ export const TalentRegistrationTable = () => {
                   <td>{row.vidya_bharti_status}</td>
                   <td>{row.accommodation_required}</td>
                   <td>
-                    {row.proof_upload ? (
-                      <a
-                        href={`${config.apiBaseUrl}/${row.proof_upload}`}
-                        target="_blank"
-                        rel="noreferrer"
-                      >
-                        <FaFileImage /> Proof
-                      </a>
-                    ) : (
-                      "-"
-                    )}
-                    {row.media_upload ? (
-                      <>
-                        {" | "}
-                        <a
-                          href={`${config.apiBaseUrl}/${row.media_upload}`}
-                          target="_blank"
-                          rel="noreferrer"
-                        >
-                          <FaFileImage /> Media
-                        </a>
-                      </>
-                    ) : null}
+                    {/* Proof Upload */}
+                    {row.proof_upload
+                      ? (() => {
+                          let proof = null;
+                          try {
+                            proof =
+                              typeof row.proof_upload === "string"
+                                ? JSON.parse(row.proof_upload)
+                                : row.proof_upload;
+                          } catch (e) {
+                            console.error(
+                              "Invalid proof_upload JSON:",
+                              row.proof_upload
+                            );
+                          }
+                          return proof && proof.path ? (
+                            <a
+                              href={`${config.apiBaseUrl}/${proof.path}`}
+                              target="_blank"
+                              rel="noreferrer"
+                            >
+                              <FaFileImage /> Proof
+                            </a>
+                          ) : (
+                            "-"
+                          );
+                        })()
+                      : "-"}
+
+                    {/* Media Upload */}
+                    {row.media_upload
+                      ? (() => {
+                          let media = null;
+                          try {
+                            media =
+                              typeof row.media_upload === "string"
+                                ? JSON.parse(row.media_upload)
+                                : row.media_upload;
+                          } catch (e) {
+                            console.error(
+                              "Invalid media_upload JSON:",
+                              row.media_upload
+                            );
+                          }
+                          return media && media.path ? (
+                            <>
+                              {" | "}
+                              <a
+                                href={`${config.apiBaseUrl}/${media.path}`}
+                                target="_blank"
+                                rel="noreferrer"
+                              >
+                                <FaFileImage /> Media
+                              </a>
+                            </>
+                          ) : null;
+                        })()
+                      : null}
+
+                    {/* Documents Upload */}
                     {row.documents_upload ? (
                       <>
                         {" | "}
@@ -193,6 +231,8 @@ export const TalentRegistrationTable = () => {
                         </a>
                       </>
                     ) : null}
+
+                    {/* Photo Upload */}
                     {row.photo_upload ? (
                       <>
                         {" | "}
@@ -206,6 +246,7 @@ export const TalentRegistrationTable = () => {
                       </>
                     ) : null}
                   </td>
+
                   <td className="d-flex bg-white">
                     <button
                       className="btn btn-outline-primary btn-sm me-2"
@@ -266,7 +307,9 @@ export const TalentRegistrationTable = () => {
             <div className="modal-content">
               <div className="modal-header">
                 <h5 className="modal-title">
-                  {selectedId ? "Edit Talent Registration" : "Add Talent Registration"}
+                  {selectedId
+                    ? "Edit Talent Registration"
+                    : "Add Talent Registration"}
                 </h5>
                 <button
                   type="button"
