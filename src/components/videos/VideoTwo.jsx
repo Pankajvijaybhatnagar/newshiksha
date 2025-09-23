@@ -75,7 +75,7 @@ const ImageSlider = () => {
     },
     {
       id: 3,
-      image: "/pics2025/abc1.jpeg",
+      image: "/img/niper3.jpeg",
       title: "Limited Time - 50% Off", 
       subtitle: "Don't Miss This Exclusive Opportunity"
     },
@@ -109,12 +109,7 @@ const ImageSlider = () => {
       title: "Limited Time - 50% Off", 
       subtitle: "Don't Miss This Exclusive Opportunity"
     },
-    {
-      id: 9,
-      image: "/img/niper3.jpeg",
-      title: "Limited Time - 50% Off", 
-      subtitle: "Don't Miss This Exclusive Opportunity"
-    },
+   
   ];
 
   useEffect(() => {
