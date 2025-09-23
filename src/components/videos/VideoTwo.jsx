@@ -63,7 +63,7 @@ const ImageSlider = () => {
   const slides = [
     {
       id: 1,
-      image: "/img/niper3.jpeg",
+      image: "/pics2025/abc10.jpeg",
       title: "Learn English Like Never Before",
       subtitle: "Master English with Expert Instructors"
     },
@@ -94,6 +94,24 @@ const ImageSlider = () => {
     {
       id: 6,
       image: "/pics2025/abc4.jpeg",
+      title: "Limited Time - 50% Off", 
+      subtitle: "Don't Miss This Exclusive Opportunity"
+    },
+     {
+      id: 7,
+      image: "/pics2025/abc8.jpeg",
+      title: "Limited Time - 50% Off", 
+      subtitle: "Don't Miss This Exclusive Opportunity"
+    },
+      {
+      id: 8,
+      image: "/pics2025/abc9.jpeg",
+      title: "Limited Time - 50% Off", 
+      subtitle: "Don't Miss This Exclusive Opportunity"
+    },
+    {
+      id: 9,
+      image: "/img/niper3.jpeg",
       title: "Limited Time - 50% Off", 
       subtitle: "Don't Miss This Exclusive Opportunity"
     },
